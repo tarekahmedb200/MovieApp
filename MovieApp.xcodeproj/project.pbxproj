@@ -7,18 +7,72 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3093C81C2C54A46D009DF963 /* MovieAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3093C81B2C54A46D009DF963 /* MovieAppApp.swift */; };
-		3093C81E2C54A46D009DF963 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3093C81D2C54A46D009DF963 /* ContentView.swift */; };
+		30424D0C2C560C9100FA431F /* LoginRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30424D0B2C560C9100FA431F /* LoginRequestDTO.swift */; };
+		30424D152C5615AC00FA431F /* AppInfoStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30424D142C5615AC00FA431F /* AppInfoStorage.swift */; };
+		30424D172C565C4200FA431F /* KeyChainImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30424D162C565C4200FA431F /* KeyChainImplementation.swift */; };
+		30424D192C565C6700FA431F /* KeyChainStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30424D182C565C6700FA431F /* KeyChainStack.swift */; };
+		30424D1B2C566BF000FA431F /* LoginResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30424D1A2C566BF000FA431F /* LoginResponseDTO.swift */; };
+		30424D1E2C56722B00FA431F /* DefaultAuthenticationImplentationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30424D1D2C56722B00FA431F /* DefaultAuthenticationImplentationRepository.swift */; };
+		30424D202C567CB400FA431F /* AuthenticationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30424D1F2C567CB400FA431F /* AuthenticationRepository.swift */; };
+		30424D242C568FD300FA431F /* AuthenticateUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30424D232C568FD300FA431F /* AuthenticateUseCase.swift */; };
+		30424D272C56911C00FA431F /* AuthenticateUseCaseImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30424D262C56911C00FA431F /* AuthenticateUseCaseImplementation.swift */; };
+		30424D292C56B3E600FA431F /* SessionRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30424D282C56B3E600FA431F /* SessionRequestDTO.swift */; };
+		30424D2B2C56B40C00FA431F /* SessionResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30424D2A2C56B40C00FA431F /* SessionResponseDTO.swift */; };
+		30424D2F2C574C4A00FA431F /* LoginCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30424D2E2C574C4A00FA431F /* LoginCoordinatorView.swift */; };
+		30424D312C574C5700FA431F /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30424D302C574C5700FA431F /* LoginCoordinator.swift */; };
+		30424D342C575CE000FA431F /* LoginViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30424D332C575CE000FA431F /* LoginViewFactory.swift */; };
+		3093C81C2C54A46D009DF963 /* MovieApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3093C81B2C54A46D009DF963 /* MovieApp.swift */; };
+		3093C81E2C54A46D009DF963 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3093C81D2C54A46D009DF963 /* LoginView.swift */; };
 		3093C8202C54A46E009DF963 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3093C81F2C54A46E009DF963 /* Assets.xcassets */; };
 		3093C8232C54A46E009DF963 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3093C8222C54A46E009DF963 /* Preview Assets.xcassets */; };
+		3093C83E2C54A9F7009DF963 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3093C83D2C54A9F7009DF963 /* ApiManager.swift */; };
+		3093C8422C54AC31009DF963 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3093C8412C54AC31009DF963 /* Request.swift */; };
+		3093C8452C54AC8C009DF963 /* RequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3093C8442C54AC8C009DF963 /* RequestType.swift */; };
+		3093C8472C54ACDD009DF963 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3093C8462C54ACDD009DF963 /* APIConstants.swift */; };
+		3093C8492C54AD71009DF963 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3093C8482C54AD71009DF963 /* NetworkError.swift */; };
+		3093C84B2C54AE78009DF963 /* AuthenticateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3093C84A2C54AE78009DF963 /* AuthenticateRequest.swift */; };
+		3093C84D2C54B5EF009DF963 /* DefaultAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3093C84C2C54B5EF009DF963 /* DefaultAPI.swift */; };
+		3093C8512C54C12E009DF963 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3093C8502C54C12E009DF963 /* AuthenticationService.swift */; };
+		3093C8532C54C1E0009DF963 /* RequestTokenResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3093C8522C54C1E0009DF963 /* RequestTokenResponseDTO.swift */; };
+		3093C8552C54C2F0009DF963 /* DefaultAuthenticationImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3093C8542C54C2F0009DF963 /* DefaultAuthenticationImplementation.swift */; };
+		3093C8572C54C6F7009DF963 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3093C8562C54C6F7009DF963 /* LoginViewModel.swift */; };
+		77D0BA38D4156B2C73F39DE6 /* Pods_MovieApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 011E50B784100180582FB6CF /* Pods_MovieApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		011E50B784100180582FB6CF /* Pods_MovieApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovieApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		30424D0B2C560C9100FA431F /* LoginRequestDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequestDTO.swift; sourceTree = "<group>"; };
+		30424D142C5615AC00FA431F /* AppInfoStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfoStorage.swift; sourceTree = "<group>"; };
+		30424D162C565C4200FA431F /* KeyChainImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChainImplementation.swift; sourceTree = "<group>"; };
+		30424D182C565C6700FA431F /* KeyChainStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChainStack.swift; sourceTree = "<group>"; };
+		30424D1A2C566BF000FA431F /* LoginResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponseDTO.swift; sourceTree = "<group>"; };
+		30424D1D2C56722B00FA431F /* DefaultAuthenticationImplentationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultAuthenticationImplentationRepository.swift; sourceTree = "<group>"; };
+		30424D1F2C567CB400FA431F /* AuthenticationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationRepository.swift; sourceTree = "<group>"; };
+		30424D232C568FD300FA431F /* AuthenticateUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticateUseCase.swift; sourceTree = "<group>"; };
+		30424D262C56911C00FA431F /* AuthenticateUseCaseImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticateUseCaseImplementation.swift; sourceTree = "<group>"; };
+		30424D282C56B3E600FA431F /* SessionRequestDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionRequestDTO.swift; sourceTree = "<group>"; };
+		30424D2A2C56B40C00FA431F /* SessionResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionResponseDTO.swift; sourceTree = "<group>"; };
+		30424D2E2C574C4A00FA431F /* LoginCoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinatorView.swift; sourceTree = "<group>"; };
+		30424D302C574C5700FA431F /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
+		30424D332C575CE000FA431F /* LoginViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewFactory.swift; sourceTree = "<group>"; };
 		3093C8182C54A46D009DF963 /* MovieApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		3093C81B2C54A46D009DF963 /* MovieAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieAppApp.swift; sourceTree = "<group>"; };
-		3093C81D2C54A46D009DF963 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		3093C81B2C54A46D009DF963 /* MovieApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieApp.swift; sourceTree = "<group>"; };
+		3093C81D2C54A46D009DF963 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		3093C81F2C54A46E009DF963 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3093C8222C54A46E009DF963 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3093C83D2C54A9F7009DF963 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		3093C8412C54AC31009DF963 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		3093C8442C54AC8C009DF963 /* RequestType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestType.swift; sourceTree = "<group>"; };
+		3093C8462C54ACDD009DF963 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
+		3093C8482C54AD71009DF963 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		3093C84A2C54AE78009DF963 /* AuthenticateRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticateRequest.swift; sourceTree = "<group>"; };
+		3093C84C2C54B5EF009DF963 /* DefaultAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultAPI.swift; sourceTree = "<group>"; };
+		3093C8502C54C12E009DF963 /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
+		3093C8522C54C1E0009DF963 /* RequestTokenResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestTokenResponseDTO.swift; sourceTree = "<group>"; };
+		3093C8542C54C2F0009DF963 /* DefaultAuthenticationImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultAuthenticationImplementation.swift; sourceTree = "<group>"; };
+		3093C8562C54C6F7009DF963 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		49611A4199246C4B89296B90 /* Pods-MovieApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieApp.debug.xcconfig"; path = "Target Support Files/Pods-MovieApp/Pods-MovieApp.debug.xcconfig"; sourceTree = "<group>"; };
+		C78DFC515DA150B8F1976323 /* Pods-MovieApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieApp.release.xcconfig"; path = "Target Support Files/Pods-MovieApp/Pods-MovieApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,17 +80,119 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77D0BA38D4156B2C73F39DE6 /* Pods_MovieApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		30424D0F2C56118300FA431F /* Persistance */ = {
+			isa = PBXGroup;
+			children = (
+				30424D112C56126100FA431F /* AppInfoStorage */,
+			);
+			path = Persistance;
+			sourceTree = "<group>";
+		};
+		30424D102C56125400FA431F /* KeyChain */ = {
+			isa = PBXGroup;
+			children = (
+				30424D182C565C6700FA431F /* KeyChainStack.swift */,
+			);
+			path = KeyChain;
+			sourceTree = "<group>";
+		};
+		30424D112C56126100FA431F /* AppInfoStorage */ = {
+			isa = PBXGroup;
+			children = (
+				30424D132C56129B00FA431F /* Implementations */,
+				30424D122C56129200FA431F /* Protocols */,
+			);
+			path = AppInfoStorage;
+			sourceTree = "<group>";
+		};
+		30424D122C56129200FA431F /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				30424D142C5615AC00FA431F /* AppInfoStorage.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		30424D132C56129B00FA431F /* Implementations */ = {
+			isa = PBXGroup;
+			children = (
+				30424D102C56125400FA431F /* KeyChain */,
+				30424D162C565C4200FA431F /* KeyChainImplementation.swift */,
+			);
+			path = Implementations;
+			sourceTree = "<group>";
+		};
+		30424D1C2C5671EF00FA431F /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				30424D1D2C56722B00FA431F /* DefaultAuthenticationImplentationRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		30424D212C567CC000FA431F /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				30424D1F2C567CB400FA431F /* AuthenticationRepository.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		30424D222C568FBD00FA431F /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				30424D232C568FD300FA431F /* AuthenticateUseCase.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		30424D252C56910000FA431F /* Implementation */ = {
+			isa = PBXGroup;
+			children = (
+				30424D262C56911C00FA431F /* AuthenticateUseCaseImplementation.swift */,
+			);
+			path = Implementation;
+			sourceTree = "<group>";
+		};
+		30424D2C2C56DC7200FA431F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3093C81F2C54A46E009DF963 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		30424D2D2C574C3100FA431F /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				30424D2E2C574C4A00FA431F /* LoginCoordinatorView.swift */,
+				30424D302C574C5700FA431F /* LoginCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		30424D322C575CC100FA431F /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				30424D332C575CE000FA431F /* LoginViewFactory.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
 		3093C80F2C54A46D009DF963 = {
 			isa = PBXGroup;
 			children = (
 				3093C81A2C54A46D009DF963 /* MovieApp */,
 				3093C8192C54A46D009DF963 /* Products */,
+				6886E440E673F031577DE15D /* Pods */,
+				FCCF6188BE3FBBD1EC74163C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -51,9 +207,9 @@
 		3093C81A2C54A46D009DF963 /* MovieApp */ = {
 			isa = PBXGroup;
 			children = (
-				3093C81B2C54A46D009DF963 /* MovieAppApp.swift */,
-				3093C81D2C54A46D009DF963 /* ContentView.swift */,
-				3093C81F2C54A46E009DF963 /* Assets.xcassets */,
+				30424D2C2C56DC7200FA431F /* Resources */,
+				3093C82D2C54A55A009DF963 /* Main */,
+				3093C8292C54A4F3009DF963 /* Authentication */,
 				3093C8212C54A46E009DF963 /* Preview Content */,
 			);
 			path = MovieApp;
@@ -67,6 +223,245 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		3093C8292C54A4F3009DF963 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				3093C8332C54A798009DF963 /* Data */,
+				3093C82C2C54A529009DF963 /* Infrastructure */,
+				3093C82B2C54A522009DF963 /* Presenters */,
+				3093C82A2C54A51C009DF963 /* Domain */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		3093C82A2C54A51C009DF963 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				3093C8302C54A76C009DF963 /* Repositories */,
+				3093C82F2C54A764009DF963 /* UseCases */,
+				3093C82E2C54A75B009DF963 /* Entities */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		3093C82B2C54A522009DF963 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				30424D322C575CC100FA431F /* Factory */,
+				30424D2D2C574C3100FA431F /* Coordinator */,
+				3093C8322C54A78D009DF963 /* ViewModels */,
+				3093C8312C54A789009DF963 /* Views */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		3093C82C2C54A529009DF963 /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				30424D1C2C5671EF00FA431F /* Repositories */,
+				30424D0F2C56118300FA431F /* Persistance */,
+				3093C8352C54A7B5009DF963 /* Network */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		3093C82D2C54A55A009DF963 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				3093C81B2C54A46D009DF963 /* MovieApp.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		3093C82E2C54A75B009DF963 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		3093C82F2C54A764009DF963 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				30424D252C56910000FA431F /* Implementation */,
+				30424D222C568FBD00FA431F /* Protocols */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		3093C8302C54A76C009DF963 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				30424D212C567CC000FA431F /* Protocols */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		3093C8312C54A789009DF963 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3093C81D2C54A46D009DF963 /* LoginView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3093C8322C54A78D009DF963 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				3093C8562C54C6F7009DF963 /* LoginViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		3093C8332C54A798009DF963 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				3093C8342C54A79E009DF963 /* DTOS */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		3093C8342C54A79E009DF963 /* DTOS */ = {
+			isa = PBXGroup;
+			children = (
+				3093C8522C54C1E0009DF963 /* RequestTokenResponseDTO.swift */,
+				30424D0B2C560C9100FA431F /* LoginRequestDTO.swift */,
+				30424D1A2C566BF000FA431F /* LoginResponseDTO.swift */,
+				30424D282C56B3E600FA431F /* SessionRequestDTO.swift */,
+				30424D2A2C56B40C00FA431F /* SessionResponseDTO.swift */,
+			);
+			path = DTOS;
+			sourceTree = "<group>";
+		};
+		3093C8352C54A7B5009DF963 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				3093C8382C54A876009DF963 /* APIManager */,
+				3093C8372C54A851009DF963 /* Services */,
+				3093C8362C54A84A009DF963 /* Requests */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		3093C8362C54A84A009DF963 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				3093C8432C54AC65009DF963 /* Info */,
+				3093C8402C54ABED009DF963 /* Implementation */,
+				3093C83F2C54ABE5009DF963 /* Protocols */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		3093C8372C54A851009DF963 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				3093C84F2C54C118009DF963 /* Implementation */,
+				3093C84E2C54C112009DF963 /* Protocols */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		3093C8382C54A876009DF963 /* APIManager */ = {
+			isa = PBXGroup;
+			children = (
+				3093C83A2C54A98F009DF963 /* Implementation */,
+				3093C8392C54A989009DF963 /* Protocols */,
+			);
+			path = APIManager;
+			sourceTree = "<group>";
+		};
+		3093C8392C54A989009DF963 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				3093C83D2C54A9F7009DF963 /* ApiManager.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		3093C83A2C54A98F009DF963 /* Implementation */ = {
+			isa = PBXGroup;
+			children = (
+				3093C83C2C54A9DA009DF963 /* Default */,
+				3093C83B2C54A99E009DF963 /* Alamofire */,
+			);
+			path = Implementation;
+			sourceTree = "<group>";
+		};
+		3093C83B2C54A99E009DF963 /* Alamofire */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Alamofire;
+			sourceTree = "<group>";
+		};
+		3093C83C2C54A9DA009DF963 /* Default */ = {
+			isa = PBXGroup;
+			children = (
+				3093C84C2C54B5EF009DF963 /* DefaultAPI.swift */,
+			);
+			path = Default;
+			sourceTree = "<group>";
+		};
+		3093C83F2C54ABE5009DF963 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				3093C8412C54AC31009DF963 /* Request.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		3093C8402C54ABED009DF963 /* Implementation */ = {
+			isa = PBXGroup;
+			children = (
+				3093C84A2C54AE78009DF963 /* AuthenticateRequest.swift */,
+			);
+			path = Implementation;
+			sourceTree = "<group>";
+		};
+		3093C8432C54AC65009DF963 /* Info */ = {
+			isa = PBXGroup;
+			children = (
+				3093C8442C54AC8C009DF963 /* RequestType.swift */,
+				3093C8462C54ACDD009DF963 /* APIConstants.swift */,
+				3093C8482C54AD71009DF963 /* NetworkError.swift */,
+			);
+			path = Info;
+			sourceTree = "<group>";
+		};
+		3093C84E2C54C112009DF963 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				3093C8502C54C12E009DF963 /* AuthenticationService.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		3093C84F2C54C118009DF963 /* Implementation */ = {
+			isa = PBXGroup;
+			children = (
+				3093C8542C54C2F0009DF963 /* DefaultAuthenticationImplementation.swift */,
+			);
+			path = Implementation;
+			sourceTree = "<group>";
+		};
+		6886E440E673F031577DE15D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				49611A4199246C4B89296B90 /* Pods-MovieApp.debug.xcconfig */,
+				C78DFC515DA150B8F1976323 /* Pods-MovieApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		FCCF6188BE3FBBD1EC74163C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				011E50B784100180582FB6CF /* Pods_MovieApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +469,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3093C8262C54A46E009DF963 /* Build configuration list for PBXNativeTarget "MovieApp" */;
 			buildPhases = (
+				BBF97D16D320B103DA4B22D2 /* [CP] Check Pods Manifest.lock */,
 				3093C8142C54A46D009DF963 /* Sources */,
 				3093C8152C54A46D009DF963 /* Frameworks */,
 				3093C8162C54A46D009DF963 /* Resources */,
+				1C0E04637E01C8EA52F3B6EA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,13 +529,80 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1C0E04637E01C8EA52F3B6EA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MovieApp/Pods-MovieApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MovieApp/Pods-MovieApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MovieApp/Pods-MovieApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BBF97D16D320B103DA4B22D2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MovieApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3093C8142C54A46D009DF963 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3093C81E2C54A46D009DF963 /* ContentView.swift in Sources */,
-				3093C81C2C54A46D009DF963 /* MovieAppApp.swift in Sources */,
+				3093C83E2C54A9F7009DF963 /* ApiManager.swift in Sources */,
+				30424D152C5615AC00FA431F /* AppInfoStorage.swift in Sources */,
+				30424D0C2C560C9100FA431F /* LoginRequestDTO.swift in Sources */,
+				3093C8492C54AD71009DF963 /* NetworkError.swift in Sources */,
+				30424D312C574C5700FA431F /* LoginCoordinator.swift in Sources */,
+				30424D1E2C56722B00FA431F /* DefaultAuthenticationImplentationRepository.swift in Sources */,
+				30424D2F2C574C4A00FA431F /* LoginCoordinatorView.swift in Sources */,
+				30424D2B2C56B40C00FA431F /* SessionResponseDTO.swift in Sources */,
+				3093C8422C54AC31009DF963 /* Request.swift in Sources */,
+				3093C8472C54ACDD009DF963 /* APIConstants.swift in Sources */,
+				3093C84B2C54AE78009DF963 /* AuthenticateRequest.swift in Sources */,
+				3093C8532C54C1E0009DF963 /* RequestTokenResponseDTO.swift in Sources */,
+				3093C8512C54C12E009DF963 /* AuthenticationService.swift in Sources */,
+				3093C8552C54C2F0009DF963 /* DefaultAuthenticationImplementation.swift in Sources */,
+				3093C8572C54C6F7009DF963 /* LoginViewModel.swift in Sources */,
+				3093C81E2C54A46D009DF963 /* LoginView.swift in Sources */,
+				30424D242C568FD300FA431F /* AuthenticateUseCase.swift in Sources */,
+				30424D202C567CB400FA431F /* AuthenticationRepository.swift in Sources */,
+				30424D1B2C566BF000FA431F /* LoginResponseDTO.swift in Sources */,
+				30424D342C575CE000FA431F /* LoginViewFactory.swift in Sources */,
+				30424D172C565C4200FA431F /* KeyChainImplementation.swift in Sources */,
+				3093C81C2C54A46D009DF963 /* MovieApp.swift in Sources */,
+				30424D292C56B3E600FA431F /* SessionRequestDTO.swift in Sources */,
+				30424D272C56911C00FA431F /* AuthenticateUseCaseImplementation.swift in Sources */,
+				3093C84D2C54B5EF009DF963 /* DefaultAPI.swift in Sources */,
+				30424D192C565C6700FA431F /* KeyChainStack.swift in Sources */,
+				3093C8452C54AC8C009DF963 /* RequestType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,6 +730,7 @@
 		};
 		3093C8272C54A46E009DF963 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 49611A4199246C4B89296B90 /* Pods-MovieApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -274,6 +739,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"MovieApp/Preview Content\"";
 				DEVELOPMENT_TEAM = 2Q2UWMU587;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -295,6 +761,7 @@
 		};
 		3093C8282C54A46E009DF963 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C78DFC515DA150B8F1976323 /* Pods-MovieApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -303,6 +770,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"MovieApp/Preview Content\"";
 				DEVELOPMENT_TEAM = 2Q2UWMU587;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
