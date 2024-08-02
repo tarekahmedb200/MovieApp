@@ -9,7 +9,7 @@ import Foundation
 
 
 class LoginCoordinator: ObservableObject {
-     
+    
     enum FullScreenCover : String , Identifiable {
         case homeScreen
         
@@ -20,8 +20,12 @@ class LoginCoordinator: ObservableObject {
     
     @Published var fullScreenCover: FullScreenCover?
     
-    private lazy var loginFactory: LoginViewFactory = {
-            LoginViewFactory(loginCoordinator: self)
+    lazy var LoginView: LoginView = {
+        return LoginViewFactory(loginCoordinator: self).getLoginView()
+    }()
+    
+    lazy var homeCoordinator: HomeCoordinator = {
+        HomeCoordinator(parentCoordinator: self)
     }()
     
     func present(fullScreenCover : FullScreenCover) {
@@ -30,10 +34,6 @@ class LoginCoordinator: ObservableObject {
     
     func dimissFullScreenCover() {
         self.fullScreenCover = nil
-    }
-    
-    func getLoginView() -> LoginView {
-        return loginFactory.getLoginView()
     }
     
 }

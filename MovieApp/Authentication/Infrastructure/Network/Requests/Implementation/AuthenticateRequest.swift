@@ -6,8 +6,10 @@
 //
 
 import Foundation
+import MovieAppNetworking
 
-enum AuthenticateRequest : Request {
+
+enum AuthenticateRequest : APIRequest {
     case requestToken
     case login(LoginRequestDTO)
     case requestSession(SessionRequestDTO)

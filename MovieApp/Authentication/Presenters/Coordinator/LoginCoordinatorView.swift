@@ -13,9 +13,9 @@ struct LoginCoordinatorView : View {
     @StateObject var coordinator = LoginCoordinator()
     
     var body: some View {
-        coordinator.getLoginView()
+        coordinator.LoginView
             .fullScreenCover(item: $coordinator.fullScreenCover) { _ in
-                Text("hello")
+                HomeCoordinatorView(coordinator: coordinator.homeCoordinator)
             }
     }
     

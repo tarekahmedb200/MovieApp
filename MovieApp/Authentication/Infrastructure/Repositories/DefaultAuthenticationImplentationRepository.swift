@@ -6,27 +6,32 @@
 //
 
 import Foundation
+import MovieAppNetworking
+import SwiftTypesExtensions
 
-
-class DefaultAuthenticationImplentationRepository {
+class DefaultAuthenticationRepositoryImplentation {
     
     private var authenticationService: AuthenticationService
-    private var appInfoStorage: AppInfoStorage
+    private var appInfoStorage: AuthenticationInfoStorage
     
-    init(authenticationService: AuthenticationService, appInfoStorage: AppInfoStorage) {
+    init(authenticationService: AuthenticationService, appInfoStorage: AuthenticationInfoStorage) {
         self.authenticationService = authenticationService
         self.appInfoStorage = appInfoStorage
     }
 }
 
-extension DefaultAuthenticationImplentationRepository : AuthenticationRepository {
-    
+extension DefaultAuthenticationRepositoryImplentation : AuthenticationRepository {
     
     func requestToken(completion: @escaping (Result<Bool, any Error>) -> Void) {
         self.authenticationService.requestToken { result in
             switch result {
             case .success(let requestTokenResponseDTO):
                 self.appInfoStorage.saveRequestToken(requestToken: requestTokenResponseDTO.token)
+                
+                if let expirationDateString = requestTokenResponseDTO.expirationDateString {
+                    self.appInfoStorage.saveExpirationDate(date: expirationDateString)
+                }
+                
                 completion(.success(requestTokenResponseDTO.success))
             case .failure(let error):
                 completion(.failure(error))
@@ -46,7 +51,16 @@ extension DefaultAuthenticationImplentationRepository : AuthenticationRepository
         self.authenticationService.login(loginRequestDTO: loginRequestDTO) { result in
             switch result {
             case .success(let loginResponseDTO):
+                
                 self.appInfoStorage.saveRequestToken(requestToken: loginResponseDTO.token)
+                
+                if let expirationDateString = loginResponseDTO.expirationDateString {
+                    self.appInfoStorage.saveExpirationDate(date: expirationDateString)
+                }
+                    
+                self.appInfoStorage.saveUserName(userName: userName)
+                self.appInfoStorage.savePassword(password: password)
+                
                 completion(.success(loginResponseDTO.success))
             case .failure(let error):
                 completion(.failure(error))

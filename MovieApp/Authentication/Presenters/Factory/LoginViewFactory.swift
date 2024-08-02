@@ -20,27 +20,27 @@ class LoginViewFactory {
     }
     
     private func getLoginViewModel() -> LoginViewModel {
-        return LoginViewModel(authenticateUseCase: getAuthenticateUseCase(), loginCoordinator: self.loginCoordinator)
+        return LoginViewModel(authenticateUseCase: getAuthenticateUseCase(), loginValidatationUseCase: getLoginValidationUseCase(), loginCoordinator: self.loginCoordinator)
     }
     
     private func getAuthenticateUseCase() -> AuthenticateUseCase {
         return AuthenticateUseCaseImplementation(authenticationRepository: getAuthenticateRepository())
     }
     
+    
+    
     private func getAuthenticateRepository() -> AuthenticationRepository {
-      return DefaultAuthenticationImplentationRepository(authenticationService: DefaultAuthenticationImplementation(), appInfoStorage: KeyChainImplementation())
+      return DefaultAuthenticationRepositoryImplentation(authenticationService: DefaultAuthenticationImplementation(), appInfoStorage: KeyChainImplementation())
     }
     
     
+    private func getLoginValidationUseCase() -> LoginValidatationUseCase {
+        return LoginValidatationUseCaseImplementation(loginValidationRepository: getLoginVaValidationRepository())
+    }
     
-    
-    
-    
-    
-    
-    
-    
-    
+    private func getLoginVaValidationRepository() -> LoginValidationRepository {
+      return DefaultLoginValidtationRepositoryImplentation(appInfoStorage: KeyChainImplementation())
+    }
     
 }
 

@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+import MovieAppNetworking
 
 class DefaultAuthenticationImplementation {
     private var apiManager: APIManager

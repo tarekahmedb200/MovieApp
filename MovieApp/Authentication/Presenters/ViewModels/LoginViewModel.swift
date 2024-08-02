@@ -15,10 +15,12 @@ class LoginViewModel : ObservableObject {
     @Published  var showAlert : Bool = false
     
     private var authenticateUseCase : AuthenticateUseCase
+    private var loginValidatationUseCase : LoginValidatationUseCase
     private var loginCoordinator : LoginCoordinator
     
-    init(authenticateUseCase: AuthenticateUseCase, loginCoordinator: LoginCoordinator) {
+    init(authenticateUseCase: AuthenticateUseCase, loginValidatationUseCase : LoginValidatationUseCase ,loginCoordinator: LoginCoordinator) {
         self.authenticateUseCase = authenticateUseCase
+        self.loginValidatationUseCase = loginValidatationUseCase
         self.loginCoordinator = loginCoordinator
     }
     
@@ -40,6 +42,14 @@ class LoginViewModel : ObservableObject {
                     self?.errorMessage = error.localizedDescription
                     self?.showAlert = true
                 }
+            }
+        }
+    }
+    
+    func checkUserSignedBefore() {
+        self.loginValidatationUseCase.execute { [weak self] isSignedBefore in
+            if isSignedBefore {
+                self?.presentHomeScreen()
             }
         }
     }

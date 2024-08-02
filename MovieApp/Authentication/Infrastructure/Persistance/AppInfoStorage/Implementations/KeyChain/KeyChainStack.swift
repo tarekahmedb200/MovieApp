@@ -16,8 +16,12 @@ class KeyChainStack {
         keychain.set(value, forKey: key)
     }
     
-    func getValue(key:String)  -> String? {
+    func getValue(key:String) -> String? {
         return keychain.get(key)
+    }
+    
+    func clearAll() {
+        keychain.clear()
     }
 
 }

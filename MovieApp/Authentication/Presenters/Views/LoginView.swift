@@ -37,14 +37,16 @@ struct LoginView: View {
                     .foregroundStyle(.white)
                     .clipShape(Capsule())
                     .padding(.top,20)
-                
             })
             
             Spacer()
             
         }
+        .onAppear(perform: {
+            viewModel.checkUserSignedBefore()
+        })
         .alert(viewModel.errorMessage, isPresented: $viewModel.showAlert) {
-                    Button("OK", role: .cancel) { }
+            Button("OK", role: .cancel) { }
         }
         .toolbar {
             ToolbarItemGroup(placement: .keyboard) {
@@ -75,7 +77,6 @@ struct LoginView: View {
             .foregroundStyle(.black)
             .clipShape(Capsule())
             
-            
             Divider()
         }
     }
@@ -84,11 +85,6 @@ struct LoginView: View {
         UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
     }
     
-    
-    
-    
 }
 
-#Preview {
-    LoginView(viewModel: LoginViewModel(authenticateUseCase: AuthenticateUseCaseImplementation(authenticationRepository: DefaultAuthenticationImplentationRepository(authenticationService: DefaultAuthenticationImplementation(), appInfoStorage: KeyChainImplementation())), loginCoordinator: LoginCoordinator()))
-}
+
