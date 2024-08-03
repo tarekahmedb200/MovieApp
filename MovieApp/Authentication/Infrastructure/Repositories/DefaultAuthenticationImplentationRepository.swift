@@ -6,8 +6,8 @@
 //
 
 import Foundation
-import MovieAppNetworking
-import SwiftTypesExtensions
+
+
 
 class DefaultAuthenticationRepositoryImplentation {
     

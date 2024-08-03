@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import MovieAppNetworking
+
 
 
 enum TopRatedRequest : APIRequest {

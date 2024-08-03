@@ -17,6 +17,11 @@ struct HomeCoordinatorView: View {
             MediaListCoordinatorView(coordinator: coordinator.mediaListCoordinator)
                 .tabItem { Label("Media List", systemImage: "list.bullet") }
                 .tag(HomeTab.mediaList)
+            
+            SearchCoordinatorView(coordinator: coordinator.searchCoordinator)
+                .tabItem { Label("Search", systemImage: "magnifyingglass") }
+                .tag(HomeTab.mediaList)
+            
         }
     }
 

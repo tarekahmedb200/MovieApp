@@ -9,6 +9,7 @@ import Foundation
 
 enum HomeTab {
     case mediaList
+    case search
 }
 
 class HomeCoordinator: ObservableObject {
@@ -18,6 +19,11 @@ class HomeCoordinator: ObservableObject {
     lazy var mediaListCoordinator: MediaListCoordinator = {
          MediaListCoordinator(parentCoordinator: self)
     }()
+    
+    lazy var searchCoordinator: SearchCoordinator = {
+        SearchCoordinator(parentCoordinator: self)
+    }()
+
     
     init(parentCoordinator: LoginCoordinator) {
         self.parentCoordinator = parentCoordinator

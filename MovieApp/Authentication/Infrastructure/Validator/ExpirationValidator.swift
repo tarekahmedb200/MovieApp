@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import SwiftTypesExtensions
 
 class ExpirationValidator {
     private var expireDate: Date

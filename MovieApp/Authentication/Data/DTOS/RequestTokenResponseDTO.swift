@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import SwiftTypesExtensions
+
 
 struct RequestTokenResponseDTO : Decodable {
     var success : Bool

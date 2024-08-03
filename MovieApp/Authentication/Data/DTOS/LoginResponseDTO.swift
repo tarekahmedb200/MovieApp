@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import SwiftTypesExtensions
 
 struct LoginResponseDTO : Codable {
     var success : Bool

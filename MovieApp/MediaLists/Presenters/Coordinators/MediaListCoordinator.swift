@@ -18,10 +18,6 @@ class MediaListCoordinator : ObservableObject {
     private var parentCoordinator : HomeCoordinator
   
     
-//    lazy var mediaListView: MediaListView = {
-//        return MediaListViewFactory(mediaListCoordinator: self).getMediaListView()
-//    }()
-    
     @Published var path = NavigationPath()
     
     init(parentCoordinator: HomeCoordinator) {
@@ -46,7 +42,7 @@ class MediaListCoordinator : ObservableObject {
         case .mediaList:
             MediaListFactory(mediaListCoordinator: self).getMediaListView()
         case .mediaDetails(let id,let mediaType):
-            MediaDetailsFactory(mediaID: id, mediaType: mediaType, mediaListCoordinator: self).getMediaDetailsView()
+            MediaDetailsCoordinatorView(coordinator: MediaDetailsCoordinator(mediaID: id, mediaType: mediaType))
         }
     }
     

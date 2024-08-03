@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import MovieAppNetworking
+
 
 class DefaultMediaListServiceImplementation {
     var apiManager : APIManager
