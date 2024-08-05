@@ -140,6 +140,31 @@
 		3093C8532C54C1E0009DF963 /* RequestTokenResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3093C8522C54C1E0009DF963 /* RequestTokenResponseDTO.swift */; };
 		3093C8552C54C2F0009DF963 /* DefaultAuthenticationImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3093C8542C54C2F0009DF963 /* DefaultAuthenticationImplementation.swift */; };
 		3093C8572C54C6F7009DF963 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3093C8562C54C6F7009DF963 /* LoginViewModel.swift */; };
+		3095A9BF2C60E7B0005BA180 /* ProfileCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3095A9BE2C60E7B0005BA180 /* ProfileCoordinatorView.swift */; };
+		3095A9C12C60E7EB005BA180 /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3095A9C02C60E7EB005BA180 /* ProfileCoordinator.swift */; };
+		3095A9C52C60F3E3005BA180 /* ProfileFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3095A9C42C60F3E3005BA180 /* ProfileFactory.swift */; };
+		3095A9D12C60F51D005BA180 /* LogoutRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3095A9D02C60F51D005BA180 /* LogoutRequest.swift */; };
+		3095A9D52C60F6F7005BA180 /* LogoutRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3095A9D42C60F6F7005BA180 /* LogoutRequestDTO.swift */; };
+		3095A9DA2C60F786005BA180 /* LogoutService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3095A9D92C60F786005BA180 /* LogoutService.swift */; };
+		3095A9DC2C60F7BD005BA180 /* LogoutResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3095A9DB2C60F7BD005BA180 /* LogoutResponseDTO.swift */; };
+		3095A9DE2C60F807005BA180 /* LogoutServiceImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3095A9DD2C60F807005BA180 /* LogoutServiceImplementation.swift */; };
+		3095A9E22C60F9B7005BA180 /* LogOutRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3095A9E12C60F9B7005BA180 /* LogOutRepository.swift */; };
+		3095A9E42C60FA3A005BA180 /* LogoutRepositoryImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3095A9E32C60FA3A005BA180 /* LogoutRepositoryImplementation.swift */; };
+		3095A9E62C60FC8A005BA180 /* LogoutUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3095A9E52C60FC8A005BA180 /* LogoutUseCase.swift */; };
+		3095A9E82C60FCE9005BA180 /* LogoutUseCaseImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3095A9E72C60FCE9005BA180 /* LogoutUseCaseImplementation.swift */; };
+		3095A9EA2C610186005BA180 /* WatchListFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3095A9E92C610186005BA180 /* WatchListFactory.swift */; };
+		3095A9F12C610282005BA180 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3095A9F02C610282005BA180 /* ProfileView.swift */; };
+		3095A9F32C6102A0005BA180 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3095A9F22C6102A0005BA180 /* ProfileViewModel.swift */; };
+		3095A9F52C61160E005BA180 /* ProfileRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3095A9F42C61160E005BA180 /* ProfileRequest.swift */; };
+		3095A9F72C611645005BA180 /* ProfileDetailsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3095A9F62C611645005BA180 /* ProfileDetailsService.swift */; };
+		3095A9F92C61165C005BA180 /* ProfileDetailsDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3095A9F82C61165C005BA180 /* ProfileDetailsDTO.swift */; };
+		3095A9FB2C611972005BA180 /* ProfileDetailsServiceImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3095A9FA2C611972005BA180 /* ProfileDetailsServiceImplementation.swift */; };
+		3095A9FD2C6119EC005BA180 /* ProfileDetailsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3095A9FC2C6119EC005BA180 /* ProfileDetailsRepository.swift */; };
+		3095A9FF2C611A22005BA180 /* ProfileDetailsRepositoryImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3095A9FE2C611A22005BA180 /* ProfileDetailsRepositoryImplementation.swift */; };
+		3095AA012C611B17005BA180 /* ProfileDetailsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3095AA002C611B17005BA180 /* ProfileDetailsUseCase.swift */; };
+		3095AA032C611B46005BA180 /* ProfileDetailsUseCaseImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3095AA022C611B46005BA180 /* ProfileDetailsUseCaseImplementation.swift */; };
+		3095AA072C615F10005BA180 /* WatchListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3095AA062C615F10005BA180 /* WatchListViewModel.swift */; };
+		3095AA092C616C2B005BA180 /* WatchListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3095AA082C616C2B005BA180 /* WatchListView.swift */; };
 		30B15BC42C5B4A75002BFEBB /* DefaultMediaDetailsServiceImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B15BC32C5B4A75002BFEBB /* DefaultMediaDetailsServiceImplementation.swift */; };
 		30B15BC62C5B4AF4002BFEBB /* MediaDetailsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B15BC52C5B4AF4002BFEBB /* MediaDetailsRequest.swift */; };
 		30B15BC82C5B4DB2002BFEBB /* MediaDetailsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B15BC72C5B4DB2002BFEBB /* MediaDetailsRepository.swift */; };
@@ -310,6 +335,31 @@
 		3093C8522C54C1E0009DF963 /* RequestTokenResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestTokenResponseDTO.swift; sourceTree = "<group>"; };
 		3093C8542C54C2F0009DF963 /* DefaultAuthenticationImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultAuthenticationImplementation.swift; sourceTree = "<group>"; };
 		3093C8562C54C6F7009DF963 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		3095A9BE2C60E7B0005BA180 /* ProfileCoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinatorView.swift; sourceTree = "<group>"; };
+		3095A9C02C60E7EB005BA180 /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
+		3095A9C42C60F3E3005BA180 /* ProfileFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFactory.swift; sourceTree = "<group>"; };
+		3095A9D02C60F51D005BA180 /* LogoutRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutRequest.swift; sourceTree = "<group>"; };
+		3095A9D42C60F6F7005BA180 /* LogoutRequestDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutRequestDTO.swift; sourceTree = "<group>"; };
+		3095A9D92C60F786005BA180 /* LogoutService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutService.swift; sourceTree = "<group>"; };
+		3095A9DB2C60F7BD005BA180 /* LogoutResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutResponseDTO.swift; sourceTree = "<group>"; };
+		3095A9DD2C60F807005BA180 /* LogoutServiceImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutServiceImplementation.swift; sourceTree = "<group>"; };
+		3095A9E12C60F9B7005BA180 /* LogOutRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogOutRepository.swift; sourceTree = "<group>"; };
+		3095A9E32C60FA3A005BA180 /* LogoutRepositoryImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutRepositoryImplementation.swift; sourceTree = "<group>"; };
+		3095A9E52C60FC8A005BA180 /* LogoutUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutUseCase.swift; sourceTree = "<group>"; };
+		3095A9E72C60FCE9005BA180 /* LogoutUseCaseImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutUseCaseImplementation.swift; sourceTree = "<group>"; };
+		3095A9E92C610186005BA180 /* WatchListFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchListFactory.swift; sourceTree = "<group>"; };
+		3095A9F02C610282005BA180 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		3095A9F22C6102A0005BA180 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		3095A9F42C61160E005BA180 /* ProfileRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRequest.swift; sourceTree = "<group>"; };
+		3095A9F62C611645005BA180 /* ProfileDetailsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetailsService.swift; sourceTree = "<group>"; };
+		3095A9F82C61165C005BA180 /* ProfileDetailsDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetailsDTO.swift; sourceTree = "<group>"; };
+		3095A9FA2C611972005BA180 /* ProfileDetailsServiceImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetailsServiceImplementation.swift; sourceTree = "<group>"; };
+		3095A9FC2C6119EC005BA180 /* ProfileDetailsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetailsRepository.swift; sourceTree = "<group>"; };
+		3095A9FE2C611A22005BA180 /* ProfileDetailsRepositoryImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetailsRepositoryImplementation.swift; sourceTree = "<group>"; };
+		3095AA002C611B17005BA180 /* ProfileDetailsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetailsUseCase.swift; sourceTree = "<group>"; };
+		3095AA022C611B46005BA180 /* ProfileDetailsUseCaseImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetailsUseCaseImplementation.swift; sourceTree = "<group>"; };
+		3095AA062C615F10005BA180 /* WatchListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchListViewModel.swift; sourceTree = "<group>"; };
+		3095AA082C616C2B005BA180 /* WatchListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchListView.swift; sourceTree = "<group>"; };
 		30B15BC32C5B4A75002BFEBB /* DefaultMediaDetailsServiceImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultMediaDetailsServiceImplementation.swift; sourceTree = "<group>"; };
 		30B15BC52C5B4AF4002BFEBB /* MediaDetailsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaDetailsRequest.swift; sourceTree = "<group>"; };
 		30B15BC72C5B4DB2002BFEBB /* MediaDetailsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaDetailsRepository.swift; sourceTree = "<group>"; };
@@ -996,6 +1046,7 @@
 		30738B6D2C5D5285002B0C92 /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
+				30424D0F2C56118300FA431F /* Persistance */,
 				30738BBB2C5E8271002B0C92 /* Repositories */,
 				30738BAD2C5E7F9A002B0C92 /* Service */,
 				30738B6E2C5D5290002B0C92 /* Network */,
@@ -1360,8 +1411,9 @@
 		3093C81A2C54A46D009DF963 /* MovieApp */ = {
 			isa = PBXGroup;
 			children = (
-				3093C82D2C54A55A009DF963 /* Main */,
 				30B15BDD2C5BB2D0002BFEBB /* Shared */,
+				3095A9B92C60E535005BA180 /* Profile */,
+				3093C82D2C54A55A009DF963 /* Main */,
 				3045CB772C58C6F500AA5FD5 /* Home */,
 				3093C8292C54A4F3009DF963 /* Authentication */,
 				30424D352C579E1E00FA431F /* MediaLists */,
@@ -1418,7 +1470,6 @@
 			children = (
 				3045CB892C58E05500AA5FD5 /* Validator */,
 				30424D1C2C5671EF00FA431F /* Repositories */,
-				30424D0F2C56118300FA431F /* Persistance */,
 				3093C8352C54A7B5009DF963 /* Network */,
 			);
 			path = Infrastructure;
@@ -1566,6 +1617,222 @@
 				3093C8542C54C2F0009DF963 /* DefaultAuthenticationImplementation.swift */,
 			);
 			path = Implementation;
+			sourceTree = "<group>";
+		};
+		3095A9B92C60E535005BA180 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				3095A9D22C60F6BF005BA180 /* Data */,
+				3095A9C62C60F41B005BA180 /* Domain */,
+				3095A9BB2C60E6A1005BA180 /* Infrastructure */,
+				3095A9BA2C60E579005BA180 /* Presenters */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		3095A9BA2C60E579005BA180 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				3095A9EC2C61022E005BA180 /* ViewModels */,
+				3095A9EB2C610226005BA180 /* View */,
+				3095A9C22C60F3BA005BA180 /* Factory */,
+				3095A9BD2C60E794005BA180 /* Coordinator */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		3095A9BB2C60E6A1005BA180 /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				3095A9CE2C60F506005BA180 /* Network */,
+				3095A9CC2C60F45A005BA180 /* Repositories */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		3095A9BD2C60E794005BA180 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				3095A9BE2C60E7B0005BA180 /* ProfileCoordinatorView.swift */,
+				3095A9C02C60E7EB005BA180 /* ProfileCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		3095A9C22C60F3BA005BA180 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				3095A9C32C60F3CC005BA180 /* Profile */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		3095A9C32C60F3CC005BA180 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				3095A9C42C60F3E3005BA180 /* ProfileFactory.swift */,
+				3095A9E92C610186005BA180 /* WatchListFactory.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		3095A9C62C60F41B005BA180 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				3095A9C82C60F42B005BA180 /* UseCases */,
+				3095A9C72C60F421005BA180 /* Repositories */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		3095A9C72C60F421005BA180 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				3095A9C92C60F43E005BA180 /* Protocols */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		3095A9C82C60F42B005BA180 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				3095A9CB2C60F449005BA180 /* Implementation */,
+				3095A9CA2C60F444005BA180 /* Protocols */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		3095A9C92C60F43E005BA180 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				3095A9E12C60F9B7005BA180 /* LogOutRepository.swift */,
+				3095A9FC2C6119EC005BA180 /* ProfileDetailsRepository.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		3095A9CA2C60F444005BA180 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				3095A9E52C60FC8A005BA180 /* LogoutUseCase.swift */,
+				3095AA002C611B17005BA180 /* ProfileDetailsUseCase.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		3095A9CB2C60F449005BA180 /* Implementation */ = {
+			isa = PBXGroup;
+			children = (
+				3095A9E72C60FCE9005BA180 /* LogoutUseCaseImplementation.swift */,
+				3095AA022C611B46005BA180 /* ProfileDetailsUseCaseImplementation.swift */,
+			);
+			path = Implementation;
+			sourceTree = "<group>";
+		};
+		3095A9CC2C60F45A005BA180 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				3095A9CD2C60F463005BA180 /* Implementations */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		3095A9CD2C60F463005BA180 /* Implementations */ = {
+			isa = PBXGroup;
+			children = (
+				3095A9E32C60FA3A005BA180 /* LogoutRepositoryImplementation.swift */,
+				3095A9FE2C611A22005BA180 /* ProfileDetailsRepositoryImplementation.swift */,
+			);
+			path = Implementations;
+			sourceTree = "<group>";
+		};
+		3095A9CE2C60F506005BA180 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				3095A9D62C60F732005BA180 /* Service */,
+				3095A9CF2C60F50D005BA180 /* Requests */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		3095A9CF2C60F50D005BA180 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				3095A9D02C60F51D005BA180 /* LogoutRequest.swift */,
+				3095A9F42C61160E005BA180 /* ProfileRequest.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		3095A9D22C60F6BF005BA180 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				3095A9D32C60F6C5005BA180 /* DTO */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		3095A9D32C60F6C5005BA180 /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				3095A9D42C60F6F7005BA180 /* LogoutRequestDTO.swift */,
+				3095A9DB2C60F7BD005BA180 /* LogoutResponseDTO.swift */,
+				3095A9F82C61165C005BA180 /* ProfileDetailsDTO.swift */,
+			);
+			path = DTO;
+			sourceTree = "<group>";
+		};
+		3095A9D62C60F732005BA180 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				3095A9D82C60F73E005BA180 /* Implementation */,
+				3095A9D72C60F737005BA180 /* Protocols */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		3095A9D72C60F737005BA180 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				3095A9D92C60F786005BA180 /* LogoutService.swift */,
+				3095A9F62C611645005BA180 /* ProfileDetailsService.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		3095A9D82C60F73E005BA180 /* Implementation */ = {
+			isa = PBXGroup;
+			children = (
+				3095A9DD2C60F807005BA180 /* LogoutServiceImplementation.swift */,
+				3095A9FA2C611972005BA180 /* ProfileDetailsServiceImplementation.swift */,
+			);
+			path = Implementation;
+			sourceTree = "<group>";
+		};
+		3095A9EB2C610226005BA180 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3095A9ED2C610239005BA180 /* ParentView */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		3095A9EC2C61022E005BA180 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				3095A9F22C6102A0005BA180 /* ProfileViewModel.swift */,
+				3095AA062C615F10005BA180 /* WatchListViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		3095A9ED2C610239005BA180 /* ParentView */ = {
+			isa = PBXGroup;
+			children = (
+				3095A9F02C610282005BA180 /* ProfileView.swift */,
+				3095AA082C616C2B005BA180 /* WatchListView.swift */,
+			);
+			name = ParentView;
 			sourceTree = "<group>";
 		};
 		30B15BDD2C5BB2D0002BFEBB /* Shared */ = {
@@ -1725,6 +1992,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				309201152C5A8E3100629457 /* MediaListFacade.swift in Sources */,
+				3095A9DE2C60F807005BA180 /* LogoutServiceImplementation.swift in Sources */,
 				30424D152C5615AC00FA431F /* AuthenticationInfoStorage.swift in Sources */,
 				30738BB12C5E7FC0002B0C92 /* MediaWatchListService.swift in Sources */,
 				30B15BD22C5B4F4F002BFEBB /* MovieDetailsUseCaseImplementation.swift in Sources */,
@@ -1740,6 +2008,7 @@
 				309201122C5A8CD700629457 /* UpComingTVShowUseCaseImplementation.swift in Sources */,
 				30738BBE2C5E828F002B0C92 /* MediaWatchListRepositoryImplementation.swift in Sources */,
 				3045CB6F2C58C61000AA5FD5 /* TopRatedTVShowUseCase.swift in Sources */,
+				3095A9E62C60FC8A005BA180 /* LogoutUseCase.swift in Sources */,
 				30738B5F2C5D3561002B0C92 /* MediaItemRowStyleView.swift in Sources */,
 				30738B6B2C5D5272002B0C92 /* StringExtension.swift in Sources */,
 				30738B192C5CD770002B0C92 /* DefaultMediaGenresServiceImplementation.swift in Sources */,
@@ -1748,14 +2017,20 @@
 				30738B9B2C5E2CC6002B0C92 /* MediaSearchRequest.swift in Sources */,
 				30B15BE42C5C0421002BFEBB /* MediaCreditsRequest.swift in Sources */,
 				30738B5B2C5D3228002B0C92 /* GenreContentContainerListViewModel.swift in Sources */,
+				3095A9EA2C610186005BA180 /* WatchListFactory.swift in Sources */,
 				3045CB762C58C6D400AA5FD5 /* MediaListCoordinator.swift in Sources */,
+				3095AA092C616C2B005BA180 /* WatchListView.swift in Sources */,
 				30738BB52C5E814E002B0C92 /* WatchListResponseDTO.swift in Sources */,
 				30738BCC2C5E8EB2002B0C92 /* WatchListTVShowsUseCase.swift in Sources */,
+				3095A9E42C60FA3A005BA180 /* LogoutRepositoryImplementation.swift in Sources */,
 				30738BAA2C5E7D9D002B0C92 /* WatchListRequestDTO.swift in Sources */,
 				30424D1E2C56722B00FA431F /* DefaultAuthenticationImplentationRepository.swift in Sources */,
 				30B15BDA2C5B896D002BFEBB /* MediaTypeDTO.swift in Sources */,
+				3095A9DA2C60F786005BA180 /* LogoutService.swift in Sources */,
 				3045CBA72C58F06800AA5FD5 /* LoginValidatationUseCaseImplementation.swift in Sources */,
 				30738B4B2C5D28E3002B0C92 /* MediaGenreContentRequest.swift in Sources */,
+				3095AA012C611B17005BA180 /* ProfileDetailsUseCase.swift in Sources */,
+				3095A9C52C60F3E3005BA180 /* ProfileFactory.swift in Sources */,
 				30738BA32C5E2EAE002B0C92 /* MovieSearchUseCaseImplementation.swift in Sources */,
 				30738B9F2C5E2E5C002B0C92 /* MovieSearchUseCase.swift in Sources */,
 				3045CBA52C58EED000AA5FD5 /* LoginValidatationUseCase.swift in Sources */,
@@ -1774,27 +2049,33 @@
 				30424D2B2C56B40C00FA431F /* SessionResponseDTO.swift in Sources */,
 				30738B742C5D53F7002B0C92 /* APIConstants.swift in Sources */,
 				30738B752C5D53F7002B0C92 /* RequestType.swift in Sources */,
+				3095A9F92C61165C005BA180 /* ProfileDetailsDTO.swift in Sources */,
 				30738B762C5D53F7002B0C92 /* NetworkError.swift in Sources */,
 				30738B4F2C5D2B83002B0C92 /* MediaGenreContentListRepositoryImplementation.swift in Sources */,
 				30738B352C5CE0CE002B0C92 /* SearchViewModel.swift in Sources */,
 				30738B4D2C5D2B24002B0C92 /* MediaGenreContentListRepository.swift in Sources */,
 				30738BA52C5E2EB9002B0C92 /* TVShowSearchUseCaseImplementation.swift in Sources */,
 				30B15BD62C5B5282002BFEBB /* MediaDetailsView.swift in Sources */,
+				3095A9E22C60F9B7005BA180 /* LogOutRepository.swift in Sources */,
 				30738B2E2C5CDC5E002B0C92 /* SearchCoordinatorView.swift in Sources */,
 				30424D5E2C57A34C00FA431F /* TopRatedRequest.swift in Sources */,
+				3095A9FB2C611972005BA180 /* ProfileDetailsServiceImplementation.swift in Sources */,
 				30738B3B2C5D11B4002B0C92 /* GenreListView.swift in Sources */,
 				30738B302C5CDC69002B0C92 /* SearchCoordinator.swift in Sources */,
 				30B15BE02C5BB2EC002BFEBB /* GeometryProxy.swift in Sources */,
 				30738BB32C5E7FF2002B0C92 /* MediaWatchListServiceImplementation.swift in Sources */,
 				30B15BD02C5B4F3E002BFEBB /* TVShowDetailsUseCaseImplementation.swift in Sources */,
 				30738BA12C5E2E67002B0C92 /* TVShowSearchUseCase.swift in Sources */,
+				3095AA032C611B46005BA180 /* ProfileDetailsUseCaseImplementation.swift in Sources */,
 				30738BC42C5E8364002B0C92 /* MediaFavouriteUseCaseImplementation.swift in Sources */,
+				3095A9BF2C60E7B0005BA180 /* ProfileCoordinatorView.swift in Sources */,
 				30738B272C5CDBD5002B0C92 /* TVShowGenresUseCase.swift in Sources */,
 				3045CBC32C594DE800AA5FD5 /* MediaListViewModel.swift in Sources */,
 				30738B452C5D2448002B0C92 /* Color.swift in Sources */,
 				30B15BC82C5B4DB2002BFEBB /* MediaDetailsRepository.swift in Sources */,
 				30738AFC2C5CBFD0002B0C92 /* MediaCreditListViewModel.swift in Sources */,
 				3045CB742C58C6C700AA5FD5 /* MediaListCoordinatorView.swift in Sources */,
+				3095AA072C615F10005BA180 /* WatchListViewModel.swift in Sources */,
 				30738B412C5D12EE002B0C92 /* MediaGenreItemViewModel.swift in Sources */,
 				3092010E2C5A8C7A00629457 /* UpComingTVShowsUseCase.swift in Sources */,
 				3045CB712C58C62F00AA5FD5 /* TopRatedTVShowUseCaseImplementation.swift in Sources */,
@@ -1807,10 +2088,12 @@
 				3093C8532C54C1E0009DF963 /* RequestTokenResponseDTO.swift in Sources */,
 				30B15BCA2C5B4E03002BFEBB /* DefaultMediaDetailsRepositoryImplementation.swift in Sources */,
 				30738BCE2C5E8EC8002B0C92 /* WatchListTVShowsUseCaseImplementation.swift in Sources */,
+				3095A9DC2C60F7BD005BA180 /* LogoutResponseDTO.swift in Sources */,
 				30738BD02C5E8F2D002B0C92 /* WatchListMoviesUseCaseImplementation.swift in Sources */,
 				3093C8512C54C12E009DF963 /* AuthenticationService.swift in Sources */,
 				3093C8552C54C2F0009DF963 /* DefaultAuthenticationImplementation.swift in Sources */,
 				30738B922C5D5994002B0C92 /* MediaDetailsCoordinator.swift in Sources */,
+				3095A9E82C60FCE9005BA180 /* LogoutUseCaseImplementation.swift in Sources */,
 				30738B252C5CDB31002B0C92 /* MovieGenresUseCaseImplementation.swift in Sources */,
 				30738B972C5E2ABF002B0C92 /* MediaSearchService.swift in Sources */,
 				30738B292C5CDBEB002B0C92 /* TVShowGenresUseCaseImplementation.swift in Sources */,
@@ -1842,23 +2125,32 @@
 				30738B372C5CE1DC002B0C92 /* SearchView.swift in Sources */,
 				3093C81C2C54A46D009DF963 /* MovieApp.swift in Sources */,
 				30424D292C56B3E600FA431F /* SessionRequestDTO.swift in Sources */,
+				3095A9F52C61160E005BA180 /* ProfileRequest.swift in Sources */,
 				30424D612C57A47000FA431F /* MediaListService.swift in Sources */,
 				30738B112C5CD5F4002B0C92 /* MediaGenresRequest.swift in Sources */,
 				309201102C5A8CBC00629457 /* UpComingMovieUseCaseImplementation.swift in Sources */,
+				3095A9F12C610282005BA180 /* ProfileView.swift in Sources */,
 				30738B212C5CDADF002B0C92 /* MovieGenresUseCase.swift in Sources */,
+				3095A9FF2C611A22005BA180 /* ProfileDetailsRepositoryImplementation.swift in Sources */,
 				30738B5D2C5D3534002B0C92 /* GenreContentContainerListView.swift in Sources */,
 				30B15BF02C5C082A002BFEBB /* MovieCreditsUseCase.swift in Sources */,
 				30738B9D2C5E2E19002B0C92 /* MediaSearchRepository.swift in Sources */,
 				30738B1F2C5CD921002B0C92 /* MediaGenresRepositoryImplementation.swift in Sources */,
 				30B15BF22C5C0856002BFEBB /* MovieCreditUseCaseImplementation.swift in Sources */,
 				30B15BD82C5B531C002BFEBB /* MediaDetailsViewModel.swift in Sources */,
+				3095A9F72C611645005BA180 /* ProfileDetailsService.swift in Sources */,
 				30B15BE82C5C053D002BFEBB /* MediaCreditDTO.swift in Sources */,
+				3095A9D12C60F51D005BA180 /* LogoutRequest.swift in Sources */,
 				30424D272C56911C00FA431F /* AuthenticateUseCaseImplementation.swift in Sources */,
 				3092010C2C5A8C6600629457 /* UpComingMoviesUseCase.swift in Sources */,
+				3095A9FD2C6119EC005BA180 /* ProfileDetailsRepository.swift in Sources */,
 				30738B512C5D2DD0002B0C92 /* MovieGenreContentListUseCase.swift in Sources */,
 				3045CB9E2C58E8B000AA5FD5 /* ExpirationValidator.swift in Sources */,
 				30738BC62C5E8567002B0C92 /* AddTVShowToWatchlistUseCase.swift in Sources */,
+				3095A9F32C6102A0005BA180 /* ProfileViewModel.swift in Sources */,
+				3095A9D52C60F6F7005BA180 /* LogoutRequestDTO.swift in Sources */,
 				3045CB7F2C58C77700AA5FD5 /* HomeCoordinatorView.swift in Sources */,
+				3095A9C12C60E7EB005BA180 /* ProfileCoordinator.swift in Sources */,
 				30B15BDC2C5B8A41002BFEBB /* MediaDetailsFactory.swift in Sources */,
 				30424D192C565C6700FA431F /* KeyChainStack.swift in Sources */,
 				30424D672C57AA7A00FA431F /* DefaultMediaListServiceImplementation.swift in Sources */,

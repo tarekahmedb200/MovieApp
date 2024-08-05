@@ -20,8 +20,12 @@ struct HomeCoordinatorView: View {
             
             SearchCoordinatorView(coordinator: coordinator.searchCoordinator)
                 .tabItem { Label("Search", systemImage: "magnifyingglass") }
-                .tag(HomeTab.mediaList)
+                .tag(HomeTab.search)
             
+
+            ProfileCoordinatorView(coordinator: coordinator.profileCoordinator)
+                .tabItem { Label("Profile", systemImage: "person.circle") }
+                .tag(HomeTab.profile)            
         }
     }
 

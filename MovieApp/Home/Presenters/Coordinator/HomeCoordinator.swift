@@ -10,6 +10,7 @@ import Foundation
 enum HomeTab {
     case mediaList
     case search
+    case profile
 }
 
 class HomeCoordinator: ObservableObject {
@@ -23,13 +24,17 @@ class HomeCoordinator: ObservableObject {
     lazy var searchCoordinator: SearchCoordinator = {
         SearchCoordinator(parentCoordinator: self)
     }()
-
     
+    lazy var profileCoordinator: ProfileCoordinator = {
+        ProfileCoordinator(parentCoordinator: self)
+    }()
+
     init(parentCoordinator: LoginCoordinator) {
         self.parentCoordinator = parentCoordinator
     }
     
     func dismiss() {
+        tab = .mediaList
         parentCoordinator.dimissFullScreenCover()
     }
     
