@@ -25,9 +25,11 @@ class MediaDetailsFactory {
     }
     
     private func getMediaListViewModel() -> MediaDetailsViewModel {
+        
         return MediaDetailsViewModel(mediaType: self.mediaType, mediaID: self.mediaID, movieDetailsUseCase: getMovieDetailsUseCase(), tvShowDetailsUseCase: getTVShowDetailsUseCase(),
                                      movieCreditUseCase: getMovieCreditsUseCase(),
                                      tvShowCreditUseCase: getTVShowCreditsUseCase(),
+                                     addMovieToWatchlistUseCase: getAddMovieToWatchlistUseCase(), addTVShowToWatchlistUseCase: getAddTVShowToWatchlistUseCase(), watchListMoviesUseCase: getWatchListMoviesUseCase(), watchListTVShowsUseCase: getWatchListTVShowsUseCase(),
                                      mediaDetailsCoordinator: self.mediaDetailsCoordinator)
     }
     
@@ -49,6 +51,26 @@ class MediaDetailsFactory {
     
     private func getMediaDetailsRepository() -> MediaDetailsRepository {
         return DefaultMediaDetailsRepositoryImplementation(mediaDetailsService: DefaultMediaDetailsServiceImplementation())
+    }
+    
+    private func getAddMovieToWatchlistUseCase() -> AddMovieToWatchlistUseCase {
+        return AddMovieToWatchListUseCaseImplementation(mediaWatchListRepository: getMediaWatchListRepository())
+    }
+    
+    private func getAddTVShowToWatchlistUseCase() -> AddTVShowToWatchlistUseCase {
+        return AddTVShowToWatchListUseCaseImplementation(mediaWatchListRepository: getMediaWatchListRepository())
+    }
+    
+    private func getWatchListMoviesUseCase() -> WatchListMoviesUseCase {
+        return WatchListMoviesUseCaseImplementation(mediaWatchListRepository: getMediaWatchListRepository())
+    }
+    
+    private func getWatchListTVShowsUseCase() -> WatchListTVShowsUseCase {
+        return WatchListTVShowsUseCaseImplementation(mediaWatchListRepository: getMediaWatchListRepository())
+    }
+
+    private func getMediaWatchListRepository() -> MediaWatchListRepository {
+        return MediaWatchListRepositoryImplementation(mediaWatchListService: MediaWatchListServiceImplementation())
     }
     
 }

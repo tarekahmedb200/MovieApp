@@ -27,6 +27,16 @@ struct MediaDetailsView: View {
                 subInfoView
                 creditView
             }
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button {
+                        viewModel.addMediaToWatchlist()
+                    } label: {
+                        Image(systemName: viewModel.isAddedToWatchList ? "plus.app.fill" : "plus.app")
+                    }
+                }
+            }
+            
         }
     }
     

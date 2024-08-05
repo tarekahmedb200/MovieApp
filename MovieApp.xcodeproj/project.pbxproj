@@ -104,6 +104,21 @@
 		30738BA32C5E2EAE002B0C92 /* MovieSearchUseCaseImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30738BA22C5E2EAE002B0C92 /* MovieSearchUseCaseImplementation.swift */; };
 		30738BA52C5E2EB9002B0C92 /* TVShowSearchUseCaseImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30738BA42C5E2EB9002B0C92 /* TVShowSearchUseCaseImplementation.swift */; };
 		30738BA72C5E3047002B0C92 /* MediaSearchRepositoryImplemenetation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30738BA62C5E3047002B0C92 /* MediaSearchRepositoryImplemenetation.swift */; };
+		30738BAA2C5E7D9D002B0C92 /* WatchListRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30738BA92C5E7D9D002B0C92 /* WatchListRequestDTO.swift */; };
+		30738BAC2C5E7E76002B0C92 /* MediaWatchListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30738BAB2C5E7E76002B0C92 /* MediaWatchListRequest.swift */; };
+		30738BB12C5E7FC0002B0C92 /* MediaWatchListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30738BB02C5E7FC0002B0C92 /* MediaWatchListService.swift */; };
+		30738BB32C5E7FF2002B0C92 /* MediaWatchListServiceImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30738BB22C5E7FF2002B0C92 /* MediaWatchListServiceImplementation.swift */; };
+		30738BB52C5E814E002B0C92 /* WatchListResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30738BB42C5E814E002B0C92 /* WatchListResponseDTO.swift */; };
+		30738BBA2C5E8238002B0C92 /* MediaWatchListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30738BB92C5E8238002B0C92 /* MediaWatchListRepository.swift */; };
+		30738BBE2C5E828F002B0C92 /* MediaWatchListRepositoryImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30738BBD2C5E828F002B0C92 /* MediaWatchListRepositoryImplementation.swift */; };
+		30738BC02C5E8340002B0C92 /* AddMovieToWatchlistUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30738BBF2C5E8340002B0C92 /* AddMovieToWatchlistUseCase.swift */; };
+		30738BC42C5E8364002B0C92 /* MediaFavouriteUseCaseImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30738BC32C5E8364002B0C92 /* MediaFavouriteUseCaseImplementation.swift */; };
+		30738BC62C5E8567002B0C92 /* AddTVShowToWatchlistUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30738BC52C5E8567002B0C92 /* AddTVShowToWatchlistUseCase.swift */; };
+		30738BC82C5E8580002B0C92 /* AddTVShowToWatchListUseCaseImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30738BC72C5E8580002B0C92 /* AddTVShowToWatchListUseCaseImplementation.swift */; };
+		30738BCA2C5E8E5D002B0C92 /* WatchListMoviesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30738BC92C5E8E5D002B0C92 /* WatchListMoviesUseCase.swift */; };
+		30738BCC2C5E8EB2002B0C92 /* WatchListTVShowsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30738BCB2C5E8EB2002B0C92 /* WatchListTVShowsUseCase.swift */; };
+		30738BCE2C5E8EC8002B0C92 /* WatchListTVShowsUseCaseImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30738BCD2C5E8EC8002B0C92 /* WatchListTVShowsUseCaseImplementation.swift */; };
+		30738BD02C5E8F2D002B0C92 /* WatchListMoviesUseCaseImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30738BCF2C5E8F2D002B0C92 /* WatchListMoviesUseCaseImplementation.swift */; };
 		309200FF2C5A236900629457 /* MediaListFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309200FE2C5A236900629457 /* MediaListFactory.swift */; };
 		309201022C5A2D1800629457 /* MediaItemsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309201012C5A2D1800629457 /* MediaItemsListView.swift */; };
 		309201042C5A2D5F00629457 /* MediaItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309201032C5A2D5F00629457 /* MediaItemView.swift */; };
@@ -252,6 +267,21 @@
 		30738BA22C5E2EAE002B0C92 /* MovieSearchUseCaseImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSearchUseCaseImplementation.swift; sourceTree = "<group>"; };
 		30738BA42C5E2EB9002B0C92 /* TVShowSearchUseCaseImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowSearchUseCaseImplementation.swift; sourceTree = "<group>"; };
 		30738BA62C5E3047002B0C92 /* MediaSearchRepositoryImplemenetation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaSearchRepositoryImplemenetation.swift; sourceTree = "<group>"; };
+		30738BA92C5E7D9D002B0C92 /* WatchListRequestDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchListRequestDTO.swift; sourceTree = "<group>"; };
+		30738BAB2C5E7E76002B0C92 /* MediaWatchListRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaWatchListRequest.swift; sourceTree = "<group>"; };
+		30738BB02C5E7FC0002B0C92 /* MediaWatchListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaWatchListService.swift; sourceTree = "<group>"; };
+		30738BB22C5E7FF2002B0C92 /* MediaWatchListServiceImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaWatchListServiceImplementation.swift; sourceTree = "<group>"; };
+		30738BB42C5E814E002B0C92 /* WatchListResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchListResponseDTO.swift; sourceTree = "<group>"; };
+		30738BB92C5E8238002B0C92 /* MediaWatchListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaWatchListRepository.swift; sourceTree = "<group>"; };
+		30738BBD2C5E828F002B0C92 /* MediaWatchListRepositoryImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaWatchListRepositoryImplementation.swift; sourceTree = "<group>"; };
+		30738BBF2C5E8340002B0C92 /* AddMovieToWatchlistUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMovieToWatchlistUseCase.swift; sourceTree = "<group>"; };
+		30738BC32C5E8364002B0C92 /* MediaFavouriteUseCaseImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaFavouriteUseCaseImplementation.swift; sourceTree = "<group>"; };
+		30738BC52C5E8567002B0C92 /* AddTVShowToWatchlistUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTVShowToWatchlistUseCase.swift; sourceTree = "<group>"; };
+		30738BC72C5E8580002B0C92 /* AddTVShowToWatchListUseCaseImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTVShowToWatchListUseCaseImplementation.swift; sourceTree = "<group>"; };
+		30738BC92C5E8E5D002B0C92 /* WatchListMoviesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchListMoviesUseCase.swift; sourceTree = "<group>"; };
+		30738BCB2C5E8EB2002B0C92 /* WatchListTVShowsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchListTVShowsUseCase.swift; sourceTree = "<group>"; };
+		30738BCD2C5E8EC8002B0C92 /* WatchListTVShowsUseCaseImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchListTVShowsUseCaseImplementation.swift; sourceTree = "<group>"; };
+		30738BCF2C5E8F2D002B0C92 /* WatchListMoviesUseCaseImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchListMoviesUseCaseImplementation.swift; sourceTree = "<group>"; };
 		309200FE2C5A236900629457 /* MediaListFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaListFactory.swift; sourceTree = "<group>"; };
 		309201012C5A2D1800629457 /* MediaItemsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaItemsListView.swift; sourceTree = "<group>"; };
 		309201032C5A2D5F00629457 /* MediaItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaItemView.swift; sourceTree = "<group>"; };
@@ -785,8 +815,10 @@
 			isa = PBXGroup;
 			children = (
 				30B15BD92C5B896D002BFEBB /* MediaTypeDTO.swift */,
+				30738BA92C5E7D9D002B0C92 /* WatchListRequestDTO.swift */,
 				30424D622C57A4F700FA431F /* MediaItemDTO.swift */,
 				30738B0E2C5CD3AB002B0C92 /* MediaGenreDTO.swift */,
+				30738BB42C5E814E002B0C92 /* WatchListResponseDTO.swift */,
 			);
 			path = DTOS;
 			sourceTree = "<group>";
@@ -964,6 +996,8 @@
 		30738B6D2C5D5285002B0C92 /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
+				30738BBB2C5E8271002B0C92 /* Repositories */,
+				30738BAD2C5E7F9A002B0C92 /* Service */,
 				30738B6E2C5D5290002B0C92 /* Network */,
 			);
 			path = Infrastructure;
@@ -992,6 +1026,7 @@
 			children = (
 				3093C8432C54AC65009DF963 /* Info */,
 				30738B712C5D52CD002B0C92 /* Protocols */,
+				30738BAB2C5E7E76002B0C92 /* MediaWatchListRequest.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -1205,6 +1240,95 @@
 				30738B642C5D3620002B0C92 /* MediaItemRowStyleViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		30738BAD2C5E7F9A002B0C92 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				30738BAF2C5E7FA7002B0C92 /* Implementations */,
+				30738BAE2C5E7FA0002B0C92 /* Potocols */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		30738BAE2C5E7FA0002B0C92 /* Potocols */ = {
+			isa = PBXGroup;
+			children = (
+				30738BB02C5E7FC0002B0C92 /* MediaWatchListService.swift */,
+			);
+			path = Potocols;
+			sourceTree = "<group>";
+		};
+		30738BAF2C5E7FA7002B0C92 /* Implementations */ = {
+			isa = PBXGroup;
+			children = (
+				30738BB22C5E7FF2002B0C92 /* MediaWatchListServiceImplementation.swift */,
+			);
+			path = Implementations;
+			sourceTree = "<group>";
+		};
+		30738BB62C5E820A002B0C92 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				30738BB82C5E821B002B0C92 /* UseCases */,
+				30738BB72C5E8211002B0C92 /* Repositories */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		30738BB72C5E8211002B0C92 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				30738BB92C5E8238002B0C92 /* MediaWatchListRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		30738BB82C5E821B002B0C92 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				30738BC22C5E8350002B0C92 /* Implementation */,
+				30738BC12C5E8346002B0C92 /* Protocols */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		30738BBB2C5E8271002B0C92 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				30738BBC2C5E827D002B0C92 /* Implementations */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		30738BBC2C5E827D002B0C92 /* Implementations */ = {
+			isa = PBXGroup;
+			children = (
+				30738BBD2C5E828F002B0C92 /* MediaWatchListRepositoryImplementation.swift */,
+			);
+			path = Implementations;
+			sourceTree = "<group>";
+		};
+		30738BC12C5E8346002B0C92 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				30738BBF2C5E8340002B0C92 /* AddMovieToWatchlistUseCase.swift */,
+				30738BC52C5E8567002B0C92 /* AddTVShowToWatchlistUseCase.swift */,
+				30738BC92C5E8E5D002B0C92 /* WatchListMoviesUseCase.swift */,
+				30738BCB2C5E8EB2002B0C92 /* WatchListTVShowsUseCase.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		30738BC22C5E8350002B0C92 /* Implementation */ = {
+			isa = PBXGroup;
+			children = (
+				30738BC32C5E8364002B0C92 /* MediaFavouriteUseCaseImplementation.swift */,
+				30738BC72C5E8580002B0C92 /* AddTVShowToWatchListUseCaseImplementation.swift */,
+				30738BCF2C5E8F2D002B0C92 /* WatchListMoviesUseCaseImplementation.swift */,
+				30738BCD2C5E8EC8002B0C92 /* WatchListTVShowsUseCaseImplementation.swift */,
+			);
+			path = Implementation;
 			sourceTree = "<group>";
 		};
 		309201132C5A8E0E00629457 /* Facade */ = {
@@ -1447,6 +1571,7 @@
 		30B15BDD2C5BB2D0002BFEBB /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				30738BB62C5E820A002B0C92 /* Domain */,
 				30738B932C5E205C002B0C92 /* Presenters */,
 				30738B6D2C5D5285002B0C92 /* Infrastructure */,
 				30738B0D2C5CD37C002B0C92 /* DTOS */,
@@ -1601,6 +1726,7 @@
 			files = (
 				309201152C5A8E3100629457 /* MediaListFacade.swift in Sources */,
 				30424D152C5615AC00FA431F /* AuthenticationInfoStorage.swift in Sources */,
+				30738BB12C5E7FC0002B0C92 /* MediaWatchListService.swift in Sources */,
 				30B15BD22C5B4F4F002BFEBB /* MovieDetailsUseCaseImplementation.swift in Sources */,
 				30738B902C5D5984002B0C92 /* MediaDetailsCoordinatorView.swift in Sources */,
 				309201082C5A5B7300629457 /* MediaItemsListViewModel.swift in Sources */,
@@ -1610,7 +1736,9 @@
 				30B15BC42C5B4A75002BFEBB /* DefaultMediaDetailsServiceImplementation.swift in Sources */,
 				30424D0C2C560C9100FA431F /* LoginRequestDTO.swift in Sources */,
 				30424D632C57A4F700FA431F /* MediaItemDTO.swift in Sources */,
+				30738BCA2C5E8E5D002B0C92 /* WatchListMoviesUseCase.swift in Sources */,
 				309201122C5A8CD700629457 /* UpComingTVShowUseCaseImplementation.swift in Sources */,
+				30738BBE2C5E828F002B0C92 /* MediaWatchListRepositoryImplementation.swift in Sources */,
 				3045CB6F2C58C61000AA5FD5 /* TopRatedTVShowUseCase.swift in Sources */,
 				30738B5F2C5D3561002B0C92 /* MediaItemRowStyleView.swift in Sources */,
 				30738B6B2C5D5272002B0C92 /* StringExtension.swift in Sources */,
@@ -1621,6 +1749,9 @@
 				30B15BE42C5C0421002BFEBB /* MediaCreditsRequest.swift in Sources */,
 				30738B5B2C5D3228002B0C92 /* GenreContentContainerListViewModel.swift in Sources */,
 				3045CB762C58C6D400AA5FD5 /* MediaListCoordinator.swift in Sources */,
+				30738BB52C5E814E002B0C92 /* WatchListResponseDTO.swift in Sources */,
+				30738BCC2C5E8EB2002B0C92 /* WatchListTVShowsUseCase.swift in Sources */,
+				30738BAA2C5E7D9D002B0C92 /* WatchListRequestDTO.swift in Sources */,
 				30424D1E2C56722B00FA431F /* DefaultAuthenticationImplentationRepository.swift in Sources */,
 				30B15BDA2C5B896D002BFEBB /* MediaTypeDTO.swift in Sources */,
 				3045CBA72C58F06800AA5FD5 /* LoginValidatationUseCaseImplementation.swift in Sources */,
@@ -1631,9 +1762,11 @@
 				30738B3F2C5D12AD002B0C92 /* MediaGenreListViewModel.swift in Sources */,
 				30738B492C5D2859002B0C92 /* DefaultMediaGenreContentListServiceImplementation.swift in Sources */,
 				30424D732C57BF7300FA431F /* TopRatedMovieUseCaseImplementation.swift in Sources */,
+				30738BC82C5E8580002B0C92 /* AddTVShowToWatchListUseCaseImplementation.swift in Sources */,
 				30B15BCC2C5B4EF8002BFEBB /* MovieDetailsUseCase.swift in Sources */,
 				30738B532C5D2DDD002B0C92 /* TVShowGenreContentListUseCase.swift in Sources */,
 				3092010A2C5A8B9000629457 /* UpComingRequest.swift in Sources */,
+				30738BAC2C5E7E76002B0C92 /* MediaWatchListRequest.swift in Sources */,
 				309201042C5A2D5F00629457 /* MediaItemView.swift in Sources */,
 				30738BA72C5E3047002B0C92 /* MediaSearchRepositoryImplemenetation.swift in Sources */,
 				30738B6C2C5D5272002B0C92 /* DateExtension.swift in Sources */,
@@ -1652,8 +1785,10 @@
 				30738B3B2C5D11B4002B0C92 /* GenreListView.swift in Sources */,
 				30738B302C5CDC69002B0C92 /* SearchCoordinator.swift in Sources */,
 				30B15BE02C5BB2EC002BFEBB /* GeometryProxy.swift in Sources */,
+				30738BB32C5E7FF2002B0C92 /* MediaWatchListServiceImplementation.swift in Sources */,
 				30B15BD02C5B4F3E002BFEBB /* TVShowDetailsUseCaseImplementation.swift in Sources */,
 				30738BA12C5E2E67002B0C92 /* TVShowSearchUseCase.swift in Sources */,
+				30738BC42C5E8364002B0C92 /* MediaFavouriteUseCaseImplementation.swift in Sources */,
 				30738B272C5CDBD5002B0C92 /* TVShowGenresUseCase.swift in Sources */,
 				3045CBC32C594DE800AA5FD5 /* MediaListViewModel.swift in Sources */,
 				30738B452C5D2448002B0C92 /* Color.swift in Sources */,
@@ -1671,6 +1806,8 @@
 				30738B332C5CDEFE002B0C92 /* SearchFactory.swift in Sources */,
 				3093C8532C54C1E0009DF963 /* RequestTokenResponseDTO.swift in Sources */,
 				30B15BCA2C5B4E03002BFEBB /* DefaultMediaDetailsRepositoryImplementation.swift in Sources */,
+				30738BCE2C5E8EC8002B0C92 /* WatchListTVShowsUseCaseImplementation.swift in Sources */,
+				30738BD02C5E8F2D002B0C92 /* WatchListMoviesUseCaseImplementation.swift in Sources */,
 				3093C8512C54C12E009DF963 /* AuthenticationService.swift in Sources */,
 				3093C8552C54C2F0009DF963 /* DefaultAuthenticationImplementation.swift in Sources */,
 				30738B922C5D5994002B0C92 /* MediaDetailsCoordinator.swift in Sources */,
@@ -1700,6 +1837,7 @@
 				309201062C5A2EAD00629457 /* MediaItemViewModel.swift in Sources */,
 				30424D342C575CE000FA431F /* LoginViewFactory.swift in Sources */,
 				309201022C5A2D1800629457 /* MediaItemsListView.swift in Sources */,
+				30738BBA2C5E8238002B0C92 /* MediaWatchListRepository.swift in Sources */,
 				30424D172C565C4200FA431F /* KeyChainImplementation.swift in Sources */,
 				30738B372C5CE1DC002B0C92 /* SearchView.swift in Sources */,
 				3093C81C2C54A46D009DF963 /* MovieApp.swift in Sources */,
@@ -1719,6 +1857,7 @@
 				3092010C2C5A8C6600629457 /* UpComingMoviesUseCase.swift in Sources */,
 				30738B512C5D2DD0002B0C92 /* MovieGenreContentListUseCase.swift in Sources */,
 				3045CB9E2C58E8B000AA5FD5 /* ExpirationValidator.swift in Sources */,
+				30738BC62C5E8567002B0C92 /* AddTVShowToWatchlistUseCase.swift in Sources */,
 				3045CB7F2C58C77700AA5FD5 /* HomeCoordinatorView.swift in Sources */,
 				30B15BDC2C5B8A41002BFEBB /* MediaDetailsFactory.swift in Sources */,
 				30424D192C565C6700FA431F /* KeyChainStack.swift in Sources */,
@@ -1732,6 +1871,7 @@
 				3045CBC12C594B5000AA5FD5 /* MediaListView.swift in Sources */,
 				3045CB7D2C58C76700AA5FD5 /* HomeCoordinator.swift in Sources */,
 				30738B572C5D2DFE002B0C92 /* TVShowGenreContentListUseCaseImplementation.swift in Sources */,
+				30738BC02C5E8340002B0C92 /* AddMovieToWatchlistUseCase.swift in Sources */,
 				30424D6F2C57BEEA00FA431F /* TopRatedMovieUseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

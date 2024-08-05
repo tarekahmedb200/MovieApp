@@ -11,11 +11,13 @@ class MediaDetailsViewModel: ObservableObject {
     
     @Published var errorMessage : String = ""
     @Published var showAlert : Bool = false
+    @Published var isAddedToWatchList: Bool = false
     
     @Published private var movieDetailsDTo : MovieDetailsDTO?
     @Published private var tvDetailsDTo : TVShowDetailsDTO?
     @Published private var movieCreditsDTos: [MediaCreditDTO ] = []
     @Published private var tvCreditsDtos: [MediaCreditDTO ] = []
+    
     
     private var mediaID: Int64
     private var mediaType : MediaTypeDTO
@@ -23,12 +25,20 @@ class MediaDetailsViewModel: ObservableObject {
     private var tvShowDetailsUseCase : TVShowDetailsUseCase
     private var movieCreditUseCase : MovieCreditsUseCase
     private var tvShowCreditUseCase : TVShowCreditUseCase
+    private var addMovieToWatchlistUseCase : AddMovieToWatchlistUseCase
+    private var addTVShowToWatchlistUseCase : AddTVShowToWatchlistUseCase
+    private var watchListMoviesUseCase : WatchListMoviesUseCase
+    private var watchListTVShowsUseCase : WatchListTVShowsUseCase
     
     private var mediaDetailsCoordinator : MediaDetailsCoordinator
     
     init(mediaType:MediaTypeDTO,mediaID:Int64,movieDetailsUseCase: MovieDetailsUseCase, tvShowDetailsUseCase: TVShowDetailsUseCase,
          movieCreditUseCase : MovieCreditsUseCase,
          tvShowCreditUseCase : TVShowCreditUseCase,
+         addMovieToWatchlistUseCase : AddMovieToWatchlistUseCase,
+         addTVShowToWatchlistUseCase : AddTVShowToWatchlistUseCase,
+         watchListMoviesUseCase : WatchListMoviesUseCase,
+         watchListTVShowsUseCase : WatchListTVShowsUseCase,
          mediaDetailsCoordinator : MediaDetailsCoordinator) {
         self.mediaID = mediaID
         self.mediaType = mediaType
@@ -37,14 +47,20 @@ class MediaDetailsViewModel: ObservableObject {
         self.mediaDetailsCoordinator = mediaDetailsCoordinator
         self.movieCreditUseCase = movieCreditUseCase
         self.tvShowCreditUseCase = tvShowCreditUseCase
+        self.addMovieToWatchlistUseCase = addMovieToWatchlistUseCase
+        self.addTVShowToWatchlistUseCase = addTVShowToWatchlistUseCase
+        self.watchListMoviesUseCase = watchListMoviesUseCase
+        self.watchListTVShowsUseCase = watchListTVShowsUseCase
         
         print("mediaID -> \(mediaID)")
         if mediaType == .movie {
             LoadMovieDetails()
             loadMovieCredits()
+            loadWatchListMovies()
         }else {
             LoadTVShowDetails()
-            loadTVShowCredits()
+            LoadTVShowDetails()
+            loadWatchListTVShows()
         }
     }
     
@@ -103,6 +119,88 @@ class MediaDetailsViewModel: ObservableObject {
             case .success(let tvShowCreditDtos):
                 DispatchQueue.main.async { [weak self] in
                     self?.tvCreditsDtos = tvShowCreditDtos
+                }
+            case .failure(let error):
+                DispatchQueue.main.async { [weak self] in
+                    self?.errorMessage = error.localizedDescription
+                    self?.showAlert = true
+                }
+            }
+        }
+    }
+    
+    func addMediaToWatchlist() {
+        switch mediaType {
+        case .movie:
+            addMovieToWatchLists()
+        case .tv:
+            addTVShowToWatchLists()
+        }
+    }
+    
+    private func addTVShowToWatchLists() {
+        self.addTVShowToWatchlistUseCase.execute(mediaType: .tv, mediaID: self.mediaID, addToWatchList: !isAddedToWatchList) { [weak self] result in
+            switch result {
+            case .success(let watchListResponseDtos):
+                DispatchQueue.main.async { [weak self] in
+                    if watchListResponseDtos.success == true {
+                        self?.isAddedToWatchList.toggle()
+                    }
+                }
+            case .failure(let error):
+                DispatchQueue.main.async { [weak self] in
+                    self?.errorMessage = error.localizedDescription
+                    self?.showAlert = true
+                }
+            }
+        }
+    }
+    
+    private func addMovieToWatchLists() {
+        self.addMovieToWatchlistUseCase.execute(mediaType: .movie, mediaID: self.mediaID, addToWatchList: !isAddedToWatchList) { [weak self] result in
+            switch result {
+            case .success(let watchListResponseDtos):
+                if watchListResponseDtos.success == true {
+                    self?.isAddedToWatchList.toggle()
+                }
+            case .failure(let error):
+                DispatchQueue.main.async { [weak self] in
+                    self?.errorMessage = error.localizedDescription
+                    self?.showAlert = true
+                }
+            }
+        }
+    }
+    
+    private func loadWatchListMovies() {
+        
+        
+        self.watchListMoviesUseCase.execute { result in
+            print("loadWatchListMovies")
+            switch result {
+            case .success(let movieItemsDtos):
+                DispatchQueue.main.async { [weak self] in
+                    self?.isAddedToWatchList = movieItemsDtos.contains(where: { mediaItemDto in
+                        self?.mediaID == mediaItemDto.id
+                    })
+                }
+            case .failure(let error):
+                DispatchQueue.main.async { [weak self] in
+                    self?.errorMessage = error.localizedDescription
+                    self?.showAlert = true
+                }
+            }
+        }
+    }
+    
+    private func loadWatchListTVShows() {
+        self.watchListTVShowsUseCase.execute { result in
+            switch result {
+            case .success(let tvItemsDtos):
+                DispatchQueue.main.async { [weak self] in
+                    self?.isAddedToWatchList = tvItemsDtos.contains(where: { mediaItemDto in
+                        self?.mediaID == mediaItemDto.id
+                    })
                 }
             case .failure(let error):
                 DispatchQueue.main.async { [weak self] in
