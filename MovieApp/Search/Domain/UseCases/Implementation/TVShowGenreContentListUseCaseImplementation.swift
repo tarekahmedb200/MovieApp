@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 final class TVShowGenreContentListUseCaseImplementation {
     private var mediaGenreContentListRepository : MediaGenreContentListRepository
     
@@ -18,8 +17,8 @@ final class TVShowGenreContentListUseCaseImplementation {
 
 extension TVShowGenreContentListUseCaseImplementation: TVShowGenreContentListUseCase {
 
-    func execute(genreID:Int64,completion: @escaping (Result<[MediaItemDTO], any Error>) -> Void) {
-        self.mediaGenreContentListRepository.requestTVShowGenreContentList(genreID: genreID) { result in
+    func execute(page:Int,genreID:Int64,completion: @escaping (Result<[MediaItemDTO], any Error>) -> Void) {
+        self.mediaGenreContentListRepository.requestTVShowGenreContentList(page:page,genreID: genreID) { result in
             switch result {
             case .success(let tvItemDtos):
                 completion(.success(tvItemDtos))

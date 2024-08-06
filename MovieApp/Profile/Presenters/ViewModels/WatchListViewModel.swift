@@ -12,28 +12,43 @@ class WatchListViewModel: ObservableObject {
     @Published var watchListMovies : [MediaItemDTO] = []
     @Published var watchListTVShows : [MediaItemDTO] = []
     @Published var mediaType : MediaTypeDTO = .movie
-
+    
     @Published var errorMessage : String = ""
     @Published var showAlert : Bool = false
+    @Published var showMoreWatchListMovies : Bool = false
+    @Published var showMoreWatchListTVShows : Bool = false
     
     private var watchListMoviesUseCase : WatchListMoviesUseCase
     private var watchListTVShowsUseCase : WatchListTVShowsUseCase
     private var profileCoordinator : ProfileCoordinator
+    private var page: Int = 1
     
     init(watchListMoviesUseCase: WatchListMoviesUseCase, watchListTVShowsUseCase: WatchListTVShowsUseCase, profileCoordinator: ProfileCoordinator) {
         self.watchListMoviesUseCase = watchListMoviesUseCase
         self.watchListTVShowsUseCase = watchListTVShowsUseCase
         self.profileCoordinator = profileCoordinator
-        LoadWatchListMovies()
-        LoadWatchListTVShows()
+    }
+    
+    func handlePagination() {
+        page += 1
+        
+        print("page -->")
+        print(page)
+        
+        if mediaType == .movie {
+            LoadWatchListMovies()
+        }else {
+            LoadWatchListTVShows()
+        }
     }
     
     func LoadWatchListMovies() {
-        self.watchListMoviesUseCase.execute { result in
+        self.watchListMoviesUseCase.execute(page:page) { result in
             switch result {
             case .success(let watchListMovies):
                 DispatchQueue.main.async { [weak self] in
-                    self?.watchListMovies = watchListMovies
+                    self?.watchListMovies += watchListMovies
+                    self?.showMoreWatchListMovies = watchListMovies.count > 0
                 }
             case .failure(let error):
                 DispatchQueue.main.async { [weak self] in
@@ -44,11 +59,12 @@ class WatchListViewModel: ObservableObject {
     }
     
     func LoadWatchListTVShows() {
-        self.watchListTVShowsUseCase.execute { result in
+        self.watchListTVShowsUseCase.execute(page:page) { result in
             switch result {
             case .success(let watchListTVShows):
                 DispatchQueue.main.async { [weak self] in
-                    self?.watchListTVShows = watchListTVShows
+                    self?.watchListTVShows += watchListTVShows
+                    self?.showMoreWatchListTVShows = watchListTVShows.count > 0
                 }
             case .failure(let error):
                 DispatchQueue.main.async { [weak self] in

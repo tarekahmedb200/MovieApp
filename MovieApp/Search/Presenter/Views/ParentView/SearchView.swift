@@ -12,6 +12,7 @@ struct SearchView: View {
     @ObservedObject var viewModel: SearchViewModel
     
     var body: some View {
+        
         ScrollView {
             
             if !viewModel.isSearching {
@@ -40,17 +41,17 @@ struct SearchView: View {
                 switch viewModel.mediaType {
                 case .movie:
                     
-                    MediaItemsListRowStyleView(viewModel: MediaItemsListRowStyleViewModel(mediaItems: viewModel.searchedMovieItems)) { mediaItemsListRowStyleViewModel in
+                    MediaItemsListRowStyleView(viewModel: MediaItemsListRowStyleViewModel(mediaItems: viewModel.searchedMovieItems), showMore: viewModel.showMoreSearchedMovies) { mediaItemsListRowStyleViewModel in
                         viewModel.navigateToMediaDetails(id:mediaItemsListRowStyleViewModel.id , mediaType: .movie)
                     } paginationCompletion: {
-                        viewModel.handlePagination(mediaType: .movie)
+                        viewModel.handlePagination()
                     }
 
                 case .tv:
-                    MediaItemsListRowStyleView(viewModel: MediaItemsListRowStyleViewModel(mediaItems: viewModel.searchedTVShowItems)) { mediaItemsListRowStyleViewModel in
+                    MediaItemsListRowStyleView(viewModel: MediaItemsListRowStyleViewModel(mediaItems: viewModel.searchedTVShowItems), showMore: viewModel.showMoreSearchedTVShow) { mediaItemsListRowStyleViewModel in
                         viewModel.navigateToMediaDetails(id:mediaItemsListRowStyleViewModel.id , mediaType: .tv)
                     } paginationCompletion: {
-                        viewModel.handlePagination(mediaType: .tv)
+                        viewModel.handlePagination()
                     }
                 }
             }

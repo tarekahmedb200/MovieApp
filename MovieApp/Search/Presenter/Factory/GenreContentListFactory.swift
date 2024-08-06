@@ -24,7 +24,7 @@ class GenreContentListFactory {
     }
     
     private func getGenreContentListViewModel() -> GenreContentContainerListViewModel {
-        return GenreContentContainerListViewModel(mediaType: self.mediaType, genreID: self.genreID, movieGenreContentListUseCase: getMovieGenreContentListUseCase(), tvShowGenreContentListUseCase: getTVShowGenreContentListUseCase())
+        return GenreContentContainerListViewModel(mediaType: self.mediaType, genreID: self.genreID, searchCoordinator: self.seachCoordinator, movieGenreContentListUseCase: getMovieGenreContentListUseCase(), tvShowGenreContentListUseCase: getTVShowGenreContentListUseCase())
     }
     
     private func getTVShowGenreContentListUseCase() -> TVShowGenreContentListUseCase {

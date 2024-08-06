@@ -38,12 +38,10 @@ struct ProfileView: View {
                 })
                 
             }
-            
-            
         }
-        
-        
-        
+        .onAppear {
+            viewModel.LoadProfileDetails()
+        }
     }
     
     @ViewBuilder

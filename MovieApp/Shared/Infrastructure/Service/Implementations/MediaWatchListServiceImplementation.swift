@@ -42,9 +42,9 @@ extension MediaWatchListServiceImplementation : MediaWatchListService {
         }
     }
     
-    func requestWatchListMovies(completion: @escaping (Result<[MediaItemDTO], any Error>) -> Void) {
+    func requestWatchListMovies(page:Int,completion: @escaping (Result<[MediaItemDTO], any Error>) -> Void) {
         
-        self.apiManager.initRequest(with:MediaWatchListRequest.requestWatchListMovies, type: MediaItemContainerDTO.self) { result  in
+        self.apiManager.initRequest(with:MediaWatchListRequest.requestWatchListMovies(page:page), type: MediaItemContainerDTO.self) { result  in
             switch result {
             case .success(let mediaItemContainerDTO):
                 completion(.success(mediaItemContainerDTO.mediaItemDTOs))
@@ -54,8 +54,8 @@ extension MediaWatchListServiceImplementation : MediaWatchListService {
         }
     }
     
-    func requestWatchListTVShows(completion: @escaping (Result<[MediaItemDTO], any Error>) -> Void) {
-        self.apiManager.initRequest(with:MediaWatchListRequest.requestWatchListTVShows, type: MediaItemContainerDTO.self) { result  in
+    func requestWatchListTVShows(page:Int,completion: @escaping (Result<[MediaItemDTO], any Error>) -> Void) {
+        self.apiManager.initRequest(with:MediaWatchListRequest.requestWatchListTVShows(page:page), type: MediaItemContainerDTO.self) { result  in
             switch result {
             case .success(let mediaItemContainerDTO):
                 completion(.success(mediaItemContainerDTO.mediaItemDTOs))

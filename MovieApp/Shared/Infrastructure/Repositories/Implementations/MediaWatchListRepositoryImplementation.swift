@@ -40,8 +40,8 @@ extension MediaWatchListRepositoryImplementation : MediaWatchListRepository {
         }
     }
     
-    func requestWatchListMovies(completion: @escaping (Result<[MediaItemDTO], any Error>) -> Void) {
-        self.mediaWatchListService.requestWatchListMovies { result in
+    func requestWatchListMovies(page:Int,completion: @escaping (Result<[MediaItemDTO], any Error>) -> Void) {
+        self.mediaWatchListService.requestWatchListMovies(page:page) { result in
             switch result {
             case .success(let movieItemDtos):
                 completion(.success(movieItemDtos))
@@ -51,8 +51,8 @@ extension MediaWatchListRepositoryImplementation : MediaWatchListRepository {
         }
     }
     
-    func requestWatchListTVShows(completion: @escaping (Result<[MediaItemDTO], any Error>) -> Void) {
-        self.mediaWatchListService.requestWatchListTVShows { result in
+    func requestWatchListTVShows(page:Int,completion: @escaping (Result<[MediaItemDTO], any Error>) -> Void) {
+        self.mediaWatchListService.requestWatchListTVShows(page:page) { result in
             switch result {
             case .success(let tvItemDtos):
                 completion(.success(tvItemDtos))

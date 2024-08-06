@@ -9,8 +9,8 @@ import Foundation
 
 
 enum MediaGenreContentRequest : APIRequest {
-    case requestMovieGenreContent(genreID:Int64)
-    case requestTVShowGenreContent(genreID:Int64)
+    case requestMovieGenreContent(page:Int,genreID:Int64)
+    case requestTVShowGenreContent(page:Int,genreID:Int64)
     
     var path: String {
         switch self {
@@ -26,10 +26,12 @@ enum MediaGenreContentRequest : APIRequest {
         
         switch self {
             
-        case .requestMovieGenreContent(genreID: let genreID):
+        case .requestMovieGenreContent(let page,let genreID):
             params["with_genres"] = "\(genreID)"
-        case .requestTVShowGenreContent(genreID: let genreID):
+            params["page"] = "\(page)"
+        case .requestTVShowGenreContent(let page,genreID: let genreID):
             params["with_genres"] = "\(genreID)"
+            params["page"] = "\(page)"
         }
         
         return params

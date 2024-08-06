@@ -19,8 +19,8 @@ final class WatchListMoviesUseCaseImplementation {
 
 extension WatchListMoviesUseCaseImplementation: WatchListMoviesUseCase {
     
-    func execute(completion: @escaping (Result<[MediaItemDTO], any Error>) -> Void) {
-        self.mediaWatchListRepository.requestWatchListMovies { result in
+    func execute(page:Int,completion: @escaping (Result<[MediaItemDTO], any Error>) -> Void) {
+        self.mediaWatchListRepository.requestWatchListMovies(page: page) { result in
             switch result {
             case .success(let movieItemDtos):
                 completion(.success(movieItemDtos))

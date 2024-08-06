@@ -13,8 +13,8 @@ protocol MediaWatchListService {
     
     func addTVShowToWatchlist(watchListRequestDTO:WatchListRequestDTO,completion: @escaping (Result<WatchListResponseDTO, any Error>) -> Void)
     
-    func requestWatchListMovies(completion: @escaping (Result<[MediaItemDTO], any Error>) -> Void)
+    func requestWatchListMovies(page:Int,completion: @escaping (Result<[MediaItemDTO], any Error>) -> Void)
     
-    func requestWatchListTVShows(completion: @escaping (Result<[MediaItemDTO], any Error>) -> Void)
+    func requestWatchListTVShows(page:Int,completion: @escaping (Result<[MediaItemDTO], any Error>) -> Void)
     
 }

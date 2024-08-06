@@ -8,5 +8,5 @@
 import Foundation
 
 protocol WatchListTVShowsUseCase {
-    func execute(completion: @escaping (Result<[MediaItemDTO],Error>) -> Void)
+    func execute(page:Int,completion: @escaping (Result<[MediaItemDTO],Error>) -> Void)
 }

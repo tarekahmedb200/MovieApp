@@ -173,9 +173,7 @@ class MediaDetailsViewModel: ObservableObject {
     }
     
     private func loadWatchListMovies() {
-        
-        
-        self.watchListMoviesUseCase.execute { result in
+        self.watchListMoviesUseCase.execute(page: 1) { result in
             print("loadWatchListMovies")
             switch result {
             case .success(let movieItemsDtos):
@@ -194,7 +192,7 @@ class MediaDetailsViewModel: ObservableObject {
     }
     
     private func loadWatchListTVShows() {
-        self.watchListTVShowsUseCase.execute { result in
+        self.watchListTVShowsUseCase.execute(page: 1) { result in
             switch result {
             case .success(let tvItemsDtos):
                 DispatchQueue.main.async { [weak self] in

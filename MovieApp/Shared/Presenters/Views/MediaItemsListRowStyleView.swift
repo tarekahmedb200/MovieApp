@@ -10,6 +10,7 @@ import SwiftUI
 struct MediaItemsListRowStyleView: View {
     
     var viewModel: MediaItemsListRowStyleViewModel
+    var showMore : Bool
     var clickCompletion : ((MediaItemRowStyleViewModel) -> Void)
     var paginationCompletion : (() -> Void)
     
@@ -17,7 +18,6 @@ struct MediaItemsListRowStyleView: View {
     Array(repeating: GridItem(.flexible(minimum: 100, maximum: 100)), count: 1)
     
     var body: some View {
-        ScrollView {
             LazyVGrid(columns: columns,alignment: .center) {
                 ForEach(viewModel.mediaItemRowStyleViewModels) { mediaItemRowStyleViewModel in
                     MediaItemRowStyleView(viewModel:mediaItemRowStyleViewModel)
@@ -25,9 +25,14 @@ struct MediaItemsListRowStyleView: View {
                             clickCompletion(mediaItemRowStyleViewModel)
                         }
                 }
+                
+                if showMore {
+                    ProgressView()
+                        .onAppear {
+                            paginationCompletion()
+                        }
+                }
             }
-        }
-        
     }
 }
 

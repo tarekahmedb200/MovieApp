@@ -23,6 +23,8 @@ class SearchViewModel: ObservableObject {
     @Published var showAlert : Bool = false
     @Published var searchText : String = ""
     @Published var isSearching : Bool = false
+    @Published var showMoreSearchedMovies : Bool = false
+    @Published var showMoreSearchedTVShow : Bool = false
     
     private var currentSearchText : String = ""
     private var page: Int = 1
@@ -78,7 +80,7 @@ class SearchViewModel: ObservableObject {
         
     }
     
-    func handlePagination(mediaType:MediaTypeDTO) {
+    func handlePagination() {
         page += 1
         
         print("page -->")
@@ -129,8 +131,7 @@ class SearchViewModel: ObservableObject {
             case .success(let movieItemDtos):
                 DispatchQueue.main.async { [weak self] in
                     self?.searchedMovieItems += movieItemDtos
-                    print("self?.searchedMovieItems.count")
-                    print( self?.searchedMovieItems.count)
+                    self?.showMoreSearchedMovies = movieItemDtos.count > 0
                 }
             case .failure(let error):
                 DispatchQueue.main.async { [weak self] in
@@ -147,8 +148,7 @@ class SearchViewModel: ObservableObject {
             case .success(let tvItemDtos):
                 DispatchQueue.main.async { [weak self] in
                     self?.searchedTVShowItems += tvItemDtos
-                    print("self?.searchedTVShowItems.count")
-                    print( self?.searchedTVShowItems.count)
+                    self?.showMoreSearchedTVShow = tvItemDtos.count > 0
                 }
             case .failure(let error):
                 DispatchQueue.main.async { [weak self] in

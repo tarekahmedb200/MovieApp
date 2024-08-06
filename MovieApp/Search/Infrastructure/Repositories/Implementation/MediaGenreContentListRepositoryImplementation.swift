@@ -17,8 +17,8 @@ class MediaGenreContentListRepositoryImplementation {
 
 extension MediaGenreContentListRepositoryImplementation : MediaGenreContentListRepository {
     
-    func requestMovieGenreContentList(genreID: Int64, completion: @escaping (Result<[MediaItemDTO], any Error>) -> Void) {
-        self.mediaGenreContentListService.requestMovieGenreContentList(genreID: genreID) { result in
+    func requestMovieGenreContentList(page:Int,genreID: Int64, completion: @escaping (Result<[MediaItemDTO], any Error>) -> Void) {
+        self.mediaGenreContentListService.requestMovieGenreContentList(page:page,genreID: genreID) { result in
             switch result {
             case .success(let movieItemDtos):
                 completion(.success(movieItemDtos))
@@ -28,8 +28,8 @@ extension MediaGenreContentListRepositoryImplementation : MediaGenreContentListR
         }
     }
     
-    func requestTVShowGenreContentList(genreID: Int64, completion: @escaping (Result<[MediaItemDTO], any Error>) -> Void) {
-        self.mediaGenreContentListService.requestTVShowGenreContentList(genreID: genreID) { result in
+    func requestTVShowGenreContentList(page:Int,genreID: Int64, completion: @escaping (Result<[MediaItemDTO], any Error>) -> Void) {
+        self.mediaGenreContentListService.requestTVShowGenreContentList(page: page, genreID: genreID) { result in
             switch result {
             case .success(let tvItemDtos):
                 completion(.success(tvItemDtos))

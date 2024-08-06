@@ -8,5 +8,5 @@
 import Foundation
 
 protocol MovieGenreContentListUseCase {
-    func execute(genreID:Int64,completion: @escaping (Result<[MediaItemDTO],any Error>) -> Void)
+    func execute(page:Int,genreID:Int64,completion: @escaping (Result<[MediaItemDTO],any Error>) -> Void)
 }

@@ -9,8 +9,8 @@ import Foundation
 
 protocol MediaGenreContentListService {
     
-    func requestMovieGenreContentList(genreID:Int64,completion: @escaping (Result<[MediaItemDTO], any Error>) -> Void)
+    func requestMovieGenreContentList(page:Int,genreID:Int64,completion: @escaping (Result<[MediaItemDTO], any Error>) -> Void)
     
-    func requestTVShowGenreContentList(genreID:Int64,completion: @escaping (Result<[MediaItemDTO], any Error>) -> Void)
+    func requestTVShowGenreContentList(page:Int,genreID:Int64,completion: @escaping (Result<[MediaItemDTO], any Error>) -> Void)
     
 }

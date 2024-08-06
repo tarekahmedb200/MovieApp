@@ -20,8 +20,8 @@ final class WatchListTVShowsUseCaseImplementation {
 
 extension WatchListTVShowsUseCaseImplementation: WatchListTVShowsUseCase {
     
-    func execute(completion: @escaping (Result<[MediaItemDTO], any Error>) -> Void) {
-        self.mediaWatchListRepository.requestWatchListTVShows { result in
+    func execute(page:Int,completion: @escaping (Result<[MediaItemDTO], any Error>) -> Void) {
+        self.mediaWatchListRepository.requestWatchListTVShows(page:page) { result in
             switch result {
             case .success(let tvItemDtos):
                 completion(.success(tvItemDtos))

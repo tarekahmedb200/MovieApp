@@ -17,8 +17,8 @@ final class MovieGenreContentListUseCaseImplementation {
 
 extension MovieGenreContentListUseCaseImplementation: MovieGenreContentListUseCase {
 
-    func execute(genreID:Int64,completion: @escaping (Result<[MediaItemDTO], any Error>) -> Void) {
-        self.mediaGenreContentListRepository.requestMovieGenreContentList(genreID: genreID) { result in
+    func execute(page:Int,genreID:Int64,completion: @escaping (Result<[MediaItemDTO], any Error>) -> Void) {
+        self.mediaGenreContentListRepository.requestMovieGenreContentList(page:page,genreID: genreID) { result in
             switch result {
             case .success(let movieItemDtos):
                 completion(.success(movieItemDtos))

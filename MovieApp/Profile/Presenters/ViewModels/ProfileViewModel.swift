@@ -21,7 +21,6 @@ class ProfileViewModel : ObservableObject {
         self.logoutUseCase = logoutUseCase
         self.profileDetailsUseCase = profileDetailsUseCase
         self.profileCoordinator = profileCoordinator
-        LoadProfileDetails()
     }
     
     func LoadProfileDetails() {

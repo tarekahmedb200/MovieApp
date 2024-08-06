@@ -12,10 +12,13 @@ struct GenreContentContainerListView: View {
     @StateObject var viewModel: GenreContentContainerListViewModel
     
     var body: some View {
-        MediaItemsListRowStyleView(viewModel: MediaItemsListRowStyleViewModel(mediaItems: viewModel.mediaItemDtos)) { mediaItemsListRowStyleViewModel in
-            print(mediaItemsListRowStyleViewModel.title)
-        } paginationCompletion: {
-            
+        
+        ScrollView {
+            MediaItemsListRowStyleView(viewModel: MediaItemsListRowStyleViewModel(mediaItems: viewModel.mediaItemDtos), showMore: viewModel.showMore) { mediaItemsListRowStyleViewModel in
+                viewModel.navigateToMediaDetails(id: mediaItemsListRowStyleViewModel.id)
+            } paginationCompletion: {
+                viewModel.handlePagination()
+            }
         }
     }
 }

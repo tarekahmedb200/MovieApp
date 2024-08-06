@@ -18,8 +18,8 @@ class DefaultMediaGenreContentListServiceImplementation {
 
 extension DefaultMediaGenreContentListServiceImplementation : MediaGenreContentListService {
     
-    func requestMovieGenreContentList(genreID: Int64, completion: @escaping (Result<[MediaItemDTO], any Error>) -> Void) {
-        self.apiManager.initRequest(with: MediaGenreContentRequest.requestMovieGenreContent(genreID: genreID), type: MediaItemContainerDTO.self) { result  in
+    func requestMovieGenreContentList(page:Int,genreID: Int64, completion: @escaping (Result<[MediaItemDTO], any Error>) -> Void) {
+        self.apiManager.initRequest(with: MediaGenreContentRequest.requestMovieGenreContent(page:page,genreID: genreID), type: MediaItemContainerDTO.self) { result  in
             switch result {
             case .success(let mediaItemContainerDTO):
                 completion(.success(mediaItemContainerDTO.mediaItemDTOs))
@@ -29,8 +29,8 @@ extension DefaultMediaGenreContentListServiceImplementation : MediaGenreContentL
         }
     }
     
-    func requestTVShowGenreContentList(genreID: Int64, completion: @escaping (Result<[MediaItemDTO], any Error>) -> Void) {
-        self.apiManager.initRequest(with: MediaGenreContentRequest.requestTVShowGenreContent(genreID: genreID), type: MediaItemContainerDTO.self) { result  in
+    func requestTVShowGenreContentList(page:Int,genreID: Int64, completion: @escaping (Result<[MediaItemDTO], any Error>) -> Void) {
+        self.apiManager.initRequest(with: MediaGenreContentRequest.requestTVShowGenreContent(page:page,genreID: genreID), type: MediaItemContainerDTO.self) { result  in
             switch result {
             case .success(let mediaItemContainerDTO):
                 completion(.success(mediaItemContainerDTO.mediaItemDTOs))
