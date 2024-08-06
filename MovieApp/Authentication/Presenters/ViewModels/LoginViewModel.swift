@@ -13,6 +13,7 @@ class LoginViewModel : ObservableObject {
     @Published  var password : String = ""
     @Published  var errorMessage : String = ""
     @Published  var showAlert : Bool = false
+    @Published  var isLoading : Bool = false
     
     private var authenticateUseCase : AuthenticateUseCase
     private var loginValidatationUseCase : LoginValidatationUseCase
@@ -26,10 +27,10 @@ class LoginViewModel : ObservableObject {
     
     func authenticate() {
         
+        isLoading = true
+        
         self.authenticateUseCase.execute(userName: userName, password: password) { [weak self] result in
             DispatchQueue.main.async { [weak self] in
-                
-                guard let weakSelf = self else { return }
                 switch result {
                 case .success(let isLoginSuccess):
                     if isLoginSuccess {
@@ -38,9 +39,11 @@ class LoginViewModel : ObservableObject {
                         self?.errorMessage = "Unknow Error"
                         self?.showAlert = true
                     }
+                    self?.isLoading = false
                 case .failure(let error):
                     self?.errorMessage = error.localizedDescription
                     self?.showAlert = true
+                    self?.isLoading = false
                 }
             }
         }

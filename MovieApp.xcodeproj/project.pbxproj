@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		302C80142C62854B00F45A57 /* LoadingToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302C80132C62854B00F45A57 /* LoadingToastView.swift */; };
 		30424D0C2C560C9100FA431F /* LoginRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30424D0B2C560C9100FA431F /* LoginRequestDTO.swift */; };
 		30424D152C5615AC00FA431F /* AuthenticationInfoStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30424D142C5615AC00FA431F /* AuthenticationInfoStorage.swift */; };
 		30424D172C565C4200FA431F /* KeyChainImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30424D162C565C4200FA431F /* KeyChainImplementation.swift */; };
@@ -201,6 +202,7 @@
 
 /* Begin PBXFileReference section */
 		011E50B784100180582FB6CF /* Pods_MovieApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovieApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		302C80132C62854B00F45A57 /* LoadingToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingToastView.swift; sourceTree = "<group>"; };
 		30424D0B2C560C9100FA431F /* LoginRequestDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequestDTO.swift; sourceTree = "<group>"; };
 		30424D142C5615AC00FA431F /* AuthenticationInfoStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationInfoStorage.swift; sourceTree = "<group>"; };
 		30424D162C565C4200FA431F /* KeyChainImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChainImplementation.swift; sourceTree = "<group>"; };
@@ -1280,6 +1282,7 @@
 			children = (
 				30738B5E2C5D3561002B0C92 /* MediaItemRowStyleView.swift */,
 				30738B602C5D35D5002B0C92 /* MediaItemsListRowStyleView.swift */,
+				302C80132C62854B00F45A57 /* LoadingToastView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1412,13 +1415,13 @@
 			isa = PBXGroup;
 			children = (
 				30B15BDD2C5BB2D0002BFEBB /* Shared */,
-				3095A9B92C60E535005BA180 /* Profile */,
 				3093C82D2C54A55A009DF963 /* Main */,
-				3045CB772C58C6F500AA5FD5 /* Home */,
 				3093C8292C54A4F3009DF963 /* Authentication */,
+				3045CB772C58C6F500AA5FD5 /* Home */,
 				30424D352C579E1E00FA431F /* MediaLists */,
-				30738B662C5D521E002B0C92 /* MediaDetails */,
 				30738B012C5CC5CB002B0C92 /* Search */,
+				3095A9B92C60E535005BA180 /* Profile */,
+				30738B662C5D521E002B0C92 /* MediaDetails */,
 				30424D2C2C56DC7200FA431F /* Resources */,
 				3093C8212C54A46E009DF963 /* Preview Content */,
 			);
@@ -2093,6 +2096,7 @@
 				3093C8512C54C12E009DF963 /* AuthenticationService.swift in Sources */,
 				3093C8552C54C2F0009DF963 /* DefaultAuthenticationImplementation.swift in Sources */,
 				30738B922C5D5994002B0C92 /* MediaDetailsCoordinator.swift in Sources */,
+				302C80142C62854B00F45A57 /* LoadingToastView.swift in Sources */,
 				3095A9E82C60FCE9005BA180 /* LogoutUseCaseImplementation.swift in Sources */,
 				30738B252C5CDB31002B0C92 /* MovieGenresUseCaseImplementation.swift in Sources */,
 				30738B972C5E2ABF002B0C92 /* MediaSearchService.swift in Sources */,

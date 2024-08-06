@@ -13,33 +13,54 @@ struct LoginView: View {
     
     var body: some View {
         
-        ScrollView {
+        ZStack {
             
-            Image("homeImage")
-                .resizable()
-                .frame(width: UIScreen.main.bounds.width / 2,height:  UIScreen.main.bounds.width / 2)
-            
-            Text("Movie App")
-                .font(.title)
-            
-            createField(placeHolder: "Enter Email", isPassword: false, value: $viewModel.userName)
-            
-            createField(placeHolder: "Enter Password", isPassword: true, value: $viewModel.password)
-            
-            
-            Button(action: {
-                dismissKeyboard()
-                viewModel.authenticate()
-            }, label: {
-                Text("Login")
-                    .frame(width: UIScreen.main.bounds.width - 20,height: 50)
-                    .background(.black)
+            ScrollView {
+                
+                Spacer()
+                
+                Image("homeImage")
+                    .resizable()
+                    .frame(width: UIScreen.main.bounds.width / 2,height:  UIScreen.main.bounds.width / 2)
+                
+                Text("Movie App")
                     .foregroundStyle(.white)
-                    .clipShape(Capsule())
-                    .padding(.top,20)
-            })
+                    .fontDesign(.rounded)
+                    .font(.title)
+                
+                VStack {
+                    createField(placeHolder: "Enter UserName", isPassword: false, value: $viewModel.userName)
+                    
+                    createField(placeHolder: "Enter Password", isPassword: true, value: $viewModel.password)
+                    
+                    Button(action: {
+                        dismissKeyboard()
+                        viewModel.authenticate()
+                    }, label: {
+                        Text("Login")
+                            .foregroundStyle(.white)
+                            .bold()
+                            .frame(width: UIScreen.main.bounds.width / 2,height: 50)
+                            .background(LinearGradient(colors: [.red,.purple], startPoint: .leading, endPoint: .trailing))
+                            .clipShape(Capsule())
+                    })
+                    .padding(.vertical)
+                    
+                }
+                .padding(.vertical)
+                .background(Color(red: 31.0/255, green: 32.0/255, blue: 50.0/255,opacity: 1))
+                .clipShape(RoundedRectangle(cornerSize: CGSize(width: 10, height: 10)))
+                .padding()
+                
+                Spacer()
+                
+            }
             
-            Spacer()
+            if viewModel.isLoading {
+                LoadingToastView()
+                    .frame(width: 300,height: 100)
+                    .clipShape(RoundedRectangle(cornerSize: CGSize(width: 10, height: 10)))
+            }
             
         }
         .onAppear(perform: {
@@ -58,7 +79,6 @@ struct LoginView: View {
                 }
             }
         }
-        .padding()
     }
     
     @ViewBuilder
@@ -66,18 +86,20 @@ struct LoginView: View {
         VStack(alignment:.center,spacing:0) {
             Group {
                 if !isPassword {
-                    TextField(placeHolder, text: $viewModel.userName)
+                    TextField("", text: $viewModel.userName,prompt: Text(placeHolder).foregroundColor(.white))
                 }else {
-                    SecureField(placeHolder, text: $viewModel.password)
+                    SecureField("", text: $viewModel.password,prompt: Text(placeHolder).foregroundColor(.white))
                 }
             }
             .textInputAutocapitalization(.never)
             .padding()
             .frame(height: 60)
-            .foregroundStyle(.black)
+            .foregroundStyle(.white)
             .clipShape(Capsule())
             
             Divider()
+                .background(.white)
+                .padding(.horizontal)
         }
     }
     
@@ -86,5 +108,6 @@ struct LoginView: View {
     }
     
 }
+
 
 
