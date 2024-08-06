@@ -12,7 +12,12 @@ struct MediaDetailsCoordinatorView: View {
     @ObservedObject var coordinator: MediaDetailsCoordinator
      
     var body: some View {
-        coordinator.build(page: .mediaDetails)
+        ZStack {
+            Color(red: 21.0/255, green: 26.0/255, blue: 48.0/255,opacity: 1)
+                .ignoresSafeArea()
+            
+            coordinator.build(page: .mediaDetails)
+        }
     }
 }
 

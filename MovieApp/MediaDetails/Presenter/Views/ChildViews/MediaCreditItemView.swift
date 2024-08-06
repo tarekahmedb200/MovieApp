@@ -34,7 +34,7 @@ struct MediaCreditItemView: View {
             
             Text(viewModel.title)
                 .lineLimit(2)
-                .foregroundStyle(.black)
+                .foregroundStyle(.white)
                 .font(.subheadline)
             
         }

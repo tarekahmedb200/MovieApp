@@ -12,31 +12,14 @@ import Kingfisher
 
 struct MediaDetailsView: View {
     
-    @State var isAnimation = false
-    
     @StateObject var viewModel: MediaDetailsViewModel
     
-    
     var body: some View {
-        
-        VStack(spacing:10) {
-            
-            ScrollView(showsIndicators: false) {
-                posterView
-                infoView
-                subInfoView
-                creditView
-            }
-            .toolbar {
-                ToolbarItem(placement: .topBarTrailing) {
-                    Button {
-                        viewModel.addMediaToWatchlist()
-                    } label: {
-                        Image(systemName: viewModel.isAddedToWatchList ? "plus.app.fill" : "plus.app")
-                    }
-                }
-            }
-            
+        ScrollView(showsIndicators: false) {
+            posterView
+            infoView
+            subInfoView
+            creditView
         }
     }
     
@@ -61,76 +44,68 @@ struct MediaDetailsView: View {
     @ViewBuilder
     var infoView: some View {
         
-        VStack(alignment:.leading,spacing: 20) {
+        HStack {
             
-            VStack(alignment:.leading) {
+            VStack(alignment:.leading,spacing:10) {
                 Text(viewModel.title)
-                    .font(.title)
+                    .font(.title3)
                     .fontDesign(.rounded)
                     .bold()
                 
-                Text(viewModel.genres)
-                    .multilineTextAlignment(.leading)
-                    .font(.body)
+                HStack(alignment:.top,spacing: 10) {
+                    
+                    Text(viewModel.durationText)
+                    
+                    HStack(spacing:0) {
+                        Image(systemName: "star.fill")
+                            .foregroundStyle(.yellow)
+                        Text(viewModel.ratingText)
+                    }
+                    
+                    Text(viewModel.mediaDate)
+                }
+                .font(.caption)
             }
-           
-            VStack(alignment:.leading) {
-                Text("Description :")
-                    .font(.title3)
-                    .frame(alignment: .leading)
-                
-                Text(viewModel.overview)
+            
+            Spacer()
+            
+            Button {
+                viewModel.addMediaToWatchlist()
+            } label: {
+                Image(systemName: viewModel.isAddedToWatchList ? "checkmark" : "plus")
                     .font(.headline)
+                    .frame(width: 50,height: 50)
+                    .background(.red)
+                    .clipShape(Circle())
+                    .animation(.bouncy,value: viewModel.isAddedToWatchList)
             }
-           
         }
         .padding()
-        .foregroundStyle(.black)
-        
+        .foregroundStyle(.white)
     }
     
     @ViewBuilder
     var subInfoView : some View {
-        
-        HStack(alignment:.top,spacing: 30) {
-            Group {
-                
-                VStack {
-                    Text(viewModel.durationTitle)
-                        .font(.callout)
-                    
-                    Text(viewModel.durationText)
-                        .font(.headline)
-                }
-                
-                VStack {
-                    Image(systemName: "star.fill")
-                        .foregroundStyle(.yellow)
-                        .font(.callout)
-                    
-                    Text(viewModel.ratingText)
-                        .font(.headline)
-                }
-                
-                VStack {
-                    Text(viewModel.mediaDateTitle)
-                        .font(.callout)
-                    
-                    Text(viewModel.mediaDate)
-                        .font(.headline)
-                }
-            }
+        VStack(alignment:.leading,spacing: 10) {
+            Text("Description :")
+                .font(.title3)
+                .frame(alignment: .leading)
+            
+            Text(viewModel.overview)
+                .font(.headline)
         }
+        .padding()
+        .foregroundStyle(.white)
     }
     
     @ViewBuilder
     var creditView : some View {
         
-        VStack(alignment: .leading,spacing: 20) {
-            Text("Credits:")
+        VStack(alignment: .leading,spacing: 10) {
+            Text("Cast & Crew")
                 .font(.title3)
                 .frame(alignment: .leading)
-                .foregroundStyle(.black)
+                .foregroundStyle(.white)
             
             MediaCreditsListView(viewModel: MediaCreditListViewModel(mediaCredits: viewModel.mediaCredits))
         }
@@ -138,5 +113,5 @@ struct MediaDetailsView: View {
         
     }
     
-  
+    
 }
