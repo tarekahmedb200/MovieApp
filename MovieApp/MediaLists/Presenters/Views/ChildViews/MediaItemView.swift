@@ -23,8 +23,8 @@ struct MediaItemView: View {
                     }
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .frame(width: 200,height: 150)
-                    .background(.black.opacity(0.4))
+                    .frame(width: 150,height: 200)
+                    .background(.blue.opacity(0.1))
                     .clipShape(RoundedRectangle(cornerSize: CGSize(width: 10, height: 10)))
             }
             
@@ -33,7 +33,8 @@ struct MediaItemView: View {
                 Text(viewModel.genre)
             }
             .lineLimit(2)
-            .foregroundStyle(.black)
+            .foregroundStyle(.white)
+            .fontDesign(.rounded)
             .font(.subheadline)
             
         }

@@ -13,11 +13,11 @@ struct MediaItemsListView: View {
     var completion : ((MediaItemViewModel) -> Void)
     
     var body: some View {
-        ScrollView(.horizontal) {
+        ScrollView(.horizontal,showsIndicators: false) {
             LazyHStack(alignment:.top) {
                 ForEach(viewModel.mediaItemsViewModels) { mediaItemsViewModel in
                     MediaItemView(viewModel: mediaItemsViewModel)
-                        .frame(width: 200)
+                        .frame(width: 150,height: 300,alignment: .top)
                         .onTapGesture {
                             completion(mediaItemsViewModel)
                         }
