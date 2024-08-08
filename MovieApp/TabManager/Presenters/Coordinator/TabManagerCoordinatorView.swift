@@ -1,5 +1,5 @@
 //
-//  HomeCoordinatorView.swift
+//  TabManagerCoordinatorView.swift
 //  MovieApp
 //
 //  Created by tarek ahmed on 30/07/2024.
@@ -8,24 +8,24 @@
 import Foundation
 import SwiftUI
 
-struct HomeCoordinatorView: View {
+struct TabManagerCoordinatorView: View {
 
-    @ObservedObject var coordinator: HomeCoordinator
+    @ObservedObject var coordinator: TabManagerCoordinator
 
     var body: some View {
         TabView(selection: $coordinator.tab) {
-            MediaListCoordinatorView(coordinator: coordinator.mediaListCoordinator)
-                .tabItem { Label("Media List", systemImage: "list.bullet") }
-                .tag(HomeTab.mediaList)
+            HomeCoordinatorView(coordinator: coordinator.homeCoordinator)
+                .tabItem { Label("Home", systemImage: "house") }
+                .tag(Tab.homeScreen)
             
             SearchCoordinatorView(coordinator: coordinator.searchCoordinator)
                 .tabItem { Label("Search", systemImage: "magnifyingglass") }
-                .tag(HomeTab.search)
+                .tag(Tab.search)
             
 
             ProfileCoordinatorView(coordinator: coordinator.profileCoordinator)
                 .tabItem { Label("Profile", systemImage: "person.circle") }
-                .tag(HomeTab.profile)            
+                .tag(Tab.profile)            
         }
         .accentColor(.white)
         

@@ -1,5 +1,5 @@
 //
-//  MediaListCoordinator.swift
+//  HomeCoordinator.swift
 //  MovieApp
 //
 //  Created by tarek ahmed on 30/07/2024.
@@ -8,18 +8,18 @@
 import Foundation
 import SwiftUI
 
-class MediaListCoordinator : ObservableObject, NavigationCoordinator {
+class HomeCoordinator : ObservableObject, NavigationCoordinator {
     
-    enum MediaListNavigation : Hashable {
-        case mediaList
+    enum HomeNavigation : Hashable {
+        case homeScreen
         case mediaDetails(id:Int64,mediaType:MediaTypeDTO)
     }
     
-    private var parentCoordinator : HomeCoordinator
+    private var parentCoordinator: TabManagerCoordinator
   
     @Published var path = NavigationPath()
     
-    init(parentCoordinator: HomeCoordinator) {
+    init(parentCoordinator: TabManagerCoordinator) {
         self.parentCoordinator = parentCoordinator
     }
     
@@ -27,7 +27,7 @@ class MediaListCoordinator : ObservableObject, NavigationCoordinator {
         path.removeLast()
     }
     
-    func push(page:MediaListNavigation) {
+    func push(page:HomeNavigation) {
         path.append(page)
     }
     
@@ -36,10 +36,10 @@ class MediaListCoordinator : ObservableObject, NavigationCoordinator {
     }
     
     @ViewBuilder
-    func build(page : MediaListNavigation) -> some View {
+    func build(page : HomeNavigation) -> some View {
         switch page {
-        case .mediaList:
-            MediaListFactory(mediaListCoordinator: self).getMediaListView()
+        case .homeScreen:
+            HomeFactory(homeCoordinator: self).getHomeView()
         case .mediaDetails(let id,let mediaType):
             MediaDetailsCoordinatorView(coordinator: MediaDetailsCoordinator(parentCoordinator: self, mediaID: id, mediaType: mediaType))
         }

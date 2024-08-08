@@ -63,7 +63,7 @@ struct LoginView: View {
     
     
     private func getImageView() -> some View {
-        Image("homeImage")
+        Image("loginImage")
             .resizable()
             .frame(width: UIScreen.main.bounds.width / 2,height:  UIScreen.main.bounds.width / 2)
     }

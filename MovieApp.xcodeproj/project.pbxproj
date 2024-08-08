@@ -28,23 +28,23 @@
 		30424D5E2C57A34C00FA431F /* TopRatedRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30424D5D2C57A34C00FA431F /* TopRatedRequest.swift */; };
 		30424D612C57A47000FA431F /* MediaListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30424D602C57A47000FA431F /* MediaListService.swift */; };
 		30424D632C57A4F700FA431F /* MediaItemDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30424D622C57A4F700FA431F /* MediaItemDTO.swift */; };
-		30424D672C57AA7A00FA431F /* DefaultMediaListServiceImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30424D662C57AA7A00FA431F /* DefaultMediaListServiceImplementation.swift */; };
+		30424D672C57AA7A00FA431F /* MediaListServiceImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30424D662C57AA7A00FA431F /* MediaListServiceImplementation.swift */; };
 		30424D6B2C57BAA200FA431F /* MediaListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30424D6A2C57BAA200FA431F /* MediaListRepository.swift */; };
-		30424D6D2C57BB0400FA431F /* DefaultMediaListRepositoryImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30424D6C2C57BB0400FA431F /* DefaultMediaListRepositoryImplementation.swift */; };
+		30424D6D2C57BB0400FA431F /* MediaListRepositoryImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30424D6C2C57BB0400FA431F /* MediaListRepositoryImplementation.swift */; };
 		30424D6F2C57BEEA00FA431F /* TopRatedMovieUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30424D6E2C57BEEA00FA431F /* TopRatedMovieUseCase.swift */; };
 		30424D732C57BF7300FA431F /* TopRatedMovieUseCaseImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30424D722C57BF7300FA431F /* TopRatedMovieUseCaseImplementation.swift */; };
 		3045CB6F2C58C61000AA5FD5 /* TopRatedTVShowUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3045CB6E2C58C61000AA5FD5 /* TopRatedTVShowUseCase.swift */; };
 		3045CB712C58C62F00AA5FD5 /* TopRatedTVShowUseCaseImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3045CB702C58C62F00AA5FD5 /* TopRatedTVShowUseCaseImplementation.swift */; };
-		3045CB742C58C6C700AA5FD5 /* MediaListCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3045CB732C58C6C700AA5FD5 /* MediaListCoordinatorView.swift */; };
-		3045CB762C58C6D400AA5FD5 /* MediaListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3045CB752C58C6D400AA5FD5 /* MediaListCoordinator.swift */; };
-		3045CB7D2C58C76700AA5FD5 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3045CB7C2C58C76700AA5FD5 /* HomeCoordinator.swift */; };
-		3045CB7F2C58C77700AA5FD5 /* HomeCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3045CB7E2C58C77700AA5FD5 /* HomeCoordinatorView.swift */; };
+		3045CB742C58C6C700AA5FD5 /* HomeCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3045CB732C58C6C700AA5FD5 /* HomeCoordinatorView.swift */; };
+		3045CB762C58C6D400AA5FD5 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3045CB752C58C6D400AA5FD5 /* HomeCoordinator.swift */; };
+		3045CB7D2C58C76700AA5FD5 /* TabManagerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3045CB7C2C58C76700AA5FD5 /* TabManagerCoordinator.swift */; };
+		3045CB7F2C58C77700AA5FD5 /* TabManagerCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3045CB7E2C58C77700AA5FD5 /* TabManagerCoordinatorView.swift */; };
 		3045CBA52C58EED000AA5FD5 /* LoginValidatationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3045CBA42C58EED000AA5FD5 /* LoginValidatationUseCase.swift */; };
 		3045CBA72C58F06800AA5FD5 /* LoginValidatationUseCaseImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3045CBA62C58F06800AA5FD5 /* LoginValidatationUseCaseImplementation.swift */; };
 		3045CBA92C58F38400AA5FD5 /* LoginValidationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3045CBA82C58F38400AA5FD5 /* LoginValidationRepository.swift */; };
 		3045CBAB2C59372400AA5FD5 /* LoginValidtationRepositoryImplentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3045CBAA2C59372400AA5FD5 /* LoginValidtationRepositoryImplentation.swift */; };
-		3045CBC12C594B5000AA5FD5 /* MediaListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3045CBC02C594B5000AA5FD5 /* MediaListView.swift */; };
-		3045CBC32C594DE800AA5FD5 /* MediaListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3045CBC22C594DE800AA5FD5 /* MediaListViewModel.swift */; };
+		3045CBC12C594B5000AA5FD5 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3045CBC02C594B5000AA5FD5 /* HomeView.swift */; };
+		3045CBC32C594DE800AA5FD5 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3045CBC22C594DE800AA5FD5 /* HomeViewModel.swift */; };
 		30738AF62C5CB1EA002B0C92 /* TVShowCreditUseCaseImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30738AF52C5CB1EA002B0C92 /* TVShowCreditUseCaseImplementation.swift */; };
 		30738AF82C5CB248002B0C92 /* TVShowCreditUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30738AF72C5CB248002B0C92 /* TVShowCreditUseCase.swift */; };
 		30738AFA2C5CBF41002B0C92 /* MediaCreditsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30738AF92C5CBF41002B0C92 /* MediaCreditsListView.swift */; };
@@ -122,7 +122,7 @@
 		30738BCC2C5E8EB2002B0C92 /* WatchListTVShowsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30738BCB2C5E8EB2002B0C92 /* WatchListTVShowsUseCase.swift */; };
 		30738BCE2C5E8EC8002B0C92 /* WatchListTVShowsUseCaseImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30738BCD2C5E8EC8002B0C92 /* WatchListTVShowsUseCaseImplementation.swift */; };
 		30738BD02C5E8F2D002B0C92 /* WatchListMoviesUseCaseImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30738BCF2C5E8F2D002B0C92 /* WatchListMoviesUseCaseImplementation.swift */; };
-		309200FF2C5A236900629457 /* MediaListFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309200FE2C5A236900629457 /* MediaListFactory.swift */; };
+		309200FF2C5A236900629457 /* HomeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309200FE2C5A236900629457 /* HomeFactory.swift */; };
 		309201022C5A2D1800629457 /* MediaItemsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309201012C5A2D1800629457 /* MediaItemsListView.swift */; };
 		309201042C5A2D5F00629457 /* MediaItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309201032C5A2D5F00629457 /* MediaItemView.swift */; };
 		3092010A2C5A8B9000629457 /* UpComingRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309201092C5A8B9000629457 /* UpComingRequest.swift */; };
@@ -130,7 +130,6 @@
 		3092010E2C5A8C7A00629457 /* UpComingTVShowsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3092010D2C5A8C7A00629457 /* UpComingTVShowsUseCase.swift */; };
 		309201102C5A8CBC00629457 /* UpComingMovieUseCaseImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3092010F2C5A8CBC00629457 /* UpComingMovieUseCaseImplementation.swift */; };
 		309201122C5A8CD700629457 /* UpComingTVShowUseCaseImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309201112C5A8CD700629457 /* UpComingTVShowUseCaseImplementation.swift */; };
-		309201152C5A8E3100629457 /* MediaListFacade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309201142C5A8E3100629457 /* MediaListFacade.swift */; };
 		309201172C5AB62D00629457 /* MediaDetailsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309201162C5AB62D00629457 /* MediaDetailsService.swift */; };
 		3093C81C2C54A46D009DF963 /* MovieApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3093C81B2C54A46D009DF963 /* MovieApp.swift */; };
 		3093C81E2C54A46D009DF963 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3093C81D2C54A46D009DF963 /* LoginView.swift */; };
@@ -223,25 +222,25 @@
 		30424D5D2C57A34C00FA431F /* TopRatedRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRatedRequest.swift; sourceTree = "<group>"; };
 		30424D602C57A47000FA431F /* MediaListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaListService.swift; sourceTree = "<group>"; };
 		30424D622C57A4F700FA431F /* MediaItemDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaItemDTO.swift; sourceTree = "<group>"; };
-		30424D662C57AA7A00FA431F /* DefaultMediaListServiceImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultMediaListServiceImplementation.swift; sourceTree = "<group>"; };
+		30424D662C57AA7A00FA431F /* MediaListServiceImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaListServiceImplementation.swift; sourceTree = "<group>"; };
 		30424D6A2C57BAA200FA431F /* MediaListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaListRepository.swift; sourceTree = "<group>"; };
-		30424D6C2C57BB0400FA431F /* DefaultMediaListRepositoryImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultMediaListRepositoryImplementation.swift; sourceTree = "<group>"; };
+		30424D6C2C57BB0400FA431F /* MediaListRepositoryImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaListRepositoryImplementation.swift; sourceTree = "<group>"; };
 		30424D6E2C57BEEA00FA431F /* TopRatedMovieUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRatedMovieUseCase.swift; sourceTree = "<group>"; };
 		30424D722C57BF7300FA431F /* TopRatedMovieUseCaseImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRatedMovieUseCaseImplementation.swift; sourceTree = "<group>"; };
 		3045CB6E2C58C61000AA5FD5 /* TopRatedTVShowUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRatedTVShowUseCase.swift; sourceTree = "<group>"; };
 		3045CB702C58C62F00AA5FD5 /* TopRatedTVShowUseCaseImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRatedTVShowUseCaseImplementation.swift; sourceTree = "<group>"; };
-		3045CB732C58C6C700AA5FD5 /* MediaListCoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaListCoordinatorView.swift; sourceTree = "<group>"; };
-		3045CB752C58C6D400AA5FD5 /* MediaListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaListCoordinator.swift; sourceTree = "<group>"; };
-		3045CB7C2C58C76700AA5FD5 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
-		3045CB7E2C58C77700AA5FD5 /* HomeCoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinatorView.swift; sourceTree = "<group>"; };
+		3045CB732C58C6C700AA5FD5 /* HomeCoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinatorView.swift; sourceTree = "<group>"; };
+		3045CB752C58C6D400AA5FD5 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		3045CB7C2C58C76700AA5FD5 /* TabManagerCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabManagerCoordinator.swift; sourceTree = "<group>"; };
+		3045CB7E2C58C77700AA5FD5 /* TabManagerCoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabManagerCoordinatorView.swift; sourceTree = "<group>"; };
 		3045CBA42C58EED000AA5FD5 /* LoginValidatationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginValidatationUseCase.swift; sourceTree = "<group>"; };
 		3045CBA62C58F06800AA5FD5 /* LoginValidatationUseCaseImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginValidatationUseCaseImplementation.swift; sourceTree = "<group>"; };
 		3045CBA82C58F38400AA5FD5 /* LoginValidationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginValidationRepository.swift; sourceTree = "<group>"; };
 		3045CBAA2C59372400AA5FD5 /* LoginValidtationRepositoryImplentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginValidtationRepositoryImplentation.swift; sourceTree = "<group>"; };
 		3045CBBC2C59398E00AA5FD5 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		3045CBBE2C59399700AA5FD5 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
-		3045CBC02C594B5000AA5FD5 /* MediaListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaListView.swift; sourceTree = "<group>"; };
-		3045CBC22C594DE800AA5FD5 /* MediaListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaListViewModel.swift; sourceTree = "<group>"; };
+		3045CBC02C594B5000AA5FD5 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		3045CBC22C594DE800AA5FD5 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		30738AF52C5CB1EA002B0C92 /* TVShowCreditUseCaseImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowCreditUseCaseImplementation.swift; sourceTree = "<group>"; };
 		30738AF72C5CB248002B0C92 /* TVShowCreditUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowCreditUseCase.swift; sourceTree = "<group>"; };
 		30738AF92C5CBF41002B0C92 /* MediaCreditsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaCreditsListView.swift; sourceTree = "<group>"; };
@@ -311,7 +310,7 @@
 		30738BCB2C5E8EB2002B0C92 /* WatchListTVShowsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchListTVShowsUseCase.swift; sourceTree = "<group>"; };
 		30738BCD2C5E8EC8002B0C92 /* WatchListTVShowsUseCaseImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchListTVShowsUseCaseImplementation.swift; sourceTree = "<group>"; };
 		30738BCF2C5E8F2D002B0C92 /* WatchListMoviesUseCaseImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchListMoviesUseCaseImplementation.swift; sourceTree = "<group>"; };
-		309200FE2C5A236900629457 /* MediaListFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaListFactory.swift; sourceTree = "<group>"; };
+		309200FE2C5A236900629457 /* HomeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFactory.swift; sourceTree = "<group>"; };
 		309201012C5A2D1800629457 /* MediaItemsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaItemsListView.swift; sourceTree = "<group>"; };
 		309201032C5A2D5F00629457 /* MediaItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaItemView.swift; sourceTree = "<group>"; };
 		309201092C5A8B9000629457 /* UpComingRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpComingRequest.swift; sourceTree = "<group>"; };
@@ -319,7 +318,6 @@
 		3092010D2C5A8C7A00629457 /* UpComingTVShowsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpComingTVShowsUseCase.swift; sourceTree = "<group>"; };
 		3092010F2C5A8CBC00629457 /* UpComingMovieUseCaseImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpComingMovieUseCaseImplementation.swift; sourceTree = "<group>"; };
 		309201112C5A8CD700629457 /* UpComingTVShowUseCaseImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpComingTVShowUseCaseImplementation.swift; sourceTree = "<group>"; };
-		309201142C5A8E3100629457 /* MediaListFacade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaListFacade.swift; sourceTree = "<group>"; };
 		309201162C5AB62D00629457 /* MediaDetailsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaDetailsService.swift; sourceTree = "<group>"; };
 		3093C8182C54A46D009DF963 /* MovieApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3093C81B2C54A46D009DF963 /* MovieApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieApp.swift; sourceTree = "<group>"; };
@@ -591,15 +589,14 @@
 			path = Factory;
 			sourceTree = "<group>";
 		};
-		30424D352C579E1E00FA431F /* MediaLists */ = {
+		30424D352C579E1E00FA431F /* Home */ = {
 			isa = PBXGroup;
 			children = (
 				30424D392C579EA900FA431F /* Infrastructure */,
-				30424D382C579EA200FA431F /* Data */,
 				30424D372C579E9700FA431F /* Presenters */,
 				30424D362C579E9200FA431F /* Domain */,
 			);
-			path = MediaLists;
+			path = Home;
 			sourceTree = "<group>";
 		};
 		30424D362C579E9200FA431F /* Domain */ = {
@@ -614,21 +611,12 @@
 		30424D372C579E9700FA431F /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
-				309201132C5A8E0E00629457 /* Facade */,
 				30424D3F2C579F2F00FA431F /* Factory */,
 				30424D3E2C579F2500FA431F /* Coordinators */,
 				30424D3D2C579F1E00FA431F /* ViewModels */,
 				30424D3C2C579F1A00FA431F /* Views */,
 			);
 			path = Presenters;
-			sourceTree = "<group>";
-		};
-		30424D382C579EA200FA431F /* Data */ = {
-			isa = PBXGroup;
-			children = (
-				30424D402C579F3900FA431F /* DTOS */,
-			);
-			path = Data;
 			sourceTree = "<group>";
 		};
 		30424D392C579EA900FA431F /* Infrastructure */ = {
@@ -669,7 +657,7 @@
 		30424D3D2C579F1E00FA431F /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				3045CBC22C594DE800AA5FD5 /* MediaListViewModel.swift */,
+				3045CBC22C594DE800AA5FD5 /* HomeViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -677,8 +665,8 @@
 		30424D3E2C579F2500FA431F /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
-				3045CB732C58C6C700AA5FD5 /* MediaListCoordinatorView.swift */,
-				3045CB752C58C6D400AA5FD5 /* MediaListCoordinator.swift */,
+				3045CB752C58C6D400AA5FD5 /* HomeCoordinator.swift */,
+				3045CB732C58C6C700AA5FD5 /* HomeCoordinatorView.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -686,16 +674,9 @@
 		30424D3F2C579F2F00FA431F /* Factory */ = {
 			isa = PBXGroup;
 			children = (
-				309200FE2C5A236900629457 /* MediaListFactory.swift */,
+				309200FE2C5A236900629457 /* HomeFactory.swift */,
 			);
 			path = Factory;
-			sourceTree = "<group>";
-		};
-		30424D402C579F3900FA431F /* DTOS */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = DTOS;
 			sourceTree = "<group>";
 		};
 		30424D412C579F3F00FA431F /* Network */ = {
@@ -751,7 +732,7 @@
 		30424D5C2C57A28B00FA431F /* Implementation */ = {
 			isa = PBXGroup;
 			children = (
-				30424D662C57AA7A00FA431F /* DefaultMediaListServiceImplementation.swift */,
+				30424D662C57AA7A00FA431F /* MediaListServiceImplementation.swift */,
 			);
 			name = Implementation;
 			sourceTree = "<group>";
@@ -768,7 +749,7 @@
 		30424D682C57AC3700FA431F /* Implementation */ = {
 			isa = PBXGroup;
 			children = (
-				30424D6C2C57BB0400FA431F /* DefaultMediaListRepositoryImplementation.swift */,
+				30424D6C2C57BB0400FA431F /* MediaListRepositoryImplementation.swift */,
 			);
 			name = Implementation;
 			sourceTree = "<group>";
@@ -803,12 +784,12 @@
 			path = Implementation;
 			sourceTree = "<group>";
 		};
-		3045CB772C58C6F500AA5FD5 /* Home */ = {
+		3045CB772C58C6F500AA5FD5 /* TabManager */ = {
 			isa = PBXGroup;
 			children = (
 				3045CB782C58C70900AA5FD5 /* Presenters */,
 			);
-			path = Home;
+			path = TabManager;
 			sourceTree = "<group>";
 		};
 		3045CB782C58C70900AA5FD5 /* Presenters */ = {
@@ -822,8 +803,8 @@
 		3045CB7B2C58C73800AA5FD5 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
-				3045CB7C2C58C76700AA5FD5 /* HomeCoordinator.swift */,
-				3045CB7E2C58C77700AA5FD5 /* HomeCoordinatorView.swift */,
+				3045CB7C2C58C76700AA5FD5 /* TabManagerCoordinator.swift */,
+				3045CB7E2C58C77700AA5FD5 /* TabManagerCoordinatorView.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -831,7 +812,7 @@
 		3045CBC42C594FB300AA5FD5 /* ParentView */ = {
 			isa = PBXGroup;
 			children = (
-				3045CBC02C594B5000AA5FD5 /* MediaListView.swift */,
+				3045CBC02C594B5000AA5FD5 /* HomeView.swift */,
 			);
 			path = ParentView;
 			sourceTree = "<group>";
@@ -1467,14 +1448,6 @@
 			path = Implementation;
 			sourceTree = "<group>";
 		};
-		309201132C5A8E0E00629457 /* Facade */ = {
-			isa = PBXGroup;
-			children = (
-				309201142C5A8E3100629457 /* MediaListFacade.swift */,
-			);
-			path = Facade;
-			sourceTree = "<group>";
-		};
 		3093C80F2C54A46D009DF963 = {
 			isa = PBXGroup;
 			children = (
@@ -1499,8 +1472,8 @@
 				3093C82D2C54A55A009DF963 /* Main */,
 				30B15BDD2C5BB2D0002BFEBB /* Shared */,
 				3093C8292C54A4F3009DF963 /* Authentication */,
-				3045CB772C58C6F500AA5FD5 /* Home */,
-				30424D352C579E1E00FA431F /* MediaLists */,
+				3045CB772C58C6F500AA5FD5 /* TabManager */,
+				30424D352C579E1E00FA431F /* Home */,
 				30738B012C5CC5CB002B0C92 /* Search */,
 				3095A9B92C60E535005BA180 /* Profile */,
 				30738B662C5D521E002B0C92 /* MediaDetails */,
@@ -2066,7 +2039,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				309201152C5A8E3100629457 /* MediaListFacade.swift in Sources */,
 				3095A9DE2C60F807005BA180 /* LogoutServiceImplementation.swift in Sources */,
 				30424D152C5615AC00FA431F /* AuthenticationInfoStorage.swift in Sources */,
 				30738BB12C5E7FC0002B0C92 /* MediaWatchListService.swift in Sources */,
@@ -2092,7 +2064,7 @@
 				30B15BE42C5C0421002BFEBB /* MediaCreditsRequest.swift in Sources */,
 				30738B5B2C5D3228002B0C92 /* GenreContentContainerListViewModel.swift in Sources */,
 				3095A9EA2C610186005BA180 /* WatchListFactory.swift in Sources */,
-				3045CB762C58C6D400AA5FD5 /* MediaListCoordinator.swift in Sources */,
+				3045CB762C58C6D400AA5FD5 /* HomeCoordinator.swift in Sources */,
 				3095AA092C616C2B005BA180 /* WatchListView.swift in Sources */,
 				30738BB52C5E814E002B0C92 /* WatchListResponseDTO.swift in Sources */,
 				30738BCC2C5E8EB2002B0C92 /* WatchListTVShowsUseCase.swift in Sources */,
@@ -2145,11 +2117,11 @@
 				30738BC42C5E8364002B0C92 /* AddMovieToWatchListUseCaseImplementation.swift in Sources */,
 				3095A9BF2C60E7B0005BA180 /* ProfileCoordinatorView.swift in Sources */,
 				30738B272C5CDBD5002B0C92 /* TVShowGenresUseCase.swift in Sources */,
-				3045CBC32C594DE800AA5FD5 /* MediaListViewModel.swift in Sources */,
+				3045CBC32C594DE800AA5FD5 /* HomeViewModel.swift in Sources */,
 				30738B452C5D2448002B0C92 /* Color.swift in Sources */,
 				30B15BC82C5B4DB2002BFEBB /* MediaDetailsRepository.swift in Sources */,
 				30738AFC2C5CBFD0002B0C92 /* MediaCreditListViewModel.swift in Sources */,
-				3045CB742C58C6C700AA5FD5 /* MediaListCoordinatorView.swift in Sources */,
+				3045CB742C58C6C700AA5FD5 /* HomeCoordinatorView.swift in Sources */,
 				3095AA072C615F10005BA180 /* WatchListViewModel.swift in Sources */,
 				30738B412C5D12EE002B0C92 /* MediaGenreItemViewModel.swift in Sources */,
 				3092010E2C5A8C7A00629457 /* UpComingTVShowsUseCase.swift in Sources */,
@@ -2223,21 +2195,21 @@
 				30738BC62C5E8567002B0C92 /* AddTVShowToWatchlistUseCase.swift in Sources */,
 				3095A9F32C6102A0005BA180 /* ProfileViewModel.swift in Sources */,
 				3095A9D52C60F6F7005BA180 /* LogoutRequestDTO.swift in Sources */,
-				3045CB7F2C58C77700AA5FD5 /* HomeCoordinatorView.swift in Sources */,
+				3045CB7F2C58C77700AA5FD5 /* TabManagerCoordinatorView.swift in Sources */,
 				303D78502C64CCC1001347A8 /* NavigationCoordinator.swift in Sources */,
 				3095A9C12C60E7EB005BA180 /* ProfileCoordinator.swift in Sources */,
 				30B15BDC2C5B8A41002BFEBB /* MediaDetailsFactory.swift in Sources */,
 				30424D192C565C6700FA431F /* KeyChainStack.swift in Sources */,
-				30424D672C57AA7A00FA431F /* DefaultMediaListServiceImplementation.swift in Sources */,
+				30424D672C57AA7A00FA431F /* MediaListServiceImplementation.swift in Sources */,
 				3045CBA92C58F38400AA5FD5 /* LoginValidationRepository.swift in Sources */,
 				30B15BCE2C5B4F02002BFEBB /* TVShowDetailsUseCase.swift in Sources */,
 				303D785D2C654CE7001347A8 /* PersistancError.swift in Sources */,
-				309200FF2C5A236900629457 /* MediaListFactory.swift in Sources */,
+				309200FF2C5A236900629457 /* HomeFactory.swift in Sources */,
 				30738AFE2C5CBFF0002B0C92 /* MediaCreditItemViewModel.swift in Sources */,
-				30424D6D2C57BB0400FA431F /* DefaultMediaListRepositoryImplementation.swift in Sources */,
+				30424D6D2C57BB0400FA431F /* MediaListRepositoryImplementation.swift in Sources */,
 				30738B002C5CC1B3002B0C92 /* MediaCreditItemView.swift in Sources */,
-				3045CBC12C594B5000AA5FD5 /* MediaListView.swift in Sources */,
-				3045CB7D2C58C76700AA5FD5 /* HomeCoordinator.swift in Sources */,
+				3045CBC12C594B5000AA5FD5 /* HomeView.swift in Sources */,
+				3045CB7D2C58C76700AA5FD5 /* TabManagerCoordinator.swift in Sources */,
 				30738B572C5D2DFE002B0C92 /* TVShowGenreContentListUseCaseImplementation.swift in Sources */,
 				30738BC02C5E8340002B0C92 /* AddMovieToWatchlistUseCase.swift in Sources */,
 				30424D6F2C57BEEA00FA431F /* TopRatedMovieUseCase.swift in Sources */,

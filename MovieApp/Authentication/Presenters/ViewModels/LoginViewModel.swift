@@ -34,7 +34,7 @@ class LoginViewModel : ObservableObject {
                 switch result {
                 case .success(let isLoginSuccess):
                     if isLoginSuccess {
-                        self?.presentHomeScreen()
+                        self?.presentTabManagerScreen()
                     }else {
                         self?.errorMessage = "Unknow Error"
                         self?.showAlert = true
@@ -52,13 +52,13 @@ class LoginViewModel : ObservableObject {
     func checkUserSignedBefore() {
         self.loginValidatationUseCase.execute { [weak self] isSignedBefore in
             if isSignedBefore {
-                self?.presentHomeScreen()
+                self?.presentTabManagerScreen()
             }
         }
     }
     
-    private func presentHomeScreen() {
-        loginCoordinator.present(fullScreenCover: .homeScreen)
+    private func presentTabManagerScreen() {
+        loginCoordinator.present(fullScreenCover: .tabManagerScreen)
     }
     
 }

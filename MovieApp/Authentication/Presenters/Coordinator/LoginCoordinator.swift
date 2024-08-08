@@ -12,15 +12,15 @@ class LoginCoordinator: ObservableObject {
     
     enum LoginNavigation : String , Identifiable {
         case loginScreen
-        case homeScreen
+        case tabManagerScreen
         
         var id : String {
             self.rawValue
         }
     }
     
-    lazy var homeCoordinator: HomeCoordinator = {
-        HomeCoordinator(parentCoordinator: self)
+    lazy var tabManagerCoordinator: TabManagerCoordinator = {
+        TabManagerCoordinator(parentCoordinator: self)
     }()
     
     @Published var fullScreenCover: LoginNavigation?
@@ -38,8 +38,8 @@ class LoginCoordinator: ObservableObject {
         switch page {
         case .loginScreen:
             LoginViewFactory(loginCoordinator: self).getLoginView()
-        case .homeScreen:
-            HomeCoordinatorView(coordinator: self.homeCoordinator)
+        case .tabManagerScreen:
+            TabManagerCoordinatorView(coordinator: self.tabManagerCoordinator)
         }
     }
     

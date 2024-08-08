@@ -1,5 +1,5 @@
 //
-//  HomeCoordinator.swift
+//  TabManagerCoordinator.swift
 //  MovieApp
 //
 //  Created by tarek ahmed on 30/07/2024.
@@ -7,18 +7,18 @@
 
 import Foundation
 
-enum HomeTab {
-    case mediaList
+enum Tab {
+    case homeScreen
     case search
     case profile
 }
 
-class HomeCoordinator: ObservableObject {
+class TabManagerCoordinator: ObservableObject {
     private var parentCoordinator : LoginCoordinator
-    @Published var tab = HomeTab.mediaList
+    @Published var tab = Tab.homeScreen
     
-    lazy var mediaListCoordinator: MediaListCoordinator = {
-         MediaListCoordinator(parentCoordinator: self)
+    lazy var homeCoordinator: HomeCoordinator = {
+         HomeCoordinator(parentCoordinator: self)
     }()
     
     lazy var searchCoordinator: SearchCoordinator = {
@@ -34,7 +34,7 @@ class HomeCoordinator: ObservableObject {
     }
     
     func dismiss() {
-        tab = .mediaList
+        tab = .homeScreen
         parentCoordinator.dimissFullScreenCover()
     }
     

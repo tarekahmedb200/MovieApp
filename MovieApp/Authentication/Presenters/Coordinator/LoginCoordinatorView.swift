@@ -20,7 +20,7 @@ struct LoginCoordinatorView : View {
             
             coordinator.build(page: .loginScreen)
                 .fullScreenCover(item: $coordinator.fullScreenCover) { _ in
-                    coordinator.build(page: .homeScreen)
+                    coordinator.build(page: .tabManagerScreen)
                 }
         }
         

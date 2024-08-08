@@ -17,7 +17,7 @@ struct MediaItemRowStyleView: View {
         HStack(alignment: .center) {
             getInfo()
             Spacer()
-            getImage()
+            getImageView()
         }
         .foregroundStyle(.white)
         .padding()
@@ -37,7 +37,7 @@ struct MediaItemRowStyleView: View {
     }
     
     @ViewBuilder
-    private func getImage() -> some View {
+    private func getImageView() -> some View {
         
         if let thumb = viewModel.posterURL {
             KFImage.url(thumb)

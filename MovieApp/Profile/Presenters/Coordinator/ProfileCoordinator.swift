@@ -17,11 +17,11 @@ class ProfileCoordinator: ObservableObject, NavigationCoordinator  {
         case mediaDetails(id:Int64,mediaType:MediaTypeDTO)
     }
     
-    private var parentCoordinator : HomeCoordinator
+    private var parentCoordinator : TabManagerCoordinator
   
     @Published var path = NavigationPath()
     
-    init(parentCoordinator: HomeCoordinator) {
+    init(parentCoordinator: TabManagerCoordinator) {
         self.parentCoordinator = parentCoordinator
     }
     

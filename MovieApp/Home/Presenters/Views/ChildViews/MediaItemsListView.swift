@@ -10,7 +10,7 @@ import SwiftUI
 struct MediaItemsListView: View {
     
     var viewModel: MediaItemsListViewModel
-    var completion : ((MediaItemViewModel) -> Void)
+    var completion: ((MediaItemViewModel) -> Void)
     
     var body: some View {
         ScrollView(.horizontal,showsIndicators: false) {
@@ -27,12 +27,3 @@ struct MediaItemsListView: View {
     }
 }
 
-//#Preview {
-//    MediaItemsListView(viewModel: MediaItemsListViewModel(mediaItems: [
-//        MediaItemDTO(id: 12,title: "The Shawshank Redemption", genres: [18,80], posterPath: "/9cqNxx0GxF0bflZmeSMuL5tnGzr.jpg"),
-//        MediaItemDTO(id: 14,title: "The Godfather", genres: [18,80], posterPath: "/3bhkrj58Vtu7enYsRolD1fZdja1.jpg"),
-//        MediaItemDTO(id: 16,title: "The Shawshank Redemption", genres: [18,80], posterPath: "/9cqNxx0GxF0bflZmeSMuL5tnGzr.jpg"),
-//        MediaItemDTO(id: 17,title: "The Godfather", genres: [18,80], posterPath: "/3bhkrj58Vtu7enYsRolD1fZdja1.jpg")
-//    ])
-//    )
-//}

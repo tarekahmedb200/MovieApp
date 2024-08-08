@@ -1,5 +1,5 @@
 //
-//  MediaListViewFactory.swift
+//  HomeFactory.swift
 //  MovieApp
 //
 //  Created by tarek ahmed on 31/07/2024.
@@ -7,25 +7,25 @@
 
 import Foundation
 
-class MediaListFactory {
+class HomeFactory {
     
-    private var mediaListCoordinator : MediaListCoordinator
+    private var homeCoordinator : HomeCoordinator
     
-    init(mediaListCoordinator: MediaListCoordinator) {
-        self.mediaListCoordinator = mediaListCoordinator
+    init(homeCoordinator: HomeCoordinator) {
+        self.homeCoordinator = homeCoordinator
     }
     
-    func getMediaListView() -> MediaListView {
-        return MediaListView(viewModel: self.getMediaListViewModel())
+    func getHomeView() -> HomeView {
+        return HomeView(viewModel: self.getHomeViewModel())
     }
     
-    private func getMediaListViewModel() -> MediaListViewModel {
-        return MediaListViewModel(
+    private func getHomeViewModel() -> HomeViewModel {
+        return HomeViewModel(
             topRatedMovieUseCase: getTopRatedMovieUseCase(),
             topRatedTVShowUseCase: getTopRatedTVShowUseCase(),
             upComingMovieUseCase: getUpComingMovieUseCase(),
             upComingTVShowUseCase: getUpComingTVShowsUseCase(),
-             mediaListCoordinator: self.mediaListCoordinator)
+            homeCoordinator: self.homeCoordinator)
     }
     
     private func getTopRatedTVShowUseCase() -> TopRatedTVShowUseCase {
@@ -46,7 +46,7 @@ class MediaListFactory {
     }
     
     private func getMediaListRepository() -> MediaListRepository {
-      return DefaultMediaListRepositoryImplementation(mediaListService: DefaultMediaListServiceImplementation())
+      return MediaListRepositoryImplementation(mediaListService: MediaListServiceImplementation())
     }
     
 }

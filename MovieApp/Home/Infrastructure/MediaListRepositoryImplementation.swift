@@ -1,5 +1,5 @@
 //
-//  DefaultMediaListRepositoryImplementation.swift
+//  MediaListRepositoryImplementation.swift
 //  MovieApp
 //
 //  Created by tarek ahmed on 29/07/2024.
@@ -8,7 +8,7 @@
 import Foundation
 
 
-class DefaultMediaListRepositoryImplementation {
+class MediaListRepositoryImplementation {
     private var mediaListService : MediaListService
     
     init(mediaListService: MediaListService) {
@@ -16,13 +16,13 @@ class DefaultMediaListRepositoryImplementation {
     }
 }
 
-extension DefaultMediaListRepositoryImplementation : MediaListRepository {
+extension MediaListRepositoryImplementation : MediaListRepository {
     
     func requestUpComingMovies(completion: @escaping (Result<[MediaItemDTO], any Error>) -> Void) {
         self.mediaListService.requestUpComingMovies { result in
             switch result {
-            case .success(let TopRatedMovieDTOs):
-                completion(.success(TopRatedMovieDTOs))
+            case .success(let upComingMovieDTOs):
+                completion(.success(upComingMovieDTOs))
             case .failure(let error):
                 completion(.failure(error))
             }
@@ -32,8 +32,8 @@ extension DefaultMediaListRepositoryImplementation : MediaListRepository {
     func requestUpComingTVShows(completion: @escaping (Result<[MediaItemDTO], any Error>) -> Void) {
         self.mediaListService.requestUpComingTVShows { result in
             switch result {
-            case .success(let TopRatedMovieDTOs):
-                completion(.success(TopRatedMovieDTOs))
+            case .success(let upComingTVShowsDTOs):
+                completion(.success(upComingTVShowsDTOs))
             case .failure(let error):
                 completion(.failure(error))
             }
@@ -44,8 +44,8 @@ extension DefaultMediaListRepositoryImplementation : MediaListRepository {
     func requestTopRatedMovies(completion: @escaping (Result<[MediaItemDTO], any Error>) -> Void) {
         self.mediaListService.requestTopRatedMovies { result in
             switch result {
-            case .success(let TopRatedMovieDTOs):
-                completion(.success(TopRatedMovieDTOs))
+            case .success(let topRatedMovieDTOs):
+                completion(.success(topRatedMovieDTOs))
             case .failure(let error):
                 completion(.failure(error))
             }
@@ -55,8 +55,8 @@ extension DefaultMediaListRepositoryImplementation : MediaListRepository {
     func requestTopRatedTVShows(completion: @escaping (Result<[MediaItemDTO], any Error>) -> Void) {
         self.mediaListService.requestTopRatedTVShows { result in
             switch result {
-            case .success(let TopRatedTVShowDTOs):
-                completion(.success(TopRatedTVShowDTOs))
+            case .success(let topRatedTVShowDTOs):
+                completion(.success(topRatedTVShowDTOs))
             case .failure(let error):
                 completion(.failure(error))
             }

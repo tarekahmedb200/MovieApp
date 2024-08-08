@@ -9,14 +9,14 @@ import Foundation
 
 
 enum UpComingRequest: APIRequest {
-    case requestTopRatedMovies
-    case requestTopRatedTVShows
+    case requestUpComingMovies
+    case requestUpComingTVShows
     
     var path: String {
         switch self {
-        case .requestTopRatedMovies:
+        case .requestUpComingMovies:
             return "/3/movie/upcoming"
-        case .requestTopRatedTVShows:
+        case .requestUpComingTVShows:
             return "/3/discover/tv"
         }
     }

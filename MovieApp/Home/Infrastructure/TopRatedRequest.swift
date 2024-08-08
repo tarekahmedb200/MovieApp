@@ -7,8 +7,6 @@
 
 import Foundation
 
-
-
 enum TopRatedRequest : APIRequest {
     case requestTopRatedMovies
     case requestTopRatedTV

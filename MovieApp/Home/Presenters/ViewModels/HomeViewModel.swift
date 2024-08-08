@@ -1,5 +1,5 @@
 //
-//  MediaListViewModel.swift
+//  HomeViewModel.swift
 //  MovieApp
 //
 //  Created by tarek ahmed on 30/07/2024.
@@ -7,31 +7,31 @@
 
 import Foundation
 
-class MediaListViewModel: ObservableObject {
+class HomeViewModel: ObservableObject {
     
-    @Published var topRatedMovies : [MediaItemDTO] = []
-    @Published var topRatedTVShows : [MediaItemDTO] = []
-    @Published var upComingMovies : [MediaItemDTO] = []
-    @Published var upComingTVShows : [MediaItemDTO] = []
+    @Published var topRatedMovies: [MediaItemDTO] = []
+    @Published var topRatedTVShows: [MediaItemDTO] = []
+    @Published var upComingMovies: [MediaItemDTO] = []
+    @Published var upComingTVShows: [MediaItemDTO] = []
     
     @Published var errorMessage : String = ""
     @Published var showAlert : Bool = false
     
-    private var topRatedMovieUseCase : TopRatedMovieUseCase
-    private var topRatedTVShowUseCase : TopRatedTVShowUseCase
-    private var upComingMovieUseCase : UpComingMoviesUseCase
-    private var upComingTVShowUseCase : UpComingTVShowsUseCase
-    private var mediaListCoordinator : MediaListCoordinator
+    private var topRatedMovieUseCase: TopRatedMovieUseCase
+    private var topRatedTVShowUseCase: TopRatedTVShowUseCase
+    private var upComingMovieUseCase: UpComingMoviesUseCase
+    private var upComingTVShowUseCase: UpComingTVShowsUseCase
+    private var homeCoordinator: HomeCoordinator
     
     init(topRatedMovieUseCase: TopRatedMovieUseCase, topRatedTVShowUseCase: TopRatedTVShowUseCase,
          upComingMovieUseCase: UpComingMoviesUseCase,
          upComingTVShowUseCase: UpComingTVShowsUseCase,
-         mediaListCoordinator : MediaListCoordinator) {
+         homeCoordinator : HomeCoordinator) {
         self.topRatedMovieUseCase = topRatedMovieUseCase
         self.topRatedTVShowUseCase = topRatedTVShowUseCase
         self.upComingMovieUseCase = upComingMovieUseCase
         self.upComingTVShowUseCase = upComingTVShowUseCase
-        self.mediaListCoordinator = mediaListCoordinator
+        self.homeCoordinator = homeCoordinator
         LoadTopRatedMovies()
         LoadTopRatedTVShows()
         LoadUpComingMovies()
@@ -103,7 +103,7 @@ class MediaListViewModel: ObservableObject {
     }
     
     func navigateToMediaDetails(id:Int64,mediaType:MediaTypeDTO) {
-        mediaListCoordinator.push(page: .mediaDetails(id: id, mediaType: mediaType))
+        homeCoordinator.push(page: .mediaDetails(id: id, mediaType: mediaType))
     }
     
 }

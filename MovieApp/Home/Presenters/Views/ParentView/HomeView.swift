@@ -1,5 +1,5 @@
 //
-//  MediaListView.swift
+//  HomeView.swift
 //  MovieApp
 //
 //  Created by tarek ahmed on 30/07/2024.
@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-struct MediaListView: View {
+struct HomeView: View {
     
-    @StateObject var viewModel: MediaListViewModel
+    @StateObject var viewModel: HomeViewModel
     
     var body: some View {
         ScrollView(showsIndicators: false) {
@@ -29,7 +29,6 @@ struct MediaListView: View {
                     
                     Spacer()
                 }
-                
             }
             
             Section {

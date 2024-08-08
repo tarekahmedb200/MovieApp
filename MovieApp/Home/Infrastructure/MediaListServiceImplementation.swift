@@ -1,5 +1,5 @@
 //
-//  DefaultMediaListServiceImplementation.swift
+//  MediaListServiceImplementation.swift
 //  MovieApp
 //
 //  Created by tarek ahmed on 29/07/2024.
@@ -8,7 +8,7 @@
 import Foundation
 
 
-class DefaultMediaListServiceImplementation {
+class MediaListServiceImplementation {
     var apiManager : APIManager
     
     init(apiManager: APIManager = DefaultAPI()) {
@@ -16,10 +16,10 @@ class DefaultMediaListServiceImplementation {
     }
 }
 
-extension DefaultMediaListServiceImplementation : MediaListService {
+extension MediaListServiceImplementation : MediaListService {
     
     func requestUpComingMovies(completion: @escaping (Result<[MediaItemDTO], any Error>) -> Void) {
-        self.apiManager.initRequest(with: UpComingRequest.requestTopRatedMovies, type: MediaItemContainerDTO.self) { result  in
+        self.apiManager.initRequest(with: UpComingRequest.requestUpComingMovies, type: MediaItemContainerDTO.self) { result  in
             switch result {
             case .success(let mediaItemContainerDto):
                 completion(.success(mediaItemContainerDto.mediaItemDTOs))
@@ -30,7 +30,7 @@ extension DefaultMediaListServiceImplementation : MediaListService {
     }
     
     func requestUpComingTVShows(completion: @escaping (Result<[MediaItemDTO], any Error>) -> Void) {
-        self.apiManager.initRequest(with: UpComingRequest.requestTopRatedTVShows, type: MediaItemContainerDTO.self) { result  in
+        self.apiManager.initRequest(with: UpComingRequest.requestUpComingTVShows, type: MediaItemContainerDTO.self) { result  in
             switch result {
             case .success(let mediaItemContainerDto):
                 completion(.success(mediaItemContainerDto.mediaItemDTOs))
