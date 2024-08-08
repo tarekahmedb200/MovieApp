@@ -27,6 +27,8 @@ struct HomeCoordinatorView: View {
                 .tabItem { Label("Profile", systemImage: "person.circle") }
                 .tag(HomeTab.profile)            
         }
+        .accentColor(.white)
+        
     }
 
 }
