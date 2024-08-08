@@ -8,7 +8,7 @@
 import SwiftUI
 
 class MediaCreditListViewModel {
-    var mediaCreditsItemViewModels : [MediaCreditItemViewModel]
+    var mediaCreditsItemViewModels: [MediaCreditItemViewModel]
     
     init(mediaCredits: [MediaCreditDTO]) {
         self.mediaCreditsItemViewModels = mediaCredits.map({ mediaCreditDTO in

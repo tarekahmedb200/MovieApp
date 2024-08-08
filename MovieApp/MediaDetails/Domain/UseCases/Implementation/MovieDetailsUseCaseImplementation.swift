@@ -16,7 +16,6 @@ final class MovieDetailsUseCaseImplementation {
     }
 }
 
-
 extension MovieDetailsUseCaseImplementation: MovieDetailsUseCase {
     
     func execute(mediaID: Int64, completion: @escaping (Result<MovieDetailsDTO, any Error>) -> Void) {

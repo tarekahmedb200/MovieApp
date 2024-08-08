@@ -18,7 +18,6 @@ class MediaDetailsViewModel: ObservableObject {
     @Published private var movieCreditsDTos: [MediaCreditDTO ] = []
     @Published private var tvCreditsDtos: [MediaCreditDTO ] = []
     
-    
     private var mediaID: Int64
     private var mediaType : MediaTypeDTO
     private var movieDetailsUseCase : MovieDetailsUseCase
@@ -64,6 +63,19 @@ class MediaDetailsViewModel: ObservableObject {
         }
     }
     
+    func addMediaToWatchlist() {
+        switch mediaType {
+        case .movie:
+            addMovieToWatchLists()
+        case .tv:
+            addTVShowToWatchLists()
+        }
+    }
+    
+    func dismiss() {
+        mediaDetailsCoordinator.pop()
+    }
+    
     private func LoadMovieDetails() {
         self.movieDetailsUseCase.execute(mediaID:self.mediaID) { [weak self] result in
             switch result {
@@ -96,7 +108,6 @@ class MediaDetailsViewModel: ObservableObject {
         }
     }
     
-    
     private func LoadTVShowDetails() {
         self.tvShowDetailsUseCase.execute(mediaID:self.mediaID) { [weak self] result in
             switch result {
@@ -126,15 +137,6 @@ class MediaDetailsViewModel: ObservableObject {
                     self?.showAlert = true
                 }
             }
-        }
-    }
-    
-    func addMediaToWatchlist() {
-        switch mediaType {
-        case .movie:
-            addMovieToWatchLists()
-        case .tv:
-            addTVShowToWatchLists()
         }
     }
     
@@ -209,13 +211,10 @@ class MediaDetailsViewModel: ObservableObject {
         }
     }
     
-    func dismiss() {
-        mediaDetailsCoordinator.pop()
-    }
-    
 }
 
 
+// MARK: - UI
 extension MediaDetailsViewModel {
     
     var mediaCredits : [MediaCreditDTO] {

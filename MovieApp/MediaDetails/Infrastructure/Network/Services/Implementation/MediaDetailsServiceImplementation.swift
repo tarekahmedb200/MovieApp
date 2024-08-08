@@ -1,5 +1,5 @@
 //
-//  DefaultMediaDetailsServiceImplementation.swift
+//  MediaDetailsServiceImplementation.swift
 //  MovieApp
 //
 //  Created by tarek ahmed on 01/08/2024.
@@ -8,7 +8,7 @@
 import Foundation
 
 
-class DefaultMediaDetailsServiceImplementation {
+class MediaDetailsServiceImplementation {
     var apiManager : APIManager
     
     init(apiManager: APIManager = DefaultAPI()) {
@@ -16,7 +16,7 @@ class DefaultMediaDetailsServiceImplementation {
     }
 }
 
-extension DefaultMediaDetailsServiceImplementation : MediaDetailsService {
+extension MediaDetailsServiceImplementation : MediaDetailsService {
     
     func requestMovieDetails(mediaID: Int64, completion: @escaping (Result<MovieDetailsDTO, any Error>) -> Void) {
         self.apiManager.initRequest(with: MediaDetailsRequest.requestMovieDetails(id: mediaID), type: MovieDetailsDTO.self) { result  in

@@ -10,7 +10,7 @@ import Foundation
 
 class MediaDetailsFactory {
     
-    private var mediaDetailsCoordinator : MediaDetailsCoordinator
+    private var mediaDetailsCoordinator: MediaDetailsCoordinator
     private var mediaType: MediaTypeDTO
     private var mediaID: Int64
     
@@ -21,10 +21,10 @@ class MediaDetailsFactory {
     }
     
     func getMediaDetailsView() -> MediaDetailsView {
-        return MediaDetailsView(viewModel: self.getMediaListViewModel())
+        return MediaDetailsView(viewModel: self.getMediaDetailsViewModel())
     }
     
-    private func getMediaListViewModel() -> MediaDetailsViewModel {
+    private func getMediaDetailsViewModel() -> MediaDetailsViewModel {
         
         return MediaDetailsViewModel(mediaType: self.mediaType, mediaID: self.mediaID, movieDetailsUseCase: getMovieDetailsUseCase(), tvShowDetailsUseCase: getTVShowDetailsUseCase(),
                                      movieCreditUseCase: getMovieCreditsUseCase(),
@@ -50,7 +50,7 @@ class MediaDetailsFactory {
     }
     
     private func getMediaDetailsRepository() -> MediaDetailsRepository {
-        return DefaultMediaDetailsRepositoryImplementation(mediaDetailsService: DefaultMediaDetailsServiceImplementation())
+        return MediaDetailsRepositoryImplementation(mediaDetailsService: MediaDetailsServiceImplementation())
     }
     
     private func getAddMovieToWatchlistUseCase() -> AddMovieToWatchlistUseCase {
@@ -68,7 +68,7 @@ class MediaDetailsFactory {
     private func getWatchListTVShowsUseCase() -> WatchListTVShowsUseCase {
         return WatchListTVShowsUseCaseImplementation(mediaWatchListRepository: getMediaWatchListRepository())
     }
-
+    
     private func getMediaWatchListRepository() -> MediaWatchListRepository {
         return MediaWatchListRepositoryImplementation(mediaWatchListService: MediaWatchListServiceImplementation())
     }

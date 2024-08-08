@@ -16,7 +16,6 @@ final class TVShowCreditUseCaseImplementation {
     }
 }
 
-
 extension TVShowCreditUseCaseImplementation: TVShowCreditUseCase {
     
     func execute(mediaID: Int64, completion: @escaping (Result<[MediaCreditDTO], any Error>) -> Void) {
