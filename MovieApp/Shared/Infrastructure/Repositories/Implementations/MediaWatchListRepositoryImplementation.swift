@@ -21,8 +21,8 @@ extension MediaWatchListRepositoryImplementation : MediaWatchListRepository {
     func addMovieToWatchList(watchListRequestDTO: WatchListRequestDTO, completion: @escaping (Result<WatchListResponseDTO, any Error>) -> Void) {
         self.mediaWatchListService.addMovieToWatchList(watchlistRequestDTO: watchListRequestDTO) { result in
             switch result {
-            case .success(let WatchListResponseDTO):
-                completion(.success(WatchListResponseDTO))
+            case .success(let watchListResponseDTO):
+                completion(.success(watchListResponseDTO))
             case .failure(let error):
                 completion(.failure(error))
             }

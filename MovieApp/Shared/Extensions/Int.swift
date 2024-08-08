@@ -1,5 +1,5 @@
 //
-//  IntExtension.swift
+//  Int.swift
 //  MovieApp
 //
 //  Created by tarek ahmed on 01/08/2024.

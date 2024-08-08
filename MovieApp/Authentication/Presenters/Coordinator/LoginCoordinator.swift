@@ -6,11 +6,12 @@
 //
 
 import Foundation
-
+import SwiftUI
 
 class LoginCoordinator: ObservableObject {
     
-    enum FullScreenCover : String , Identifiable {
+    enum LoginNavigation : String , Identifiable {
+        case loginScreen
         case homeScreen
         
         var id : String {
@@ -18,22 +19,28 @@ class LoginCoordinator: ObservableObject {
         }
     }
     
-    @Published var fullScreenCover: FullScreenCover?
-    
-    lazy var LoginView: LoginView = {
-        return LoginViewFactory(loginCoordinator: self).getLoginView()
-    }()
-    
     lazy var homeCoordinator: HomeCoordinator = {
         HomeCoordinator(parentCoordinator: self)
     }()
     
-    func present(fullScreenCover : FullScreenCover) {
+    @Published var fullScreenCover: LoginNavigation?
+    
+    func present(fullScreenCover : LoginNavigation) {
         self.fullScreenCover = fullScreenCover
     }
     
     func dimissFullScreenCover() {
         self.fullScreenCover = nil
+    }
+    
+    @ViewBuilder
+    func build(page : LoginNavigation) -> some View {
+        switch page {
+        case .loginScreen:
+            LoginViewFactory(loginCoordinator: self).getLoginView()
+        case .homeScreen:
+            HomeCoordinatorView(coordinator: self.homeCoordinator)
+        }
     }
     
 }

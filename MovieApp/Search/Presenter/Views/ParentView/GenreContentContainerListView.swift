@@ -14,7 +14,7 @@ struct GenreContentContainerListView: View {
     var body: some View {
         
         ScrollView {
-            MediaItemsListRowStyleView(viewModel: MediaItemsListRowStyleViewModel(mediaItems: viewModel.mediaItemDtos), showMore: viewModel.showMore) { mediaItemsListRowStyleViewModel in
+            MediaItemsListRowStyleView(viewModel: MediaItemsListViewModel(mediaItems: viewModel.mediaItemDtos), showMore: viewModel.showMore) { mediaItemsListRowStyleViewModel in
                 viewModel.navigateToMediaDetails(id: mediaItemsListRowStyleViewModel.id)
             } paginationCompletion: {
                 viewModel.handlePagination()

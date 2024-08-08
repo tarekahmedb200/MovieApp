@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-class MediaListCoordinator : ObservableObject, Coordinator {
+class MediaListCoordinator : ObservableObject, NavigationCoordinator {
     
     enum MediaListNavigation : Hashable {
         case mediaList
@@ -17,7 +17,6 @@ class MediaListCoordinator : ObservableObject, Coordinator {
     
     private var parentCoordinator : HomeCoordinator
   
-    
     @Published var path = NavigationPath()
     
     init(parentCoordinator: HomeCoordinator) {

@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 struct MediaGenreContainerDTO : Codable {
     var genres: [MediaGenreDTO]
 }
@@ -142,6 +141,6 @@ enum Genre: Int {
         case .warPolitics: return "war"
         }
     }
-
+    
 }
 

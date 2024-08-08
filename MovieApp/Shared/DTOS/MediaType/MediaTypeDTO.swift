@@ -8,10 +8,11 @@
 import Foundation
 
 enum MediaTypeDTO : String, Identifiable , CaseIterable {
-    case movie
-    case tv
     
-    var id : String {
+    var id: String {
         UUID().uuidString
     }
+    
+    case movie
+    case tv
 }

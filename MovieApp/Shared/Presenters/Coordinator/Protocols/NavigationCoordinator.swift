@@ -8,6 +8,6 @@
 import Foundation
 import SwiftUI
 
-protocol Coordinator {
+protocol NavigationCoordinator {
     var path: NavigationPath { get set }
 }

@@ -14,7 +14,6 @@ final class AddMovieToWatchListUseCaseImplementation {
     init(mediaWatchListRepository: MediaWatchListRepository) {
         self.mediaWatchListRepository = mediaWatchListRepository
     }
-    
 }
 
 extension AddMovieToWatchListUseCaseImplementation: AddMovieToWatchlistUseCase {
@@ -23,8 +22,8 @@ extension AddMovieToWatchListUseCaseImplementation: AddMovieToWatchlistUseCase {
         
         self.mediaWatchListRepository.addMovieToWatchList(watchListRequestDTO: WatchListRequestDTO(mediaType: mediaType.rawValue, mediaID: mediaID, addToWatchList: addToWatchList)) { result in
             switch result {
-            case .success(let WatchListResponseDTO):
-                completion(.success(WatchListResponseDTO))
+            case .success(let watchListResponseDTO):
+                completion(.success(watchListResponseDTO))
             case .failure(let error):
                 completion(.failure(error))
             }

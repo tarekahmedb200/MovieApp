@@ -19,33 +19,13 @@ struct LoginView: View {
                 
                 Spacer()
                 
-                Image("homeImage")
-                    .resizable()
-                    .frame(width: UIScreen.main.bounds.width / 2,height:  UIScreen.main.bounds.width / 2)
-                
-                Text("Movie App")
-                    .foregroundStyle(.white)
-                    .fontDesign(.rounded)
-                    .font(.title)
+                getImageView()
+                getTitleView()
                 
                 VStack {
                     createField(placeHolder: "Enter UserName", isPassword: false, value: $viewModel.userName)
-                    
                     createField(placeHolder: "Enter Password", isPassword: true, value: $viewModel.password)
-                    
-                    Button(action: {
-                        dismissKeyboard()
-                        viewModel.authenticate()
-                    }, label: {
-                        Text("Login")
-                            .foregroundStyle(.white)
-                            .bold()
-                            .frame(width: UIScreen.main.bounds.width / 2,height: 50)
-                            .background(LinearGradient(colors: [.red,.purple], startPoint: .leading, endPoint: .trailing))
-                            .clipShape(Capsule())
-                    })
-                    .padding(.vertical)
-                    
+                    getLoginButton()
                 }
                 .padding(.vertical)
                 .background(Color(red: 31.0/255, green: 32.0/255, blue: 50.0/255,opacity: 1))
@@ -81,14 +61,27 @@ struct LoginView: View {
         }
     }
     
-    @ViewBuilder
-    func createField(placeHolder:String,isPassword:Bool,value:Binding<String>) -> some View {
+    
+    private func getImageView() -> some View {
+        Image("homeImage")
+            .resizable()
+            .frame(width: UIScreen.main.bounds.width / 2,height:  UIScreen.main.bounds.width / 2)
+    }
+    
+    private func getTitleView() -> some View {
+        Text("Movie App")
+            .foregroundStyle(.white)
+            .fontDesign(.rounded)
+            .font(.title)
+    }
+    
+    private func createField(placeHolder:String,isPassword:Bool,value:Binding<String>) -> some View {
         VStack(alignment:.center,spacing:0) {
             Group {
                 if !isPassword {
-                    TextField("", text: $viewModel.userName,prompt: Text(placeHolder).foregroundColor(.white))
+                    TextField("", text: $viewModel.userName,prompt: Text(placeHolder).foregroundColor(.gray))
                 }else {
-                    SecureField("", text: $viewModel.password,prompt: Text(placeHolder).foregroundColor(.white))
+                    SecureField("", text: $viewModel.password,prompt: Text(placeHolder).foregroundColor(.gray))
                 }
             }
             .textInputAutocapitalization(.never)
@@ -101,6 +94,21 @@ struct LoginView: View {
                 .background(.white)
                 .padding(.horizontal)
         }
+    }
+    
+    private func getLoginButton() -> some View {
+        return Button(action: {
+            dismissKeyboard()
+            viewModel.authenticate()
+        }, label: {
+            Text("Login")
+                .foregroundStyle(.white)
+                .bold()
+                .frame(width: UIScreen.main.bounds.width / 2,height: 50)
+                .background(LinearGradient(colors: [.red,.purple], startPoint: .leading, endPoint: .trailing))
+                .clipShape(Capsule())
+        })
+        .padding(.vertical)
     }
     
     private func dismissKeyboard() {

@@ -9,11 +9,11 @@ import Foundation
 
 class LoginViewModel : ObservableObject {
     
-    @Published  var userName : String = ""
-    @Published  var password : String = ""
-    @Published  var errorMessage : String = ""
-    @Published  var showAlert : Bool = false
-    @Published  var isLoading : Bool = false
+    @Published var userName: String = ""
+    @Published var password: String = ""
+    @Published var errorMessage: String = ""
+    @Published var showAlert: Bool = false
+    @Published var isLoading: Bool = false
     
     private var authenticateUseCase : AuthenticateUseCase
     private var loginValidatationUseCase : LoginValidatationUseCase
@@ -60,6 +60,5 @@ class LoginViewModel : ObservableObject {
     private func presentHomeScreen() {
         loginCoordinator.present(fullScreenCover: .homeScreen)
     }
-    
     
 }

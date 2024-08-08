@@ -33,8 +33,6 @@ struct LoadingToastView: View {
                     isAnimating = true
                 }
         }
-       
-        
     }
 }
 

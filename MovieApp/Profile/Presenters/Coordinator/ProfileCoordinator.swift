@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 
-class ProfileCoordinator: ObservableObject, Coordinator  {
+class ProfileCoordinator: ObservableObject, NavigationCoordinator  {
     
     enum ProfileScreenNavigation : Hashable {
         case profileScreen

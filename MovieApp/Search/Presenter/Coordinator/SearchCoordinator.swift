@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-class SearchCoordinator : ObservableObject , Coordinator {
+class SearchCoordinator : ObservableObject , NavigationCoordinator {
     
     enum SearchNavigation : Hashable {
         case genreList

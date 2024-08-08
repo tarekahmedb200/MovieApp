@@ -27,19 +27,16 @@ class LoginViewFactory {
         return AuthenticateUseCaseImplementation(authenticationRepository: getAuthenticateRepository())
     }
     
-    
-    
     private func getAuthenticateRepository() -> AuthenticationRepository {
-      return DefaultAuthenticationRepositoryImplentation(authenticationService: DefaultAuthenticationImplementation(), appInfoStorage: KeyChainImplementation())
+        return AuthenticationRepositoryImplentation(authenticationService: AuthenticationImplementation(), appInfoStorage: KeyChainImplementation())
     }
-    
     
     private func getLoginValidationUseCase() -> LoginValidatationUseCase {
         return LoginValidatationUseCaseImplementation(loginValidationRepository: getLoginVaValidationRepository())
     }
     
     private func getLoginVaValidationRepository() -> LoginValidationRepository {
-      return DefaultLoginValidtationRepositoryImplentation(appInfoStorage: KeyChainImplementation())
+        return LoginValidtationRepositoryImplentation(appInfoStorage: KeyChainImplementation())
     }
     
 }

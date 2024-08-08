@@ -9,9 +9,9 @@ import SwiftUI
 
 struct MediaItemsListRowStyleView: View {
     
-    var viewModel: MediaItemsListRowStyleViewModel
+    var viewModel: MediaItemsListViewModel
     var showMore : Bool
-    var clickCompletion : ((MediaItemRowStyleViewModel) -> Void)
+    var clickCompletion : ((MediaItemViewModel) -> Void)
     var paginationCompletion : (() -> Void)
     
     var columns: [GridItem] =
@@ -21,7 +21,7 @@ struct MediaItemsListRowStyleView: View {
         
         ZStack {
             
-            Color(red: 31.0/255, green: 32.0/255, blue: 90.0/255,opacity: 1)
+            Color("AppBackgroundColor", bundle: nil)
             
             LazyVGrid(columns: columns,alignment: .center) {
                 ForEach(viewModel.mediaItemRowStyleViewModels) { mediaItemRowStyleViewModel in
@@ -43,6 +43,4 @@ struct MediaItemsListRowStyleView: View {
     }
 }
 
-//#Preview {
-//    GenreContentListView()
-//}
+

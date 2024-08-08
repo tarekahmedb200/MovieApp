@@ -41,14 +41,14 @@ struct SearchView: View {
                 switch viewModel.mediaType {
                 case .movie:
                     
-                    MediaItemsListRowStyleView(viewModel: MediaItemsListRowStyleViewModel(mediaItems: viewModel.searchedMovieItems), showMore: viewModel.showMoreSearchedMovies) { mediaItemsListRowStyleViewModel in
+                    MediaItemsListRowStyleView(viewModel: MediaItemsListViewModel(mediaItems: viewModel.searchedMovieItems), showMore: viewModel.showMoreSearchedMovies) { mediaItemsListRowStyleViewModel in
                         viewModel.navigateToMediaDetails(id:mediaItemsListRowStyleViewModel.id , mediaType: .movie)
                     } paginationCompletion: {
                         viewModel.handlePagination()
                     }
 
                 case .tv:
-                    MediaItemsListRowStyleView(viewModel: MediaItemsListRowStyleViewModel(mediaItems: viewModel.searchedTVShowItems), showMore: viewModel.showMoreSearchedTVShow) { mediaItemsListRowStyleViewModel in
+                    MediaItemsListRowStyleView(viewModel: MediaItemsListViewModel(mediaItems: viewModel.searchedTVShowItems), showMore: viewModel.showMoreSearchedTVShow) { mediaItemsListRowStyleViewModel in
                         viewModel.navigateToMediaDetails(id:mediaItemsListRowStyleViewModel.id , mediaType: .tv)
                     } paginationCompletion: {
                         viewModel.handlePagination()

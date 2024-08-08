@@ -27,14 +27,14 @@ struct WatchListView: View {
             switch viewModel.mediaType {
             case .movie:
                 
-                MediaItemsListRowStyleView(viewModel: MediaItemsListRowStyleViewModel(mediaItems: viewModel.watchListMovies), showMore: viewModel.showMoreWatchListMovies) { mediaItemsListRowStyleViewModel in
+                MediaItemsListRowStyleView(viewModel: MediaItemsListViewModel(mediaItems: viewModel.watchListMovies), showMore: viewModel.showMoreWatchListMovies) { mediaItemsListRowStyleViewModel in
                     viewModel.navigateToMediaDetails(id:mediaItemsListRowStyleViewModel.id , mediaType: .movie)
                 } paginationCompletion: {
                     viewModel.handlePagination()
                 }
                 
             case .tv:
-                MediaItemsListRowStyleView(viewModel: MediaItemsListRowStyleViewModel(mediaItems: viewModel.watchListTVShows), showMore: viewModel.showMoreWatchListTVShows) { mediaItemsListRowStyleViewModel in
+                MediaItemsListRowStyleView(viewModel: MediaItemsListViewModel(mediaItems: viewModel.watchListTVShows), showMore: viewModel.showMoreWatchListTVShows) { mediaItemsListRowStyleViewModel in
                     viewModel.navigateToMediaDetails(id:mediaItemsListRowStyleViewModel.id , mediaType: .tv)
                 } paginationCompletion: {
                     viewModel.handlePagination()

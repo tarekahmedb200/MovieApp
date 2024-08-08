@@ -7,16 +7,16 @@
 
 import Foundation
 
- protocol APIRequest {
+protocol APIRequest {
     var path: String { get }
     var requestType: RequestType { get }
     var headers: [String: String] { get }
-    var httpBody : Codable? { get }
+    var httpBody: Codable? { get }
     var urlParams: [String: String?] { get }
 }
 
 // MARK: - Default RequestProtocol
- extension APIRequest {
+extension APIRequest {
     var host: String {
         APIConstants.host
     }
@@ -34,7 +34,7 @@ import Foundation
     }
     
     func createUrlRequest() throws -> URLRequest {
-         
+        
         guard let url = createURLComponents().url else {
             throw NetworkError.invalidURL
         }

@@ -14,7 +14,6 @@ final class AddTVShowToWatchListUseCaseImplementation {
     init(mediaWatchListRepository: MediaWatchListRepository) {
         self.mediaWatchListRepository = mediaWatchListRepository
     }
-    
 }
 
 extension AddTVShowToWatchListUseCaseImplementation: AddTVShowToWatchlistUseCase {
@@ -30,8 +29,6 @@ extension AddTVShowToWatchListUseCaseImplementation: AddTVShowToWatchlistUseCase
             }
         }
     }
-    
-    
 }
 
 

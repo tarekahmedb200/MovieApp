@@ -17,5 +17,5 @@ struct LoginRequestDTO : Codable {
         case password
         case requestToken = "request_token"
     }
-
+    
 }

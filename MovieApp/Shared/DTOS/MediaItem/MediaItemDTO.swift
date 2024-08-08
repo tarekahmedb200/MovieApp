@@ -18,27 +18,8 @@ struct MediaItemContainerDTO : Decodable {
 struct MediaItemDTO : Decodable {
     var id: Int64
     var title: String?
-    private var genres: [Int]
-    private var posterPath: String?
-    
-    var genreString : String {
-        if  let firstGenre = genres.first,
-            let genreString = Genre(rawValue: firstGenre) {
-            return genreString.stringValue
-        }else {
-            return ""
-        }
-    }
-    
-    var posterPathUrl : URL? {
-        
-        guard let posterPath = posterPath else {
-            return nil
-        }
-        
-        let urlString = "https://image.tmdb.org/t/p/w200/" + posterPath
-        return URL(string: urlString)
-    }
+    var genres: [Int]
+    var posterPath: String?
     
     enum CodingKeys: String , CodingKey {
         case id

@@ -14,7 +14,6 @@ final class WatchListMoviesUseCaseImplementation {
     init(mediaWatchListRepository: MediaWatchListRepository) {
         self.mediaWatchListRepository = mediaWatchListRepository
     }
-    
 }
 
 extension WatchListMoviesUseCaseImplementation: WatchListMoviesUseCase {
@@ -29,5 +28,4 @@ extension WatchListMoviesUseCaseImplementation: WatchListMoviesUseCase {
             }
         }
     }
-    
 }

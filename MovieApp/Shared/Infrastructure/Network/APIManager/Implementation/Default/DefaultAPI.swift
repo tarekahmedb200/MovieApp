@@ -12,20 +12,19 @@ class DefaultAPI {
     
     private var urlSession : URLSession
     
-     init(urlSession: URLSession = .shared) {
+    init(urlSession: URLSession = .shared) {
         self.urlSession = urlSession
     }
-    
 }
 
 extension DefaultAPI: APIManager {
     
-     func initRequest<T>(with data: any APIRequest, type: T.Type, completion: @escaping (Result<T, any Error>) -> Void) where T : Decodable {
+    func initRequest<T>(with data: any APIRequest, type: T.Type, completion: @escaping (Result<T, any Error>) -> Void) where T : Decodable {
         
         do {
             
             let urlRequest = try data.createUrlRequest()
-                
+            
             self.urlSession.dataTask(with: urlRequest) { data, response, error in
                 
                 // printing data json represetation in the form of logging messages
@@ -37,16 +36,14 @@ extension DefaultAPI: APIManager {
                 }
                 
                 guard let data = data else {
-                    completion(.failure(NetworkError.unknown))
+                    completion(.failure(NetworkError.invalidServerResponse))
                     return
                 }
                 
-                guard error == nil else {
-                    completion(.failure(error ?? NetworkError.unknown))
+                if let error = error {
+                    completion(.failure(error))
                     return
                 }
-                
-                
                 
                 do {
                     let decodedData = try JSONDecoder().decode(T.self, from: data)
@@ -55,28 +52,14 @@ extension DefaultAPI: APIManager {
                     print(error)
                     completion(.failure(error))
                 }
-               
+                
             }.resume()
             
         } catch let error {
             completion(.failure(error))
         }
-    
-    }
-    
-    
-}
-
-
-extension Data {
-    var prettyPrintedJSONString: NSString? {
-        guard let jsonObject = try? JSONSerialization.jsonObject(with: self, options: []),
-              let data = try? JSONSerialization.data(withJSONObject: jsonObject,
-                                                       options: [.prettyPrinted]),
-              let prettyJSON = NSString(data: data, encoding: String.Encoding.utf8.rawValue) else {
-                  return nil
-               }
-
-        return prettyJSON
     }
 }
+
+
+

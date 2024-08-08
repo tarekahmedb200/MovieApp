@@ -11,5 +11,4 @@ protocol LoginValidationRepository {
     func getPassword() -> String?
     func getUserName() -> String?
     func getExpirationDate() -> String?
-    func clearAll()
 }

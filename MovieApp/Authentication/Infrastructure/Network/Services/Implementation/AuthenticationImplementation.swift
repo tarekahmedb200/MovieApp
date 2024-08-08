@@ -1,5 +1,5 @@
 //
-//  RequestTokenImplementation.swift
+//  AuthenticationImplementation.swift
 //  MovieApp
 //
 //  Created by tarek ahmed on 27/07/2024.
@@ -7,8 +7,7 @@
 
 import Foundation
 
-
-class DefaultAuthenticationImplementation {
+class AuthenticationImplementation {
     private var apiManager: APIManager
     
     init(apiManager: APIManager = DefaultAPI()) {
@@ -16,7 +15,7 @@ class DefaultAuthenticationImplementation {
     }
 }
 
-extension DefaultAuthenticationImplementation: AuthenticationService {
+extension AuthenticationImplementation: AuthenticationService {
     
     func requestToken(completion: @escaping (Result<RequestTokenResponseDTO, any Error>) -> Void) {
         self.apiManager.initRequest(with: AuthenticateRequest.requestToken, type: RequestTokenResponseDTO.self) { result  in

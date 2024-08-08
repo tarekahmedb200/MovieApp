@@ -1,5 +1,5 @@
 //
-//  MediaItemsListRowStyleViewModel.swift
+//  MediaItemsListViewModel.swift
 //  MovieApp
 //
 //  Created by tarek ahmed on 02/08/2024.
@@ -8,13 +8,13 @@
 import Foundation
 import SwiftUI
 
-class MediaItemsListRowStyleViewModel  {
+class MediaItemsListViewModel  {
     
-    var mediaItemRowStyleViewModels: [MediaItemRowStyleViewModel]
+    var mediaItemRowStyleViewModels: [MediaItemViewModel]
     
     init(mediaItems: [MediaItemDTO]) {
         self.mediaItemRowStyleViewModels = mediaItems.map({ mediaItemDTO in
-            return MediaItemRowStyleViewModel(mediaItemDTO: mediaItemDTO)
+            return MediaItemViewModel(mediaItemDTO: mediaItemDTO)
         })
     }
     

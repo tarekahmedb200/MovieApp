@@ -11,7 +11,7 @@ struct LoginResponseDTO : Codable {
     var success : Bool
     var token : String
     var expirationDateString : String?
-        
+    
     enum CodingKeys: String, CodingKey {
         case token = "request_token"
         case success

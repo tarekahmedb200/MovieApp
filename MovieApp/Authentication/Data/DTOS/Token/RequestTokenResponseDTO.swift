@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 struct RequestTokenResponseDTO : Decodable {
     var success : Bool
     var token : String

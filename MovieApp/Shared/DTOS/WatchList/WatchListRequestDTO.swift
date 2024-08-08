@@ -7,11 +7,10 @@
 
 import Foundation
 
-
 struct WatchListRequestDTO : Codable {
-    var mediaType : String
-    var mediaID : Int64
-    var addToWatchList : Bool
+    var mediaType: String
+    var mediaID: Int64
+    var addToWatchList: Bool
     
     enum CodingKeys : String , CodingKey {
         case mediaType = "media_type"

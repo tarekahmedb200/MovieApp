@@ -1,5 +1,5 @@
 //
-//  DefaultAuthenticationImplentationRepository.swift
+//  AuthenticationRepositoryImplentation.swift
 //  MovieApp
 //
 //  Created by tarek ahmed on 28/07/2024.
@@ -7,9 +7,7 @@
 
 import Foundation
 
-
-
-class DefaultAuthenticationRepositoryImplentation {
+class AuthenticationRepositoryImplentation {
     
     private var authenticationService: AuthenticationService
     private var appInfoStorage: AuthenticationInfoStorage
@@ -20,16 +18,16 @@ class DefaultAuthenticationRepositoryImplentation {
     }
 }
 
-extension DefaultAuthenticationRepositoryImplentation : AuthenticationRepository {
+extension AuthenticationRepositoryImplentation : AuthenticationRepository {
     
     func requestToken(completion: @escaping (Result<Bool, any Error>) -> Void) {
-        self.authenticationService.requestToken { result in
+        self.authenticationService.requestToken { [weak self] result in
             switch result {
             case .success(let requestTokenResponseDTO):
-                self.appInfoStorage.saveRequestToken(requestToken: requestTokenResponseDTO.token)
+                self?.appInfoStorage.saveRequestToken(requestToken: requestTokenResponseDTO.token)
                 
                 if let expirationDateString = requestTokenResponseDTO.expirationDateString {
-                    self.appInfoStorage.saveExpirationDate(date: expirationDateString)
+                    self?.appInfoStorage.saveExpirationDate(date: expirationDateString)
                 }
                 
                 completion(.success(requestTokenResponseDTO.success))
@@ -42,7 +40,7 @@ extension DefaultAuthenticationRepositoryImplentation : AuthenticationRepository
     func login(userName: String, password: String, completion: @escaping (Result<Bool, any Error>) -> Void) {
         
         guard let token = appInfoStorage.getRequestToken() else {
-            completion(.failure(NetworkError.unknown))
+            completion(.failure(PersistancError.valueNotFound))
             return
         }
         
@@ -57,7 +55,7 @@ extension DefaultAuthenticationRepositoryImplentation : AuthenticationRepository
                 if let expirationDateString = loginResponseDTO.expirationDateString {
                     self.appInfoStorage.saveExpirationDate(date: expirationDateString)
                 }
-                    
+                
                 self.appInfoStorage.saveUserName(userName: userName)
                 self.appInfoStorage.savePassword(password: password)
                 
@@ -71,7 +69,7 @@ extension DefaultAuthenticationRepositoryImplentation : AuthenticationRepository
     func requestSession(completion: @escaping (Result<Bool, any Error>) -> Void) {
         
         guard let token = appInfoStorage.getRequestToken() else {
-            completion(.failure(NetworkError.unknown))
+            completion(.failure(PersistancError.valueNotFound))
             return
         }
         
@@ -92,7 +90,7 @@ extension DefaultAuthenticationRepositoryImplentation : AuthenticationRepository
                 completion(.failure(error))
             }
         }
-    
+        
     }
     
 }

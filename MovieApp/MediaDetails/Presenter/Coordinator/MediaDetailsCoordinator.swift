@@ -16,9 +16,9 @@ class MediaDetailsCoordinator : ObservableObject {
     
     private var mediaID : Int64
     private var mediaType : MediaTypeDTO
-    private var parentCoordinator: Coordinator
+    private var parentCoordinator: NavigationCoordinator
   
-    init(parentCoordinator:Coordinator,mediaID: Int64, mediaType: MediaTypeDTO) {
+    init(parentCoordinator:NavigationCoordinator,mediaID: Int64, mediaType: MediaTypeDTO) {
         self.parentCoordinator = parentCoordinator
         self.mediaID = mediaID
         self.mediaType = mediaType

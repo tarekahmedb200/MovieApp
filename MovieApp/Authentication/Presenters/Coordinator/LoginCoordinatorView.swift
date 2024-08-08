@@ -15,12 +15,12 @@ struct LoginCoordinatorView : View {
     var body: some View {
         
         ZStack {
-            Color(red: 21.0/255, green: 26.0/255, blue: 48.0/255,opacity: 1)
+            Color("AppBackgroundColor", bundle: nil)
                 .ignoresSafeArea()
             
-            coordinator.LoginView
+            coordinator.build(page: .loginScreen)
                 .fullScreenCover(item: $coordinator.fullScreenCover) { _ in
-                    HomeCoordinatorView(coordinator: coordinator.homeCoordinator)
+                    coordinator.build(page: .homeScreen)
                 }
         }
         

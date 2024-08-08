@@ -9,6 +9,6 @@ import Foundation
 
 protocol AddTVShowToWatchlistUseCase {
     func execute(mediaType : MediaTypeDTO,
-    mediaID : Int64,
-    addToWatchList : Bool,completion: @escaping (Result<WatchListResponseDTO,Error>) -> Void)
+                 mediaID : Int64,
+                 addToWatchList : Bool,completion: @escaping (Result<WatchListResponseDTO,Error>) -> Void)
 }

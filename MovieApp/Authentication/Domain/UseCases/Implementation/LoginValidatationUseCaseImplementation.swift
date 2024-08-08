@@ -21,10 +21,9 @@ final class LoginValidatationUseCaseImplementation {
 extension LoginValidatationUseCaseImplementation: LoginValidatationUseCase {
     
     func execute(completion: @escaping (Bool) -> Void) {
-        if isUserInfoExists() && !isExpirationDateEnded() {
+        if isUserInfoExists() {
             completion(true)
         } else {
-            self.loginValidationRepository.clearAll()
             completion(false)
         }
     }
@@ -34,23 +33,5 @@ extension LoginValidatationUseCaseImplementation: LoginValidatationUseCase {
         let password = self.loginValidationRepository.getPassword()
         return userName != nil && password != nil
     }
-    
-    private func isExpirationDateEnded() -> Bool {
-        guard let expirationDate = getExpirationDate() else {
-            return true
-        }
-        
-        let expirationValidator = ExpirationValidator(expireDate: expirationDate)
-        
-        return expirationValidator.isExpirationDateEnded()
-    }
-    
-    private func getExpirationDate() -> Date? {
-        let expirationDateString = self.loginValidationRepository.getExpirationDate()
-        
-        return expirationDateString?.toDate()
-    }
-    
-    
     
 }

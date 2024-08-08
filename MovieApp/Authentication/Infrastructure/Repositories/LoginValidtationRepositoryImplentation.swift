@@ -1,5 +1,5 @@
 //
-//  DefaultLoginValidtationRepositoryImplentation.swift
+//  LoginValidtationRepositoryImplentation.swift
 //  MovieApp
 //
 //  Created by tarek ahmed on 30/07/2024.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-class DefaultLoginValidtationRepositoryImplentation {
+class LoginValidtationRepositoryImplentation {
     
     private var appInfoStorage: AuthenticationInfoStorage
     
@@ -16,7 +16,7 @@ class DefaultLoginValidtationRepositoryImplentation {
     }
 }
 
-extension DefaultLoginValidtationRepositoryImplentation : LoginValidationRepository {
+extension LoginValidtationRepositoryImplentation : LoginValidationRepository {
     
     func getPassword() -> String? {
         self.appInfoStorage.getPassword()
@@ -30,9 +30,5 @@ extension DefaultLoginValidtationRepositoryImplentation : LoginValidationReposit
         self.appInfoStorage.getExpirationDate()
     }
     
-    func clearAll() {
-        self.appInfoStorage.clearAll()
-    }
-
 }
 
