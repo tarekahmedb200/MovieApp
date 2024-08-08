@@ -36,7 +36,7 @@ the third tab shows profile screen where u can find your watchlist.
 
  <tr>
   <td> 
-    <img src = "https://github.com/tarekahmedb200/MovieApp/assets/35314267/d9e8b7d2-ea2f-4c2f-9e91-65c15541771e" width="300" height="600" />
+    <img src = "https://github.com/user-attachments/assets/5a3b7681-f981-4d64-8160-c44a38ff317e" width="300" height="600" />
   </td>
   
   <td> 
