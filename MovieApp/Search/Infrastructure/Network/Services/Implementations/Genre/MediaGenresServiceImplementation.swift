@@ -1,5 +1,5 @@
 //
-//  DefaultMediaGenresServiceImplementation.swift
+//  MediaGenresServiceImplementation.swift
 //  MovieApp
 //
 //  Created by tarek ahmed on 02/08/2024.
@@ -8,7 +8,7 @@
 import Foundation
 
 
-class DefaultMediaGenresServiceImplementation {
+class MediaGenresServiceImplementation {
     var apiManager : APIManager
     
     init(apiManager: APIManager = DefaultAPI()) {
@@ -16,7 +16,7 @@ class DefaultMediaGenresServiceImplementation {
     }
 }
 
-extension DefaultMediaGenresServiceImplementation : MediaGenresService {
+extension MediaGenresServiceImplementation : MediaGenresService {
     
     func requestMovieGenres(completion: @escaping (Result<[MediaGenreDTO], any Error>) -> Void) {
         self.apiManager.initRequest(with: MediaGenresRequest.requestMovieGenres, type: MediaGenreContainerDTO.self) { result  in

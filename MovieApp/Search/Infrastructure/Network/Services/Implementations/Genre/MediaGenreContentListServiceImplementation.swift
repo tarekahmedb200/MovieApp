@@ -1,5 +1,5 @@
 //
-//  DefaultMediaGenreContentListServiceImplementation.swift
+//  MediaGenreContentListServiceImplementation.swift
 //  MovieApp
 //
 //  Created by tarek ahmed on 02/08/2024.
@@ -8,7 +8,7 @@
 import Foundation
 
 
-class DefaultMediaGenreContentListServiceImplementation {
+class MediaGenreContentListServiceImplementation {
     var apiManager : APIManager
     
     init(apiManager: APIManager = DefaultAPI()) {
@@ -16,7 +16,7 @@ class DefaultMediaGenreContentListServiceImplementation {
     }
 }
 
-extension DefaultMediaGenreContentListServiceImplementation : MediaGenreContentListService {
+extension MediaGenreContentListServiceImplementation : MediaGenreContentListService {
     
     func requestMovieGenreContentList(page:Int,genreID: Int64, completion: @escaping (Result<[MediaItemDTO], any Error>) -> Void) {
         self.apiManager.initRequest(with: MediaGenreContentRequest.requestMovieGenreContent(page:page,genreID: genreID), type: MediaItemContainerDTO.self) { result  in

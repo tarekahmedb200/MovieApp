@@ -69,6 +69,11 @@ extension ProfileViewModel {
     }
     
     var posterPathUrl : URL? {
-        return profileDetailsDTO?.posterPathUrl
+    
+        guard let path = profileDetailsDTO?.avatar.tmdb.avatarPath else {
+            return nil
+        }
+        
+        return URL(string:"https://image.tmdb.org/t/p/original/" + path)
     }
 }
