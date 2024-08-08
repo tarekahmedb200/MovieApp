@@ -209,7 +209,9 @@ class MediaDetailsViewModel: ObservableObject {
         }
     }
     
-    
+    func dismiss() {
+        mediaDetailsCoordinator.pop()
+    }
     
 }
 

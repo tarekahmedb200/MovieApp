@@ -12,11 +12,13 @@ class GenreContentListFactory {
     private var seachCoordinator : SearchCoordinator
     private var mediaType: MediaTypeDTO
     private var genreID: Int64
+    private var genreName: String
    
-    init(seachCoordinator: SearchCoordinator, mediaType: MediaTypeDTO, genreID: Int64) {
+    init(seachCoordinator: SearchCoordinator, genreName: String,mediaType: MediaTypeDTO, genreID: Int64) {
         self.seachCoordinator = seachCoordinator
         self.mediaType = mediaType
         self.genreID = genreID
+        self.genreName = genreName
     }
     
     func getGenreContentContainerListView() -> GenreContentContainerListView {
@@ -24,7 +26,7 @@ class GenreContentListFactory {
     }
     
     private func getGenreContentListViewModel() -> GenreContentContainerListViewModel {
-        return GenreContentContainerListViewModel(mediaType: self.mediaType, genreID: self.genreID, searchCoordinator: self.seachCoordinator, movieGenreContentListUseCase: getMovieGenreContentListUseCase(), tvShowGenreContentListUseCase: getTVShowGenreContentListUseCase())
+        return GenreContentContainerListViewModel(mediaType: self.mediaType, genreID: self.genreID, genreName: self.genreName, searchCoordinator: self.seachCoordinator, movieGenreContentListUseCase: getMovieGenreContentListUseCase(), tvShowGenreContentListUseCase: getTVShowGenreContentListUseCase())
     }
     
     private func getTVShowGenreContentListUseCase() -> TVShowGenreContentListUseCase {

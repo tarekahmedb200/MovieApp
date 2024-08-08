@@ -17,7 +17,7 @@ struct GenreListView: View {
     Array(repeating: GridItem(.flexible(minimum: UIScreen.main.bounds.width / 2, maximum: UIScreen.main.bounds.width / 2)), count: 2)
     
     var body: some View {
-        Section(sectionTitle) {
+        Section {
             LazyVGrid(columns: columns,alignment: .center) {
                 ForEach(viewModel.mediaItemsViewModels) { mediaGenreItemViewModel in
                     GenreItemView(viewModel: mediaGenreItemViewModel)
@@ -27,7 +27,19 @@ struct GenreListView: View {
                         }
                 }
             }
+        } header: {
+            HStack {
+                Text(sectionTitle)
+                    .frame(alignment: .leading)
+                    .foregroundStyle(.white)
+                    .fontDesign(.rounded)
+                    .font(.title)
+                    .padding()
+                
+                Spacer()
+            }
         }
+        
     }
 }
 

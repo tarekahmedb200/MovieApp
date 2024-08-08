@@ -16,13 +16,17 @@ class MediaDetailsCoordinator : ObservableObject {
     
     private var mediaID : Int64
     private var mediaType : MediaTypeDTO
+    private var parentCoordinator: Coordinator
   
-    
-    init(mediaID: Int64, mediaType: MediaTypeDTO) {
+    init(parentCoordinator:Coordinator,mediaID: Int64, mediaType: MediaTypeDTO) {
+        self.parentCoordinator = parentCoordinator
         self.mediaID = mediaID
         self.mediaType = mediaType
     }
     
+    func pop() {
+        parentCoordinator.path.removeLast()
+    }
 
     @ViewBuilder
     func build(page : MediaListNavigation) -> some View {

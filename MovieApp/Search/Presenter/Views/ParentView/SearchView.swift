@@ -19,23 +19,29 @@ struct SearchView: View {
                 GenreListView(viewModel: MediaGenreListViewModel(mediaGenreItems: viewModel.movieGenreDtos),
                               sectionTitle: "Movie Genre")
                 { movieGenreItemViewModel in
-                    viewModel.navigateToGenreContentList(id: movieGenreItemViewModel.id, mediaType: .movie)
+                    viewModel.navigateToGenreContentList(id: movieGenreItemViewModel.id, mediaType: .movie, genreName: movieGenreItemViewModel.title)
                 }
                 
                 GenreListView(viewModel: MediaGenreListViewModel(mediaGenreItems: viewModel.tvGenresDtos),
                               sectionTitle: "TV Shows Genre")
                 { tvGenreItemViewModel in
-                    viewModel.navigateToGenreContentList(id: tvGenreItemViewModel.id, mediaType: .tv)
+                    viewModel.navigateToGenreContentList(id: tvGenreItemViewModel.id, mediaType: .tv, genreName: tvGenreItemViewModel.title)
                 }
             } else {
                 
                 Picker("Movie Type", selection: $viewModel.mediaType) {
                     ForEach(MediaTypeDTO.allCases) { type in
                         Text(type.rawValue)
+                            .tint(.white)
                             .tag(type)
                     }
                 }
                 .pickerStyle(.segmented)
+                .colorMultiply(.white)
+                .tint(.white)
+                .padding()
+                .background(Color(red: 31.0/255, green: 32.0/255, blue: 90.0/255,opacity: 1))
+                
                 
                 
                 switch viewModel.mediaType {
@@ -68,3 +74,4 @@ struct SearchView: View {
 //#Preview {
 //    SearchView()
 //}
+ 

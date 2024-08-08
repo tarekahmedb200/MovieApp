@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		302C80142C62854B00F45A57 /* LoadingToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302C80132C62854B00F45A57 /* LoadingToastView.swift */; };
+		303D78502C64CCC1001347A8 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303D784F2C64CCC1001347A8 /* Coordinator.swift */; };
 		30424D0C2C560C9100FA431F /* LoginRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30424D0B2C560C9100FA431F /* LoginRequestDTO.swift */; };
 		30424D152C5615AC00FA431F /* AuthenticationInfoStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30424D142C5615AC00FA431F /* AuthenticationInfoStorage.swift */; };
 		30424D172C565C4200FA431F /* KeyChainImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30424D162C565C4200FA431F /* KeyChainImplementation.swift */; };
@@ -203,6 +204,7 @@
 /* Begin PBXFileReference section */
 		011E50B784100180582FB6CF /* Pods_MovieApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovieApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		302C80132C62854B00F45A57 /* LoadingToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingToastView.swift; sourceTree = "<group>"; };
+		303D784F2C64CCC1001347A8 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		30424D0B2C560C9100FA431F /* LoginRequestDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequestDTO.swift; sourceTree = "<group>"; };
 		30424D142C5615AC00FA431F /* AuthenticationInfoStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationInfoStorage.swift; sourceTree = "<group>"; };
 		30424D162C565C4200FA431F /* KeyChainImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChainImplementation.swift; sourceTree = "<group>"; };
@@ -396,6 +398,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		303D784D2C64CCA9001347A8 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				303D784E2C64CCB2001347A8 /* Protocols */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		303D784E2C64CCB2001347A8 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				303D784F2C64CCC1001347A8 /* Coordinator.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		30424D0F2C56118300FA431F /* Persistance */ = {
 			isa = PBXGroup;
 			children = (
@@ -1271,6 +1289,7 @@
 		30738B932C5E205C002B0C92 /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
+				303D784D2C64CCA9001347A8 /* Coordinator */,
 				30738B952C5E2070002B0C92 /* ViewModels */,
 				30738B942C5E2068002B0C92 /* Views */,
 			);
@@ -2154,6 +2173,7 @@
 				3095A9F32C6102A0005BA180 /* ProfileViewModel.swift in Sources */,
 				3095A9D52C60F6F7005BA180 /* LogoutRequestDTO.swift in Sources */,
 				3045CB7F2C58C77700AA5FD5 /* HomeCoordinatorView.swift in Sources */,
+				303D78502C64CCC1001347A8 /* Coordinator.swift in Sources */,
 				3095A9C12C60E7EB005BA180 /* ProfileCoordinator.swift in Sources */,
 				30B15BDC2C5B8A41002BFEBB /* MediaDetailsFactory.swift in Sources */,
 				30424D192C565C6700FA431F /* KeyChainStack.swift in Sources */,

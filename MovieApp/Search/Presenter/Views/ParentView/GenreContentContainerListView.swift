@@ -19,6 +19,7 @@ struct GenreContentContainerListView: View {
             } paginationCompletion: {
                 viewModel.handlePagination()
             }
+            .navigationTitle(viewModel.genreName)
         }
     }
 }

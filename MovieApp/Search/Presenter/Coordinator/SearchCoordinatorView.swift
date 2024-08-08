@@ -12,11 +12,18 @@ struct SearchCoordinatorView: View {
     @ObservedObject var coordinator: SearchCoordinator
     
     var body: some View {
+        
         NavigationStack(path:$coordinator.path){
-            coordinator.build(page: .genreList)
-                .navigationDestination(for: SearchCoordinator.SearchNavigation.self) { page in
-                    coordinator.build(page: page)
-                }
+            
+            ZStack {
+                Color(red: 21.0/255, green: 26.0/255, blue: 48.0/255,opacity: 1)
+                    .ignoresSafeArea()
+                
+                coordinator.build(page: .genreList)
+                    .navigationDestination(for: SearchCoordinator.SearchNavigation.self) { page in
+                        coordinator.build(page: page)
+                    }
+            }
         }
     }
 }

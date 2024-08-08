@@ -21,24 +21,47 @@ struct MediaDetailsView: View {
             subInfoView
             creditView
         }
+        .toolbar(.hidden)
     }
     
     
     @ViewBuilder
     var posterView : some View {
-        GeometryReader { geometry in
-            if let posterImagePathUrl = viewModel.posterPathUrl {
-                KFImage.url(posterImagePathUrl)
-                    .placeholder{
-                        ProgressView()
+        ZStack {
+            GeometryReader { geometry in
+                if let posterImagePathUrl = viewModel.posterPathUrl {
+                    KFImage.url(posterImagePathUrl)
+                        .placeholder{
+                            ProgressView()
+                        }
+                        .resizable()
+                        .frame(width: geometry.size.width,
+                               height: geometry.height)
+                        .offset(y: geometry.verticalOffset)
+                }
+            }
+            .frame(height: 300)
+            
+            VStack {
+                HStack {
+                    Button(action: {
+                        viewModel.dismiss()
+                    }) {
+                        HStack {
+                            Image(systemName: "arrow.left")
+                                .foregroundColor(.white)
+                            Text("Back")
+                                .foregroundColor(.white)
+                        }
+                        .padding()
                     }
-                    .resizable()
-                    .frame(width: geometry.size.width,
-                           height: geometry.height)
-                    .offset(y: geometry.verticalOffset)
+                    
+                    Spacer()
+                }
+                
+                Spacer()
             }
         }
-        .frame(height: 300)
     }
     
     @ViewBuilder

@@ -14,6 +14,7 @@ class GenreContentContainerListViewModel: ObservableObject {
     private var mediaType: MediaTypeDTO
     private var genreID: Int64
     private var page: Int = 1
+    var genreName: String
     
     @Published var errorMessage : String = ""
     @Published var showAlert : Bool = false
@@ -23,9 +24,10 @@ class GenreContentContainerListViewModel: ObservableObject {
     private var tvShowGenreContentListUseCase : TVShowGenreContentListUseCase
     private var searchCoordinator : SearchCoordinator
     
-    init(mediaType: MediaTypeDTO, genreID: Int64,searchCoordinator:SearchCoordinator,movieGenreContentListUseCase: MovieGenreContentListUseCase, tvShowGenreContentListUseCase: TVShowGenreContentListUseCase) {
+    init(mediaType: MediaTypeDTO, genreID: Int64, genreName:String,searchCoordinator:SearchCoordinator,movieGenreContentListUseCase: MovieGenreContentListUseCase, tvShowGenreContentListUseCase: TVShowGenreContentListUseCase) {
         self.mediaType = mediaType
         self.genreID = genreID
+        self.genreName = genreName
         self.movieGenreContentListUseCase = movieGenreContentListUseCase
         self.tvShowGenreContentListUseCase = tvShowGenreContentListUseCase
         self.searchCoordinator = searchCoordinator

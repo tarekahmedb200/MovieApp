@@ -8,11 +8,11 @@
 import Foundation
 import SwiftUI
 
-class SearchCoordinator : ObservableObject {
+class SearchCoordinator : ObservableObject , Coordinator {
     
     enum SearchNavigation : Hashable {
         case genreList
-        case genreContentList(id:Int64,mediaType:MediaTypeDTO)
+        case genreContentList(id:Int64,mediaType:MediaTypeDTO,genreName:String)
         case mediaDetails(id:Int64,mediaType:MediaTypeDTO)
     }
     
@@ -41,10 +41,10 @@ class SearchCoordinator : ObservableObject {
         switch page {
         case .genreList:
             SearchFactory(seachCoordinator: self).getSearchView()
-        case .genreContentList(let id, let mediaType):
-            GenreContentListFactory(seachCoordinator: self, mediaType: mediaType, genreID: id).getGenreContentContainerListView()
+        case .genreContentList(let id, let mediaType,let genreName):
+            GenreContentListFactory(seachCoordinator: self, genreName: genreName, mediaType: mediaType, genreID: id).getGenreContentContainerListView()
         case .mediaDetails(let id,let mediaType):
-            MediaDetailsCoordinatorView(coordinator: MediaDetailsCoordinator(mediaID: id, mediaType: mediaType))
+            MediaDetailsCoordinatorView(coordinator: MediaDetailsCoordinator(parentCoordinator: self, mediaID: id, mediaType: mediaType))
         }
     }
     

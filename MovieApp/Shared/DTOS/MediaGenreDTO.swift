@@ -111,5 +111,37 @@ enum Genre: Int {
     }
     
     
+    var imageName: String {
+        switch self {
+        case .action: return "action"
+        case .adventure: return "adventure"
+        case .animation: return "animation"
+        case .comedy: return "comedy"
+        case .crime: return "crime"
+        case .documentary: return "documentry"
+        case .drama: return "drama"
+        case .family: return "family"
+        case .fantasy: return "fantasy"
+        case .history: return "history"
+        case .horror: return "horror"
+        case .music: return "music"
+        case .mystery: return "mystery"
+        case .romance: return "romance"
+        case .scienceFiction: return "science_fiction"
+        case .tvMovie: return "tv-movie"
+        case .thriller: return "thriller"
+        case .war: return "war"
+        case .western: return "western"
+        case .actionAdventure: return "action"
+        case .kids: return "kids"
+        case .news: return "news"
+        case .reality: return "reality"
+        case .sciFiFantasy: return "science_fiction"
+        case .soap: return "soap"
+        case .talk: return "talk"
+        case .warPolitics: return "war"
+        }
+    }
+
 }
 

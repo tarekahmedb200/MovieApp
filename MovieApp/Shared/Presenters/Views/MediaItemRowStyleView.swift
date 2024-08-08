@@ -14,47 +14,51 @@ struct MediaItemRowStyleView: View {
     
     var body: some View {
         
-        HStack(alignment: .center) {
+        ZStack {
             
-            VStack(alignment:.leading,spacing: 5) {
-                Text(viewModel.title)
-                    .lineLimit(2)
-                    .multilineTextAlignment(.leading)
-                    .font(.headline)
+            Color(red: 31.0/255, green: 32.0/255, blue: 90.0/255,opacity: 1)
+            
+            HStack(alignment: .center) {
                 
-                Text(viewModel.genre)
-                    .font(.subheadline)
+                VStack(alignment:.leading,spacing: 5) {
+                    Text(viewModel.title)
+                        .lineLimit(2)
+                        .multilineTextAlignment(.leading)
+                        .font(.headline)
+                    
+                    Text(viewModel.genre)
+                        .font(.subheadline)
+                    
+                }
                 
+                
+                Spacer()
+                
+                if let thumb = viewModel.posterURL {
+                    KFImage.url(thumb)
+                        .placeholder{
+                            ProgressView()
+                        }
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 100,height:150)
+                        .clipShape(
+                            RoundedRectangle(cornerSize: CGSize(width: 10, height: 10))
+                        )
+                } else {
+                    Image("noMediaImage")
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 100,height:150)
+                        .clipShape(
+                            RoundedRectangle(cornerSize: CGSize(width: 10, height: 10))
+                        )
+                }
             }
-            .foregroundStyle(.black)
+            .foregroundStyle(.white)
+            .padding()
             
-            Spacer()
-            
-            if let thumb = viewModel.posterURL {
-                KFImage.url(thumb)
-                    .placeholder{
-                        ProgressView()
-                    }
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: 100,height:150)
-                    .clipShape(
-                        RoundedRectangle(cornerSize: CGSize(width: 10, height: 10))
-                    )
-            } else {
-                Image("noMediaImage")
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: 100,height:150)
-                    .clipShape(
-                        RoundedRectangle(cornerSize: CGSize(width: 10, height: 10))
-                    )
-            }
         }
-        .padding()
-        .frame(width: UIScreen.main.bounds.width)
-        
-        
     }
 }
 

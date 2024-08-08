@@ -159,8 +159,8 @@ class SearchViewModel: ObservableObject {
         }
     }
     
-    func navigateToGenreContentList(id:Int64,mediaType:MediaTypeDTO) {
-        searchCoordinator.push(page: .genreContentList(id: id, mediaType: mediaType))
+    func navigateToGenreContentList(id:Int64,mediaType:MediaTypeDTO,genreName:String) {
+        searchCoordinator.push(page: .genreContentList(id: id, mediaType: mediaType, genreName: genreName))
     }
     
     func navigateToMediaDetails(id:Int64,mediaType:MediaTypeDTO) {

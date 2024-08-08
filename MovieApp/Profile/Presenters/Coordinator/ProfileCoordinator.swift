@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 
-class ProfileCoordinator: ObservableObject {
+class ProfileCoordinator: ObservableObject, Coordinator  {
     
     enum ProfileScreenNavigation : Hashable {
         case profileScreen
@@ -37,12 +37,11 @@ class ProfileCoordinator: ObservableObject {
         case .watchList:
             WatchListFactory(profileCoordinator: self).getWatchListView()
         case .mediaDetails(let id,let mediaType):
-            MediaDetailsCoordinatorView(coordinator: MediaDetailsCoordinator(mediaID: id, mediaType: mediaType))
+            MediaDetailsCoordinatorView(coordinator: MediaDetailsCoordinator(parentCoordinator: self, mediaID: id, mediaType: mediaType))
         }
     }
     
     func dismiss() {
         parentCoordinator.dismiss()
     }
-
 }

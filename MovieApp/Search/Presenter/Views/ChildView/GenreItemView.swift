@@ -13,6 +13,7 @@ struct GenreItemView: View {
     var viewModel: MediaGenreItemViewModel
     
     var body: some View {
+        
         RoundedRectangle(cornerSize: CGSize(width: 10, height: 10))
             .fill (
                 LinearGradient(
@@ -22,16 +23,25 @@ struct GenreItemView: View {
                 )
             )
             .overlay {
-                Text(viewModel.title)
-                    .lineLimit(2)
-                    .foregroundStyle(.white)
-                    .font(.title2)
-                    .fontDesign(.serif)
+                
+                VStack {
+                    Image(viewModel.imageName)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 50,height: 50)
+                        .foregroundStyle(.white)
+                    
+                    Text(viewModel.title)
+                        .lineLimit(2)
+                        .foregroundStyle(.white)
+                        .font(.title2)
+                        .fontDesign(.serif)
+                }
             }
     }
 }
 
 #Preview {
-    GenreItemView(viewModel: MediaGenreItemViewModel(mediaGenreDTO: MediaGenreDTO(id: 12, name: "Action")))
+    GenreItemView(viewModel: MediaGenreItemViewModel(mediaGenreDTO: MediaGenreDTO(id: 18, name: "Action")))
         .previewLayout(.sizeThatFits)
 }

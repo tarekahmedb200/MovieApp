@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-class MediaListCoordinator : ObservableObject {
+class MediaListCoordinator : ObservableObject, Coordinator {
     
     enum MediaListNavigation : Hashable {
         case mediaList
@@ -42,7 +42,7 @@ class MediaListCoordinator : ObservableObject {
         case .mediaList:
             MediaListFactory(mediaListCoordinator: self).getMediaListView()
         case .mediaDetails(let id,let mediaType):
-            MediaDetailsCoordinatorView(coordinator: MediaDetailsCoordinator(mediaID: id, mediaType: mediaType))
+            MediaDetailsCoordinatorView(coordinator: MediaDetailsCoordinator(parentCoordinator: self, mediaID: id, mediaType: mediaType))
         }
     }
     
