@@ -14,31 +14,41 @@ struct ProfileView: View {
     
     var body: some View {
         
-        VStack {
-            List {
-                
-                Section("Profile") {
-                    profileView
-                }
-                
-                Section("Preferences") {
-                    Button(action: {
-                        viewModel.navigateToWatchList()
-                    }, label: {
-                        Text("WatchList")
-                            .foregroundStyle(.black)
-                    })
-                }
-                
+        ScrollView {
+            
+            profileView
+            
+            VStack(alignment: .leading,spacing:10) {
                 Button(action: {
-                    viewModel.logout()
+                    viewModel.navigateToWatchList()
                 }, label: {
-                    Text("Logout")
-                        .foregroundStyle(.red)
+                    Text("WatchList")
+                        .font(.headline)
                 })
                 
+                Divider()
+                    .background(.white)
+                    .frame(height: 5)
             }
+            .padding()
+            
+            Button(action: {
+                viewModel.logout()
+            }, label: {
+                Text("Logout")
+            })
+            .frame(width: 200,height: 50)
+            .background(.red)
+            .clipShape(RoundedRectangle(cornerSize: CGSize(width: 10, height: 10)))
+            .padding()
+            
         }
+        .scrollContentBackground(.hidden)
+        .background(
+            Color(red: 21.0/255, green: 26.0/255, blue: 48.0/255,opacity: 1)
+                .ignoresSafeArea()
+        )
+        .foregroundStyle(.white)
         .onAppear {
             viewModel.LoadProfileDetails()
         }
@@ -47,7 +57,7 @@ struct ProfileView: View {
     @ViewBuilder
     var profileView : some View {
         
-        HStack(alignment:.center) {
+        VStack(alignment:.center) {
             if let thumb = viewModel.posterPathUrl {
                 KFImage.url(thumb)
                     .placeholder{
@@ -58,7 +68,7 @@ struct ProfileView: View {
                     .clipShape(
                         Circle()
                     )
-                    .frame(width: 70,height:70)
+                    .frame(width: 200,height:200)
                 
             } else {
                 Image("noMediaImage")
@@ -72,9 +82,10 @@ struct ProfileView: View {
             }
             
             Text(viewModel.profileUserName)
-                .font(.body)
+                .font(.title3)
                 .bold()
         }
+        .foregroundStyle(.white)
     }
     
 }

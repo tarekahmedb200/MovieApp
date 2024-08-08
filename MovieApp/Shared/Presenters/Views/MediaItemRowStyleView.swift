@@ -16,8 +16,8 @@ struct MediaItemRowStyleView: View {
         
         ZStack {
             
-            Color(red: 31.0/255, green: 32.0/255, blue: 90.0/255,opacity: 1)
-            
+            Color(red: 21.0/255, green: 26.0/255, blue: 48.0/255,opacity: 1)
+        
             HStack(alignment: .center) {
                 
                 VStack(alignment:.leading,spacing: 5) {

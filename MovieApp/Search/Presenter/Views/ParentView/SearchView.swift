@@ -37,12 +37,6 @@ struct SearchView: View {
                     }
                 }
                 .pickerStyle(.segmented)
-                .colorMultiply(.white)
-                .tint(.white)
-                .padding()
-                .background(Color(red: 31.0/255, green: 32.0/255, blue: 90.0/255,opacity: 1))
-                
-                
                 
                 switch viewModel.mediaType {
                 case .movie:

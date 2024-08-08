@@ -22,6 +22,7 @@ struct WatchListView: View {
                 }
             }
             .pickerStyle(.segmented)
+            .padding()
             
             switch viewModel.mediaType {
             case .movie:
@@ -40,6 +41,12 @@ struct WatchListView: View {
                 }
             }
         }
+        .background(
+            Color(red: 21.0/255, green: 26.0/255, blue: 48.0/255,opacity: 1)
+                .ignoresSafeArea()
+        )
+        .navigationTitle("Watch List")
+        .navigationBarTitleDisplayMode(.large)
         .onAppear {
             viewModel.LoadWatchListMovies()
             viewModel.LoadWatchListTVShows()
